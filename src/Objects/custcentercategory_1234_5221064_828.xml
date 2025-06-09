@@ -1,0 +1,31 @@
+<centercategory scriptid="custcentercategory_1234_5221064_828">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab31]</centertab>
+  <label>Order Tracker</label>
+  <links>
+    <link>
+      <linklabel>All Order Tracker</linklabel>
+      <linkobject>[scriptid=customsearch3367]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>PL Customer Updates</linklabel>
+      <linkobject>[scriptid=customsearch3719]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>ATER Updates</linklabel>
+      <linkobject>[scriptid=customsearch2870]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>HBNO WO Tracker</linklabel>
+      <linkobject>[scriptid=customsearch3344]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

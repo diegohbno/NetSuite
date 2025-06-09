@@ -1,0 +1,17 @@
+<centercategory scriptid="custcentercategory_114_4971052_904">
+  <center>ACCOUNTCENTER</center>
+  <centertab>[scriptid=custcentertab_atlas_standard_cost_tab]</centertab>
+  <label>Purchase Variance</label>
+  <links>
+    <link>
+      <linkid>REPO_NEG227</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>REPO_NEG226</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

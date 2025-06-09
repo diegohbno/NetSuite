@@ -1,0 +1,18 @@
+<centercategory scriptid="custcentercategorycustcentercategory_wmsse_wave">
+  <center>[scriptid=custcenter_wmsse_warehouse]</center>
+  <centertab>[scriptid=custcentertab_wmsse_inventory]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_wave]</label>
+  <links>
+    <link>
+      <linkid>EDIT_TRAN_WAVE</linkid>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_wave_createwave]</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Schedule Wave Release</linklabel>
+      <linkobject>[scriptid=customrecord_wms_wave_release_schedule]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

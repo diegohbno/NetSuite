@@ -1,0 +1,5 @@
+<subtab scriptid="custtab_versapay_ara_payments">
+  <parent></parent>
+  <tabtype>TRANSACTION</tabtype>
+  <title>Versapay AR Automations</title>
+</subtab>

@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_shipsystemrules">
+  <center>[scriptid=custcenter_shipcentral]</center>
+  <centertab>[scriptid=custcentertab_shipcentralsetup]</centertab>
+  <label translate="T">[scriptid=custcollection_packship_roles.system_rule_config_label]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_packship_roles.ship_central_systemrules_label]</linklabel>
+      <linkobject>[scriptid=customscript_packship_sl_system_rules.customdeploy_packship_sl_system_rules]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

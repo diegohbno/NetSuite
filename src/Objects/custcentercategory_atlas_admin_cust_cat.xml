@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory_atlas_admin_cust_cat">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_atlas_admin_tab]</centertab>
+  <label>Customers</label>
+  <links>
+    <link>
+      <linklabel>Address Change</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_address_change_rpt]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Status Change</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_cust_status_chnge_rpt]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

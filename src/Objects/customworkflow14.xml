@@ -1,0 +1,155 @@
+<workflow scriptid="customworkflow14">
+  <description>This workflow disable items on line level for any editing</description>
+  <initcontexts>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</initcontexts>
+  <initeventtypes></initeventtypes>
+  <initlocalizationcontext></initlocalizationcontext>
+  <initoncreate>T</initoncreate>
+  <initonvieworupdate>T</initonvieworupdate>
+  <initsavedsearchcondition></initsavedsearchcondition>
+  <inittriggertype></inittriggertype>
+  <isinactive>F</isinactive>
+  <islogenabled>T</islogenabled>
+  <keephistory>ALWAYS</keephistory>
+  <name>Restrict Item Lines on Vendor Bill</name>
+  <recordtypes>VENDORBILL</recordtypes>
+  <releasestatus>RELEASED</releasestatus>
+  <runasadmin>T</runasadmin>
+  <initcondition>
+    <formula></formula>
+    <type>VISUAL_BUILDER</type>
+  </initcondition>
+  <workflowstates>
+    <workflowstate scriptid="workflowstate173">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>State 1</name>
+      <positionx>543</positionx>
+      <positiony>133</positiony>
+      <workflowactions triggertype="BEFORELOAD">
+        <setdisplaytypeaction scriptid="workflowaction569">
+          <clienttriggerfields></clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</contexttypes>
+          <displaytype>DISABLED</displaytype>
+          <eventtypes></eventtypes>
+          <field>STDCOLQUANTITY</field>
+          <isinactive>F</isinactive>
+          <issublistfield>T</issublistfield>
+          <sublist>ITEM</sublist>
+          <initcondition>
+            <formula><![CDATA["HBNO Approval Status" IN ("HBNO Approval Status List1","HBNO Approval Status List2","HBNO Approval Status List3","HBNO Approval Status List4")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>HBNO Approval Status</name>
+                <value>[scriptid=custbody_hbno_approval_status]</value>
+              </parameter>
+              <parameter>
+                <name>HBNO Approval Status List1</name>
+                <selectrecordtype>[scriptid=customlist3831]</selectrecordtype>
+                <value>[scriptid=customlist3831.val_1279548_5221064_sb1_418]</value>
+              </parameter>
+              <parameter>
+                <name>HBNO Approval Status List2</name>
+                <selectrecordtype>[scriptid=customlist3831]</selectrecordtype>
+                <value>[scriptid=customlist3831.val_1279502_5221064_sb1_608]</value>
+              </parameter>
+              <parameter>
+                <name>HBNO Approval Status List3</name>
+                <selectrecordtype>[scriptid=customlist3831]</selectrecordtype>
+                <value>[scriptid=customlist3831.val_1279507_5221064_sb1_120]</value>
+              </parameter>
+              <parameter>
+                <name>HBNO Approval Status List4</name>
+                <selectrecordtype>[scriptid=customlist3831]</selectrecordtype>
+                <value>[scriptid=customlist3831.val_1279582_5221064_sb1_214]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </setdisplaytypeaction>
+        <setdisplaytypeaction scriptid="workflowaction570">
+          <clienttriggerfields></clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</contexttypes>
+          <displaytype>DISABLED</displaytype>
+          <eventtypes></eventtypes>
+          <field>STDCOLRATE</field>
+          <isinactive>F</isinactive>
+          <issublistfield>T</issublistfield>
+          <sublist>ITEM</sublist>
+          <initcondition>
+            <formula><![CDATA["HBNO Approval Status" IN ("HBNO Approval Status List1","HBNO Approval Status List2","HBNO Approval Status List3","HBNO Approval Status List4")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>HBNO Approval Status</name>
+                <value>[scriptid=custbody_hbno_approval_status]</value>
+              </parameter>
+              <parameter>
+                <name>HBNO Approval Status List1</name>
+                <selectrecordtype>[scriptid=customlist3831]</selectrecordtype>
+                <value>[scriptid=customlist3831.val_1279548_5221064_sb1_418]</value>
+              </parameter>
+              <parameter>
+                <name>HBNO Approval Status List2</name>
+                <selectrecordtype>[scriptid=customlist3831]</selectrecordtype>
+                <value>[scriptid=customlist3831.val_1279502_5221064_sb1_608]</value>
+              </parameter>
+              <parameter>
+                <name>HBNO Approval Status List3</name>
+                <selectrecordtype>[scriptid=customlist3831]</selectrecordtype>
+                <value>[scriptid=customlist3831.val_1279507_5221064_sb1_120]</value>
+              </parameter>
+              <parameter>
+                <name>HBNO Approval Status List4</name>
+                <selectrecordtype>[scriptid=customlist3831]</selectrecordtype>
+                <value>[scriptid=customlist3831.val_1279582_5221064_sb1_214]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </setdisplaytypeaction>
+        <setdisplaytypeaction scriptid="workflowaction571">
+          <clienttriggerfields></clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</contexttypes>
+          <displaytype>DISABLED</displaytype>
+          <eventtypes></eventtypes>
+          <field>STDCOLAMOUNT</field>
+          <isinactive>F</isinactive>
+          <issublistfield>T</issublistfield>
+          <sublist>ITEM</sublist>
+          <initcondition>
+            <formula><![CDATA["HBNO Approval Status" IN ("HBNO Approval Status List1","HBNO Approval Status List2","HBNO Approval Status List3","HBNO Approval Status List4")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>HBNO Approval Status</name>
+                <value>[scriptid=custbody_hbno_approval_status]</value>
+              </parameter>
+              <parameter>
+                <name>HBNO Approval Status List1</name>
+                <selectrecordtype>[scriptid=customlist3831]</selectrecordtype>
+                <value>[scriptid=customlist3831.val_1279548_5221064_sb1_418]</value>
+              </parameter>
+              <parameter>
+                <name>HBNO Approval Status List2</name>
+                <selectrecordtype>[scriptid=customlist3831]</selectrecordtype>
+                <value>[scriptid=customlist3831.val_1279502_5221064_sb1_608]</value>
+              </parameter>
+              <parameter>
+                <name>HBNO Approval Status List3</name>
+                <selectrecordtype>[scriptid=customlist3831]</selectrecordtype>
+                <value>[scriptid=customlist3831.val_1279507_5221064_sb1_120]</value>
+              </parameter>
+              <parameter>
+                <name>HBNO Approval Status List4</name>
+                <selectrecordtype>[scriptid=customlist3831]</selectrecordtype>
+                <value>[scriptid=customlist3831.val_1279582_5221064_sb1_214]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </setdisplaytypeaction>
+      </workflowactions>
+    </workflowstate>
+  </workflowstates>
+</workflow>

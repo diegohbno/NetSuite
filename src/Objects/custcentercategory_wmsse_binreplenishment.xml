@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory_wmsse_binreplenishment">
+  <center>[scriptid=custcenter_wmsse_wms]</center>
+  <centertab>[scriptid=custcentertab_wmsse_wmsinventory]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_binreplenishment]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.customdeploy_wms_gui_replenishment]</linklabel>
+      <linkobject>[scriptid=customscript_wms_gui_replenishment.customdeploy_wms_gui_replenishment]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Schedule Bin Replenishment</linklabel>
+      <linkobject>[scriptid=customrecord_wms_bin_replen_schedule]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

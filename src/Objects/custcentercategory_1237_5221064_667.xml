@@ -1,0 +1,31 @@
+<centercategory scriptid="custcentercategory_1237_5221064_667">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab31]</centertab>
+  <label>Pre-Manufacturing</label>
+  <links>
+    <link>
+      <linklabel>Packets In House</linklabel>
+      <linkobject>[scriptid=customsearch3451]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Verification Forms</linklabel>
+      <linkobject>[scriptid=customsearch3452]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>OOS Labels</linklabel>
+      <linkobject>[scriptid=customsearch3473]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Label&apos;s Weekly PO</linklabel>
+      <linkobject>[scriptid=customsearch3761]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

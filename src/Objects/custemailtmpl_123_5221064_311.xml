@@ -1,0 +1,12 @@
+<emailtemplate scriptid="custemailtmpl_123_5221064_311">
+  <addcompanyaddress>T</addcompanyaddress>
+  <addunsubscribelink>T</addunsubscribelink>
+  <description></description>
+  <isinactive>F</isinactive>
+  <isprivate>F</isprivate>
+  <mediaitem></mediaitem>
+  <name>PL - Intro to HBNO</name>
+  <recordtype></recordtype>
+  <subject>Welcome to HBNO Products! Private Label Inquiry</subject>
+  <usesmedia>F</usesmedia>
+</emailtemplate>

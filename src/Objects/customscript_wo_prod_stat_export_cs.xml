@@ -1,0 +1,10 @@
+<clientscript scriptid="customscript_wo_prod_stat_export_cs">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>HBNO WO Prod Stat Export CS</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/hbno_cs_export_csv.js]</scriptfile>
+</clientscript>

@@ -1,0 +1,37 @@
+<centercategory scriptid="custcentercategory_qm_center_cat_setup">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_qm_quality_new_center_tab]</centertab>
+  <label translate="T">[scriptid=custcollection_qm_translation.custcentercategory_qm_center_cat_setup_qualitycenter]</label>
+  <links>
+    <link>
+      <linklabel>Data Fields</linklabel>
+      <linkobject>[scriptid=customrecord_qm_inspection_fields]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Inspections</linklabel>
+      <linkobject>[scriptid=customrecord_qm_quality_inspection]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_qm_translation.reports_specifications_link_label]</linklabel>
+      <linkobject>[scriptid=customscript_qm_sl_qualityspeclist.customdeploy_qm_sl_qualityspeclist]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_qm_translation.datacollection_assign_insp_link_label]</linklabel>
+      <linkobject>[scriptid=customscript_qm_sl_admin_assignqueue.customdeployqm_sl_admin_assignqueue]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Statistical Sampling Template</linklabel>
+      <linkobject>[scriptid=customrecord_qm_stat_samp_template]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

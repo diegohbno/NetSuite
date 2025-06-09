@@ -1,0 +1,9 @@
+<advancedpdftemplate scriptid="custtmpl_736_5221064_815" standard="STDTMPLPACKINGSLIP">
+  <description></description>
+  <displaysourcecode>T</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>T</preferred>
+  <printtype>PACKINGSLIP</printtype>
+  <title>Bulk Cart 2.0 Packing Slip PDF/HTML Template</title>
+  <trantype>CUSTINVC</trantype>
+</advancedpdftemplate>

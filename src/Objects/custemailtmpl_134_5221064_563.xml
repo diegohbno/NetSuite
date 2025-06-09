@@ -1,0 +1,12 @@
+<emailtemplate scriptid="custemailtmpl_134_5221064_563">
+  <addcompanyaddress>T</addcompanyaddress>
+  <addunsubscribelink>T</addunsubscribelink>
+  <description></description>
+  <isinactive>F</isinactive>
+  <isprivate>F</isprivate>
+  <mediaitem></mediaitem>
+  <name>SO - Will Call</name>
+  <recordtype></recordtype>
+  <subject>HBNO: Sales Order # SOxxxxx</subject>
+  <usesmedia>F</usesmedia>
+</emailtemplate>

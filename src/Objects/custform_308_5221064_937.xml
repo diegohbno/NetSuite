@@ -1,0 +1,38 @@
+<transactionForm scriptid="custform_308_5221064_937" standard="STANDARDPACKINGSLIP">
+  <name>HBNO CUSTOM Packing Slip</name>
+  <recordType>INVOICE</recordType>
+  <inactive>F</inactive>
+  <preferred>T</preferred>
+  <mainFields>
+    <defaultFieldGroup/>
+  </mainFields>
+  <tabs>
+    <tab>
+      <id>TRANSACTIONSHIPPING</id>
+      <label>Shipping</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup/>
+      </fieldGroups>
+      <subItems/>
+    </tab>
+    <tab>
+      <id>TRANSACTIONPAYMENT</id>
+      <label>Payment</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup/>
+      </fieldGroups>
+      <subItems/>
+    </tab>
+  </tabs>
+  <disclaimer/>
+  <address/>
+  <emailMessageTemplate>USE_DEFAULT</emailMessageTemplate>
+  <printingType>
+    <advanced>
+      <printTemplate>[scriptid=custtmpl_735_5221064_484]</printTemplate>
+      <emailTemplate>[scriptid=custtmpl_735_5221064_484]</emailTemplate>
+    </advanced>
+  </printingType>
+</transactionForm>

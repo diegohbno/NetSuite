@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_wmsse_shippings">
+  <center>[scriptid=custcenter_wmsse_wms]</center>
+  <centertab>[scriptid=custcentertab_wmsse_wmsoutbound]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_shipping]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_quickship_orders]</linklabel>
+      <linkobject>[scriptid=customscript_wms_gui_quickship.customdeploy_wms_gui_quickship]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

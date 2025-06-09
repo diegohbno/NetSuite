@@ -1,0 +1,10 @@
+<advancedpdftemplate scriptid="custtmpl_742_5221064_703" standard="STDTMPLCR4749">
+  <description></description>
+  <displaysourcecode>F</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>F</preferred>
+  <printtype>CUSTOMRECORD</printtype>
+  <recordtype>[scriptid=customrecord4749]</recordtype>
+  <title>Custom Preship Sample PDF/HTML Template</title>
+  <trantype>CUSTOM</trantype>
+</advancedpdftemplate>

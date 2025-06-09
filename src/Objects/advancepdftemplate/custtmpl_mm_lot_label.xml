@@ -1,0 +1,10 @@
+<advancedpdftemplate scriptid="custtmpl_mm_lot_label" standard="STDTMPLCR_MFGMOB_PRINT_INTERMEDIATE">
+  <description></description>
+  <displaysourcecode>T</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>F</preferred>
+  <printtype>CUSTOMRECORD</printtype>
+  <recordtype>[scriptid=customrecord_mfgmob_print_intermediate]</recordtype>
+  <title>Standard MM Finished Lot Label Advanced PDF Template</title>
+  <trantype>CUSTOM</trantype>
+</advancedpdftemplate>

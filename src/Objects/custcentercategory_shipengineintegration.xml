@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_shipengineintegration">
+  <center>[scriptid=custcenter_shipcentral]</center>
+  <centertab>[scriptid=custcentertab_shipcentralsetup]</centertab>
+  <label translate="T">[scriptid=custcollection_packship_roles.ship_engine_integration]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_packship_roles.manage_integration_carrier_label]</linklabel>
+      <linkobject>[scriptid=customscript_packship_sl_cust_api_key.customdeploy_packship_sl_cust_api_key]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

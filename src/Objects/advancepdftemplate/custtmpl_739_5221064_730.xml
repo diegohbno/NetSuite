@@ -1,0 +1,10 @@
+<advancedpdftemplate scriptid="custtmpl_739_5221064_730" standard="STDTMPLCR4742">
+  <description></description>
+  <displaysourcecode>F</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>F</preferred>
+  <printtype>CUSTOMRECORD</printtype>
+  <recordtype>[scriptid=customrecord4742]</recordtype>
+  <title>Custom VF Form PDF/HTML Template</title>
+  <trantype>CUSTOM</trantype>
+</advancedpdftemplate>

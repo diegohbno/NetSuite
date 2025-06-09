@@ -1,0 +1,12 @@
+<centercategory scriptid="custcentercategory_109_4971052_782">
+  <center>SHIPPINGCENTER</center>
+  <centertab>[scriptid=custcentertab_atlas_mfg_em_mfg_tab]</centertab>
+  <label>Print Forms</label>
+  <links>
+    <link>
+      <linkid>TRAN_PRINT</linkid>
+      <linklabel>Work Orders - Print Bill of Material</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

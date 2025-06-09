@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_13_t1195985_293">
+  <center>[scriptid=custcenter_nsps]</center>
+  <centertab>[scriptid=custcentertab_nsps_implementation]</centertab>
+  <label>Meeting Notes</label>
+  <links>
+    <link>
+      <linklabel>Meeting Notes</linklabel>
+      <linkobject>[scriptid=customrecord_ns_ps_meeting_notes]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

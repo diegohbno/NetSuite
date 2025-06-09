@@ -1,0 +1,17 @@
+<centercategory scriptid="custcentercategory_inventorystatuschange">
+  <center>[scriptid=custcenter_wmsse_warehouse]</center>
+  <centertab>[scriptid=custcentertab_wmsse_inventory]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_invstatuschange]</label>
+  <links>
+    <link>
+      <linkid>EDIT_TRAN_STATCHNG</linkid>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_invstatuschange_invstatus]</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>EDIT_TRAN_BINTRNFR</linkid>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_invstatuschange_bin]</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

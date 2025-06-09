@@ -1,0 +1,32 @@
+<centercategory scriptid="custcentercategory_wmsse_supplychain_forcore">
+  <center>[scriptid=custcenter_wmsse_wms]</center>
+  <centertab>[scriptid=custcentertab_wmsse_wmsconfig]</centertab>
+  <label>Supply Chain</label>
+  <links>
+    <link>
+      <linkid>LIST_ITEMPROCESSFAMILY</linkid>
+      <linklabel>Item Process Family</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_ITEMPROCESSGROUP</linkid>
+      <linklabel>Item Process Group</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_ZONE</linkid>
+      <linklabel>Zone</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_PICKSTRATEGY</linkid>
+      <linklabel>Pick Strategy</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_PICKDECOMPOSITION</linkid>
+      <linklabel>Pick Decomposition Units</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

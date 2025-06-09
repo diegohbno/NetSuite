@@ -1,0 +1,12 @@
+<emailtemplate scriptid="custemailtmpl_129_5221064_584">
+  <addcompanyaddress>T</addcompanyaddress>
+  <addunsubscribelink>T</addunsubscribelink>
+  <description></description>
+  <isinactive>F</isinactive>
+  <isprivate>F</isprivate>
+  <mediaitem></mediaitem>
+  <name>Video CODE 20% OFF</name>
+  <recordtype></recordtype>
+  <subject>Exclusive Discount Code from HBNO</subject>
+  <usesmedia>F</usesmedia>
+</emailtemplate>

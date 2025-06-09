@@ -1,0 +1,9 @@
+<advancedpdftemplate scriptid="custtmpl_751_5221064_231" standard="STDTMPLPURCHORD">
+  <description></description>
+  <displaysourcecode>F</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>F</preferred>
+  <printtype>TRANSACTION</printtype>
+  <title>3PL HBNO PO to 3pl Template</title>
+  <trantype>PURCHORD</trantype>
+</advancedpdftemplate>

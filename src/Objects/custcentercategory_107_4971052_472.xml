@@ -1,0 +1,22 @@
+<centercategory scriptid="custcentercategory_107_4971052_472">
+  <center>SHIPPINGCENTER</center>
+  <centertab>[scriptid=custcentertab_atlas_mfg_em_mfg_tab]</centertab>
+  <label>Inquiries</label>
+  <links>
+    <link>
+      <linkid>TRAN_ITEMGROSSREQUIREMENTS</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>TRAN_COSTEDBOMINQUIRY</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>TRAN_COMPONENTWHEREUSEDINQUIRY</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

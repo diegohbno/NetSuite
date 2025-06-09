@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_1252_5221064_325">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab32]</centertab>
+  <label>Safety Infraction</label>
+  <links>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=customrecord5363]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

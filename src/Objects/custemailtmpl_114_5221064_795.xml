@@ -1,0 +1,12 @@
+<emailtemplate scriptid="custemailtmpl_114_5221064_795">
+  <addcompanyaddress>T</addcompanyaddress>
+  <addunsubscribelink>T</addunsubscribelink>
+  <description></description>
+  <isinactive>F</isinactive>
+  <isprivate>F</isprivate>
+  <mediaitem></mediaitem>
+  <name>Wholesale Account</name>
+  <recordtype></recordtype>
+  <subject>HBNO Products</subject>
+  <usesmedia>F</usesmedia>
+</emailtemplate>

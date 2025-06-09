@@ -1,0 +1,30 @@
+<centercategory scriptid="custcentercategory_atlas_admin_alert_cat">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_atlas_admin_tab]</centertab>
+  <label>Alerts</label>
+  <links>
+    <link>
+      <linklabel>Login Failures</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_login_failure_rem]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Script Changes</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_scrpt_chng_rem]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_SYSALERT</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Transactions Approved By Creator</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_trns_apprv_alert]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

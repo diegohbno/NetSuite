@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_qm_inspections_role">
+  <center>[scriptid=custcenter_qm_center]</center>
+  <centertab>[scriptid=custcentertab_qm_qualitymgmt_new_center_tab]</centertab>
+  <label translate="T">[scriptid=custcollection_qm_translation.custcentercategory_qm_inspections_role]</label>
+  <links>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=customrecord_qm_quality_inspection]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

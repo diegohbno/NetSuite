@@ -1,0 +1,31 @@
+<centercategory scriptid="custcentercategory_scm_ecn_eng_change_order">
+  <center>BASIC</center>
+  <centertab>BASICCENTERLISTS</centertab>
+  <label>Engineering</label>
+  <links>
+    <link>
+      <linklabel>Engineering Change Order</linklabel>
+      <linkobject>[scriptid=customrecord_scm_ecn_engr_change_order]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Engineering Change Order Type</linklabel>
+      <linkobject>[scriptid=customrecord_scm_ecn_eco_type]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Implement Engineering Change Order</linklabel>
+      <linkobject>[scriptid=customscript_scm_ecn_implement_eco.customdeploy_scm_ecn_implement_eco]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>ECO Implementation Status</linklabel>
+      <linkobject>[scriptid=customscript_scm_ecn_implement_eco_log.customdeploy_scm_ecn_implement_eco_log]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

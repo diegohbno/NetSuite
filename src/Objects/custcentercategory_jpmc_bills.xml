@@ -1,0 +1,25 @@
+<centercategory scriptid="custcentercategory_jpmc_bills">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_jpmc_payments]</centertab>
+  <label translate="T">[scriptid=custcollection_jpmc_centercat_xml.centercat_label__payments]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_jpmc_centercat_xml.centercat_linklabel__vendor_bills]</linklabel>
+      <linkobject>[scriptid=customscript_jpmc_pay_bills_s.customdeploy_jpmc_pay_bills_s]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_jpmc_centercat_xml.centercat_linklabel__expense_reports]</linklabel>
+      <linkobject>[scriptid=customscript_jpmc_pay_exp_reps_s.customdeploy_jpmc_pay_exp_reps_s]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>History</linklabel>
+      <linkobject>[scriptid=customscript_jpmc_bills_history_s.customdeploy_jpmc_bills_history_s]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

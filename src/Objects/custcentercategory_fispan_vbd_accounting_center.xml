@@ -1,0 +1,25 @@
+<centercategory scriptid="custcentercategory_fispan_vbd_accounting_center">
+  <center>ACCOUNTCENTER</center>
+  <centertab>ACCOUNTCENTERCENTERSETUP</centertab>
+  <label>Entity Bank Details</label>
+  <links>
+    <link>
+      <linklabel>Overview</linklabel>
+      <linkobject>[scriptid=customscript_fispan_vbd_overview.customdeploy_fispan_vbd_overview]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>History</linklabel>
+      <linkobject>[scriptid=customscript_fispan_vbd_history.customdeploy_fispan_vbd_history]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Import/Export</linklabel>
+      <linkobject>[scriptid=customscript_fispan_vbd_backup.customdeploy_fispan_vbd_backup]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

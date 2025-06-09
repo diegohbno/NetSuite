@@ -1,0 +1,85 @@
+<centercategory scriptid="custcentercategory_atlas_admin_audit_cat">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_atlas_admin_tab]</centertab>
+  <label>Audit</label>
+  <links>
+    <link>
+      <linkid>EDIT_BUNDLEAUDITTRAIL</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Change Status of Accounting Period</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_acc_period_audit_rpt]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Deleted Record Audit Log</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_it_deleted_records]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_GLNUMBERING</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Saved Search Log</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_saved_search_rpt]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Script Changes Log</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_scrpt_chng_rem]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_SCRIPTLOGS</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>System Notes Audit Log</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_systemnotes_rpt]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>System Notes For Configuration Settings</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_admin_sysnts_cnfg_rpt]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>System Notes on Custom Records Results</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_sysnote_custrec_rpt]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Transaction Audit Log</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_transaction_audit_rpt]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_TRANNUMBERAUDITLOG</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>TRAN_AUDIT</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>ADMI_LOGINAUDIT</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

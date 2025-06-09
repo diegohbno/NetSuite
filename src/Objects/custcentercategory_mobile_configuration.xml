@@ -1,0 +1,43 @@
+<centercategory scriptid="custcentercategory_mobile_configuration">
+  <center>[scriptid=custcenter_mobile_administrator]</center>
+  <centertab>[scriptid=custcentertab_mobile_setup]</centertab>
+  <label translate="T">[scriptid=custcollection_mobile_bundle_translations.centername_configuration]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_mobile_bundle_translations.centerlink_applications]</linklabel>
+      <linkobject>[scriptid=customscript_mobile_sl_app_list.customdeploy_mobile_sl_app_list]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_mobile_bundle_translations.centerlink_import_custom_process]</linklabel>
+      <linkobject>[scriptid=customscript_mobile_sl_import_process.customdeploy_mobile_sl_import_process]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_mobile_bundle_translations.centerlink_mobile_app]</linklabel>
+      <linkobject>[scriptid=customscript_mobile_sl_app_loader.customdeploy_mobile_sl_app_loader]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_mobile_bundle_translations.centerlink_login_url]</linklabel>
+      <linkobject>[scriptid=customscript_mobile_sl_admin_links.customdeploy_mobile_sl_admin_links]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_mobile_bundle_translations.centerlink_lic_mapping]</linklabel>
+      <linkobject>[scriptid=customrecord_mobile_hibc_lic_code]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_mobile_bundle_translations.centerlink_import_status]</linklabel>
+      <linkobject>[scriptid=customscript_mobile_sl_import_status.customdeploy_mobile_sl_import_status]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

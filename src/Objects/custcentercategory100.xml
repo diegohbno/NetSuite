@@ -1,0 +1,31 @@
+<centercategory scriptid="custcentercategory100">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab30]</centertab>
+  <label>Active Purchase Order Managment </label>
+  <links>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=custlink_33_5221064_164]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=custlink_34_5221064_870]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Master Open PO Stage 1 Tracking List - All POs &amp; Assignies</linklabel>
+      <linkobject>[scriptid=custlink_49_5221064_474]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=custlink_55_5221064_112]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

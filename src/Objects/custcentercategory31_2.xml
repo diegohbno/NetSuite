@@ -1,0 +1,37 @@
+<centercategory scriptid="custcentercategory31_2">
+  <center>[scriptid=custcenter_wmsse_warehouse]</center>
+  <centertab>[scriptid=custcentertab_wmsse_setup]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory31]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory31_carrierservicelevel]</linklabel>
+      <linkobject>[scriptid=customrecord_wmsse_carrier]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory31_compositebarcode]</linklabel>
+      <linkobject>[scriptid=customscript_wmsse_barcodetemplates.customdeploy_wmsse_barcodetemplates]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Composite Bar Code Component Mapping</linklabel>
+      <linkobject>[scriptid=customrecord_barcode_componentmapping]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory31_migratescript]</linklabel>
+      <linkobject>[scriptid=customscript_wms_migration_script.customdeploy_wms_migration_script]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_configurewarehouse_syncsysrules]</linklabel>
+      <linkobject>[scriptid=customscript_wms_systemrules_sync_tran.customdeploy_wms_systemrules_sync_tran]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

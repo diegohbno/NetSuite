@@ -1,0 +1,17 @@
+<centercategory scriptid="custcentercategory48">
+  <center>[scriptid=custcenter1]</center>
+  <centertab>[scriptid=custcentertab14]</centertab>
+  <label>Mail Merge</label>
+  <links>
+    <link>
+      <linkid>EDIT_MAILMERGE</linkid>
+      <linklabel></linklabel>
+      <shortlist>T</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_MAILMERGE</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

@@ -1,0 +1,22 @@
+<restlet scriptid="customscript_hbno_pipe17_item_inv_export">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>HBNO Pipe17 Item Inventory Export</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/pipe17_item_inventory_export_restlet.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_hbno_pipe17_item_inv_export">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>T</allroles>
+      <audslctrole>[scriptid=customrole1762]|[scriptid=customrole1763]|CUSTOMER_CENTER|EMPLOYEE_CENTER|[scriptid=customrole2007]|NETSUITE_SUPPORT_CENTER|NETSUITE_SUPPORT_CENTER__BASIC|ONLINE_FORM_USER|PARTNER_CENTER|VENDOR_CENTER</audslctrole>
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <status>RELEASED</status>
+      <title>HBNO Pipe17 Item Inventory Export</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</restlet>

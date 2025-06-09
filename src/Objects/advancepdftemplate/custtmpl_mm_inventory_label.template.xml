@@ -1,0 +1,72 @@
+<?xml version="1.0"?><!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdfset>
+    <pdf>
+        <body padding="0.5in 0.5in 0.5in 0.5in" size="Letter">
+            <table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
+                <tr>
+                    <td>
+                        <table border="0" cellpadding="1" cellspacing="1" style="width:400px;">
+                            <tr>
+                                <td>Item:</td>
+                                <td>${record.custrecord_mfgmob_print_assemblyitem}</td>
+                            </tr>
+                            <tr>
+                                <td>Manufactured Date:</td>
+                                <td>${record.custrecord_mfgmob_print_manufactureddate}</td>
+                            </tr>
+                            <#if record.custrecord_mfgmob_print_quantity?length!=0>
+                                <#if !record.custrecord_mfgmob_print_bulkprinting>
+                                    <tr>
+                                        <td>Quantity:</td>
+                                        <td>${record.custrecord_mfgmob_print_quantity}</td>
+                                    </tr>
+                                </#if>
+                            </#if>
+                            <#if record.custrecord_mfgmob_print_units?length!=0>
+                                <tr>
+                                    <td>Units:</td>
+                                    <td>${record.custrecord_mfgmob_print_units}</td>
+                                </tr>
+                            </#if>
+                            <#if record.custrecord_mfgmob_print_userfield1?length!=0>
+                                <tr>
+                                    <td>userField1:</td>
+                                    <td>${record.custrecord_mfgmob_print_userfield1}</td>
+                                </tr>
+                            </#if>
+                            <#if record.custrecord_mfgmob_print_userfield2?length!=0>
+                                <tr>
+                                    <td>userField2:</td>
+                                    <td>${record.custrecord_mfgmob_print_userfield2}</td>
+                                </tr>
+                            </#if>
+                            <#if record.custrecord_mfgmob_print_customer?length!=0>
+                                <tr>
+                                    <td>Customer:</td>
+                                    <td>${record.custrecord_mfgmob_print_customer}</td>
+                                </tr>
+                            </#if>
+                            <#if record.custrecord_mfgmob_print_salesorder?length!=0>
+                                <tr>
+                                    <td>Sales Order:</td>
+                                    <td>${record.custrecord_mfgmob_print_salesorder}</td>
+                                </tr>
+                            </#if>
+                        </table>
+                    </td>
+                    <#if record.custrecord_mfgmob_print_barcode?length!=0>
+                        <td>
+                            <barcode codetype="datamatrix" showtext="false" height="80" width="80"
+                                     value="${record.custrecord_mfgmob_print_barcode}"/>
+                        </td>
+                    <#else>
+                        <td>
+                            <barcode codetype="datamatrix" showtext="false" height="80" width="80"
+                                     value="${record.custrecord_mfgmob_print_assemblyitem}"/>
+                        </td>
+                    </#if>
+                </tr>
+            </table>
+        </body>
+    </pdf>
+</pdfset>

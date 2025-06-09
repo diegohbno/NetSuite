@@ -1,0 +1,9 @@
+<advancedpdftemplate scriptid="custtmpl_710_5221064_104" standard="STDTMPLCASHSALE">
+  <description></description>
+  <displaysourcecode>F</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>F</preferred>
+  <printtype>TRANSACTION</printtype>
+  <title>Custom Cash Sale PDF/HTML Template</title>
+  <trantype>CASHSALE</trantype>
+</advancedpdftemplate>

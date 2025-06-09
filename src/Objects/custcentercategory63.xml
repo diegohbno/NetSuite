@@ -1,0 +1,38 @@
+<centercategory scriptid="custcentercategory63">
+  <center>[scriptid=custcenter1]</center>
+  <centertab>[scriptid=custcentertab21]</centertab>
+  <label>Tools</label>
+  <links>
+    <link>
+      <linkid>LIST_LEAD</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_PROSPECT</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>ADMI_IMPORTCSV</linkid>
+      <linklabel>Import Assistant</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>ADMI_SAVEDIMPORTS</linkid>
+      <linklabel>View Saved Imports</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=custlink_4_5221064_824]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_SALESCAMPAIGN</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

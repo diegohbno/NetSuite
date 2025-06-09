@@ -1,0 +1,37 @@
+<centercategory scriptid="custcentercategory_wms_priting">
+  <center>[scriptid=custcenter_wmsse_wms]</center>
+  <centertab>[scriptid=custcentertab_wmsse_wmsconfig]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wms_priting]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wms_priting_printreports]</linklabel>
+      <linkobject>[scriptid=customscript_wms_mobile_printingmenu.customdeploy_wms_mobile_printingmenu]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wms_priting_printers]</linklabel>
+      <linkobject>[scriptid=customscript_wms_mobile_printers.customdeploy_wms_mobile_printers]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wms_priting_templates]</linklabel>
+      <linkobject>[scriptid=customscript_wms_mobile_printtemplates.customdeploy_wms_mobile_printtemplates]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wms_priting_audits]</linklabel>
+      <linkobject>[scriptid=customscript_wms_mobile_printaudits.customdeploy_wms_mobile_printaudits]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wms_priting_printapi]</linklabel>
+      <linkobject>[scriptid=customscript_wms_mobile_printapikeys.customdeploy_wms_mobile_printapikeys]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

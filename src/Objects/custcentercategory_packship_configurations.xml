@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory_packship_configurations">
+  <center>[scriptid=custcenter_packship]</center>
+  <centertab>[scriptid=custcentertab_packship_setup]</centertab>
+  <label translate="T">[scriptid=custcollection_packship_roles.packship_company_center_tab]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_packship_roles.packship_site_center_category_link]</linklabel>
+      <linkobject>[scriptid=customscript_packship_mobileapplication.customdeploy_packship_mobileapplication]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_packship_roles.packship_import_process_link]</linklabel>
+      <linkobject>[scriptid=customscript_packship_mobile_import.customdeploy_packship_mobile_import]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

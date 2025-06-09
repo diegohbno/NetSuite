@@ -1,0 +1,49 @@
+<centercategory scriptid="custcentercategory_1242_5221064_547">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab31]</centertab>
+  <label>Shipping</label>
+  <links>
+    <link>
+      <linklabel>Order&apos;s in OGQC</linklabel>
+      <linkobject>[scriptid=customsearch3423]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Order&apos;s Approved by OGQC</linklabel>
+      <linkobject>[scriptid=customsearch3361]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Shipping Labels Requestd</linklabel>
+      <linkobject>[scriptid=customsearch3834]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Shipping Labels to be printed</linklabel>
+      <linkobject>[scriptid=customsearch4722]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Order to be Labeled</linklabel>
+      <linkobject>[scriptid=customsearch3422]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Orders Pending Shipping QC</linklabel>
+      <linkobject>[scriptid=customsearch3836]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Orders Approved for Shipping</linklabel>
+      <linkobject>[scriptid=customsearch3837]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

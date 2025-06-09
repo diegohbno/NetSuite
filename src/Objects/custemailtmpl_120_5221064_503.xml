@@ -1,0 +1,12 @@
+<emailtemplate scriptid="custemailtmpl_120_5221064_503">
+  <addcompanyaddress>T</addcompanyaddress>
+  <addunsubscribelink>T</addunsubscribelink>
+  <description>Drop Shipping email Template</description>
+  <isinactive>F</isinactive>
+  <isprivate>F</isprivate>
+  <mediaitem></mediaitem>
+  <name>Drop shipping inquiry Template Reply</name>
+  <recordtype>TRANSACTION</recordtype>
+  <subject>Thank you for your inquiry</subject>
+  <usesmedia>F</usesmedia>
+</emailtemplate>

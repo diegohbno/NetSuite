@@ -1,0 +1,22 @@
+<centercategory scriptid="custcentercategory_115_4971052_997">
+  <center>ACCOUNTCENTER</center>
+  <centertab>[scriptid=custcentertab_atlas_standard_cost_tab]</centertab>
+  <label>Bill of Materials</label>
+  <links>
+    <link>
+      <linkid>LIST_ITEM</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>TRAN_COSTEDBOMINQUIRY</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>TRAN_BILLOFMATERIALSINQUIRY</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

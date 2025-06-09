@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory_9997_acctg_file_generation">
+  <center>ACCOUNTCENTER</center>
+  <centertab>[scriptid=custcentertab_ebp_payments_acct]</centertab>
+  <label translate="T">[scriptid=custcollection_electronic_payments_objects_translations.label_custcentercategory_9997_acctg_file_generation]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_electronic_payments_objects_translations.linklabel_custcentercategory_9997_acctg_file_generation_ge_1]</linklabel>
+      <linkobject>[scriptid=customscript_9997_eft_file_generation.customdeploy_9997_eft_file_generation]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_electronic_payments_objects_translations.linklabel_custcentercategory_9997_acctg_file_generation_ge_2]</linklabel>
+      <linkobject>[scriptid=customscript_9997_eft_file_generation.customdeploy_9997_dd_file_generation]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

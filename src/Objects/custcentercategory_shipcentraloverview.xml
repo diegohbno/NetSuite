@@ -1,0 +1,12 @@
+<centercategory scriptid="custcentercategory_shipcentraloverview">
+  <center>[scriptid=custcenter_shipcentral]</center>
+  <centertab>[scriptid=custcentertab_shipcentralsetup]</centertab>
+  <label translate="T">[scriptid=custcollection_packship_roles.ship_central_overview]</label>
+  <links>
+    <link>
+      <linkid>LIST_KPIREPORT</linkid>
+      <linklabel>KPI, Reminders</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

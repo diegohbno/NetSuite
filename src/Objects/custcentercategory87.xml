@@ -1,0 +1,25 @@
+<centercategory scriptid="custcentercategory87">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab30]</centertab>
+  <label>MRP Planning</label>
+  <links>
+    <link>
+      <linklabel>MRP Inventory Consumption</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_total_assy_mnth_rpt_5]</linkobject>
+      <linktasktype>SRCH_FORM</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>MRP Assembly Usage Consumption Report</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_total_assy_mnth_rpt_4]</linkobject>
+      <linktasktype>SRCH_FORM</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>MRP Report</linklabel>
+      <linkobject>[scriptid=customsearch3678]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

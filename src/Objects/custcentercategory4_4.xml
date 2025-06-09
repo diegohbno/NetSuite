@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory4_4">
+  <center>BASIC</center>
+  <centertab>BASICCENTERLISTS</centertab>
+  <label>Productivity</label>
+  <links>
+    <link>
+      <linklabel>StickyNotes Board</linklabel>
+      <linkobject>[scriptid=customscript_stick_board_frontend_sl.customdeploy_stick_board_frontend_sl]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

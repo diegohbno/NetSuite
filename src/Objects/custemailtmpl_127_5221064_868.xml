@@ -1,0 +1,12 @@
+<emailtemplate scriptid="custemailtmpl_127_5221064_868">
+  <addcompanyaddress>T</addcompanyaddress>
+  <addunsubscribelink>T</addunsubscribelink>
+  <description></description>
+  <isinactive>F</isinactive>
+  <isprivate>F</isprivate>
+  <mediaitem></mediaitem>
+  <name>Private Label Questions</name>
+  <recordtype></recordtype>
+  <subject></subject>
+  <usesmedia>F</usesmedia>
+</emailtemplate>

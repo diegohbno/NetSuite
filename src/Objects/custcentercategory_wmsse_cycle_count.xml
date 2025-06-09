@@ -1,0 +1,35 @@
+<centercategory scriptid="custcentercategory_wmsse_cycle_count">
+  <center>[scriptid=custcenter_wmsse_warehouse]</center>
+  <centertab>[scriptid=custcentertab_wmsse_inventory]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_cycle_count]</label>
+  <links>
+    <link>
+      <linkid>TRAN_CREATE_INVCOUNT</linkid>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_cycle_count_createcycc]</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>EDIT_TRAN_INVCOUNT</linkid>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_cycle_count_entercycc]</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Cycle Count Plan</linklabel>
+      <linkobject>[scriptid=customrecord_wmsse_cyclecount_plan]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_cycle_count_createplan]</linklabel>
+      <linkobject>[scriptid=customrecord_wms_cyclecount_plans]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_cycle_count_gencyccplan]</linklabel>
+      <linkobject>[scriptid=customscript_wms_cc_planandrelease.customdeploy_wms_cc_planandrelease]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

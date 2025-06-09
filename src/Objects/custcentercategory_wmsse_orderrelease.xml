@@ -1,0 +1,5 @@
+<centercategory scriptid="custcentercategory_wmsse_orderrelease">
+  <center>[scriptid=custcenter_wmsse_wms]</center>
+  <centertab>[scriptid=custcentertab_wmsse_wmsoutbound]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_orderrelease]</label>
+</centercategory>

@@ -1,0 +1,12 @@
+<centercategory scriptid="custcentercategory13">
+  <center>[scriptid=custcenter1]</center>
+  <centertab>[scriptid=custcentertab8]</centertab>
+  <label>Saved Searches</label>
+  <links>
+    <link>
+      <linkid>SRCH_SAVEDSEARCH</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

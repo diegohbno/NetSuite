@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory_setup_navigationportlet">
+  <center>BASIC</center>
+  <centertab>BASICCENTERSETUP</centertab>
+  <label translate="T">[scriptid=custcollection_nav_portlet_translation.label_navigation_portlet]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_nav_portlet_translation.linklabel_manage_shortcut_group]</linklabel>
+      <linkobject>[scriptid=customrecord_nav_shortcutgroup]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_nav_portlet_translation.linklabel_roles_update]</linklabel>
+      <linkobject>[scriptid=customscript_nav_su_rolemassupdate.customdeploy_nav_su_rolemassupdate_admin]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

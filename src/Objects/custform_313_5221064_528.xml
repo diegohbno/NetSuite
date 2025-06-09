@@ -1,0 +1,38 @@
+<transactionForm scriptid="custform_313_5221064_528" standard="STANDARDPACKINGSLIP">
+  <name>Bulk Cart - Packing Slip</name>
+  <recordType>INVOICE</recordType>
+  <inactive>F</inactive>
+  <preferred>F</preferred>
+  <mainFields>
+    <defaultFieldGroup/>
+  </mainFields>
+  <tabs>
+    <tab>
+      <id>TRANSACTIONSHIPPING</id>
+      <label>Shipping</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup/>
+      </fieldGroups>
+      <subItems/>
+    </tab>
+    <tab>
+      <id>TRANSACTIONPAYMENT</id>
+      <label>Payment</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup/>
+      </fieldGroups>
+      <subItems/>
+    </tab>
+  </tabs>
+  <disclaimer/>
+  <address/>
+  <emailMessageTemplate>USE_DEFAULT</emailMessageTemplate>
+  <printingType>
+    <basic>
+      <pdfLayout>CLASSICPACKINGSLIPLAYOUT</pdfLayout>
+      <htmlLayout>CLASSICHTMLPACKINGSLIPLAYOUT</htmlLayout>
+    </basic>
+  </printingType>
+</transactionForm>

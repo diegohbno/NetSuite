@@ -1,0 +1,23 @@
+<centercategory scriptid="custcentercategory60">
+  <center>[scriptid=custcenter1]</center>
+  <centertab>[scriptid=custcentertab19]</centertab>
+  <label>Tools</label>
+  <links>
+    <link>
+      <linkid>LIST_TRAN_SALESORD</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>TRAN_SALESORDAPPRV</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=custlink_9_5221064_934]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

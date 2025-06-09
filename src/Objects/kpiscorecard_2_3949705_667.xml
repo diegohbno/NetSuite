@@ -1,0 +1,75 @@
+<kpiscorecard scriptid="kpiscorecard_2_3949705_667">
+  <description></description>
+  <name>Vendor Performance</name>
+  <useperiods>F</useperiods>
+  <custom>
+    <kpi1>[scriptid=customsearch_ap_kpisc_total_po]</kpi1>
+    <kpi10></kpi10>
+    <kpi2>[scriptid=customsearch_ap_kpisc_late_po]</kpi2>
+    <kpi3></kpi3>
+    <kpi4></kpi4>
+    <kpi5></kpi5>
+    <kpi6></kpi6>
+    <kpi7></kpi7>
+    <kpi8></kpi8>
+    <kpi9></kpi9>
+  </custom>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>T</allroles>
+  </audience>
+  <kpis>
+    <kpi>
+      <comparevalueto></comparevalueto>
+      <comparewithprevious>F</comparewithprevious>
+      <comparisontype></comparisontype>
+      <hidden>F</hidden>
+      <invertcomparison>F</invertcomparison>
+      <kpi>CUSTOM</kpi>
+      <label>Total Purchase Orders</label>
+    </kpi>
+    <kpi>
+      <comparevalueto></comparevalueto>
+      <comparewithprevious>F</comparewithprevious>
+      <comparisontype></comparisontype>
+      <hidden>F</hidden>
+      <invertcomparison>F</invertcomparison>
+      <kpi>CUSTOM2</kpi>
+      <label>Late or Unreceived Orders by Vendor</label>
+    </kpi>
+    <kpi>
+      <formula>1 - ({CUSTOM2}/{CUSTOM})</formula>
+      <hidden>F</hidden>
+      <kpi>FORMULAPERCENT</kpi>
+      <label>On-Time Delivery Performance</label>
+      <lessismore>F</lessismore>
+    </kpi>
+  </kpis>
+  <ranges>
+    <range>
+      <comparevalueto></comparevalueto>
+      <comparewithprevious>F</comparewithprevious>
+      <comparisontype></comparisontype>
+      <invertcomparison>F</invertcomparison>
+      <label></label>
+      <range>THIS_MONTH</range>
+    </range>
+    <range>
+      <comparevalueto></comparevalueto>
+      <comparewithprevious>F</comparewithprevious>
+      <comparisontype></comparisontype>
+      <invertcomparison>F</invertcomparison>
+      <label></label>
+      <range>LAST_MONTH</range>
+    </range>
+    <range>
+      <comparevalueto></comparevalueto>
+      <comparewithprevious>T</comparewithprevious>
+      <comparisontype>VARIANCE_PERCENT</comparisontype>
+      <invertcomparison>F</invertcomparison>
+      <label>% Change</label>
+      <range>THIS_MONTH</range>
+    </range>
+  </ranges>
+</kpiscorecard>

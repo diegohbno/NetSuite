@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory30_2">
+  <center>[scriptid=custcenter_wmsse_warehouse]</center>
+  <centertab>[scriptid=custcentertab_wmsse_shipping]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory30]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory30_markopenpicksdone]</linklabel>
+      <linkobject>[scriptid=customscript_wms_gui_mrkcmp_partial_pick.customdeploy_wms_gui_mrkcmp_partial_pick]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory30_reversepicks]</linklabel>
+      <linkobject>[scriptid=customscript_wms_guipickreversal.customdeploy_wms_guipickreversal]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

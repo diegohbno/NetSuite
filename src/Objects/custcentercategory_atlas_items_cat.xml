@@ -1,0 +1,25 @@
+<centercategory scriptid="custcentercategory_atlas_items_cat">
+  <center>ACCOUNTCENTER</center>
+  <centertab>[scriptid=custcentertab_atlas_sales_audit]</centertab>
+  <label>Items</label>
+  <links>
+    <link>
+      <linklabel>Item Audit</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_sales_item_audit_rpt]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Item Description Audit</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_sales_item_change_rpt]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Item Price Change</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_item_price_change_rpt]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

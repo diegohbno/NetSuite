@@ -1,0 +1,264 @@
+<?xml version="1.0"?><!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdf>
+<head>
+	<link name="NotoSans" type="font" subtype="truetype" src="${nsfont.NotoSans_Regular}" src-bold="${nsfont.NotoSans_Bold}" src-italic="${nsfont.NotoSans_Italic}" src-bolditalic="${nsfont.NotoSans_BoldItalic}" bytes="2" />
+	<#if .locale == "zh_CN">
+		<link name="NotoSansCJKsc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKsc_Regular}" src-bold="${nsfont.NotoSansCJKsc_Bold}" bytes="2" />
+	<#elseif .locale == "zh_TW">
+		<link name="NotoSansCJKtc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKtc_Regular}" src-bold="${nsfont.NotoSansCJKtc_Bold}" bytes="2" />
+	<#elseif .locale == "ja_JP">
+		<link name="NotoSansCJKjp" type="font" subtype="opentype" src="${nsfont.NotoSansCJKjp_Regular}" src-bold="${nsfont.NotoSansCJKjp_Bold}" bytes="2" />
+	<#elseif .locale == "ko_KR">
+		<link name="NotoSansCJKkr" type="font" subtype="opentype" src="${nsfont.NotoSansCJKkr_Regular}" src-bold="${nsfont.NotoSansCJKkr_Bold}" bytes="2" />
+	<#elseif .locale == "th_TH">
+		<link name="NotoSansThai" type="font" subtype="opentype" src="${nsfont.NotoSansThai_Regular}" src-bold="${nsfont.NotoSansThai_Bold}" bytes="2" />
+	</#if>
+    <macrolist>
+        <macro id="nlheader">
+            
+<table class="header" style="width: 100%;"><tr>
+<td rowspan="3" style="padding: 0;">
+       <#if record.subsidiary.id == '3'>
+         <#if subsidiary.logo@url?length != 0>
+                        <@filecabinet nstype="image" style="float: left; width: 200px; height: 75px; margin: 7px" src="${subsidiary.logo@url}" />${subsidiary.mainaddress_text}
+                    </#if>
+        <!-- <img src="http://5221064.shop.netsuite.com/core/media/media.nl?id=23157&amp;c=5221064&amp;h=HDVftoL8V7TuyB3918WSvFXlidzTh0_XjhmbtPZSZ5JsS_tG" style="float: left; width: 200px; height: 75px;" /> ${subsidiary.mainaddress_text} -->
+    <#elseif record.subsidiary.id == '2'>
+      <#if subsidiary.logo@url?length != 0>
+                        <@filecabinet nstype="image" style="float: left; width: 120px; height: 100px; margin: 7px" src="${subsidiary.logo@url}" />${subsidiary.mainaddress_text}
+                    </#if>
+        <!-- <img src="http://5221064.shop.netsuite.com/core/media/media.nl?id=6347&amp;c=5221064&amp;h=LY5CSL5aSF7dNRt5TuG2E8S7BmWGKqSUnti-3hIixLQbUJBA" style="float: left; width: 120px; height: 100px;" /><br /> ${subsidiary.mainaddress_text} -->
+    <#else>
+       <#if subsidiary.logo@url?length != 0>
+                        <@filecabinet nstype="image" style="float: left; width: 120px; height: 100px; margin: 7px" src="${subsidiary.logo@url}" />${subsidiary.mainaddress_text}
+                    </#if>
+        <!-- <img src="http://5221064.shop.netsuite.com/core/media/media.nl?id=6347&amp;c=5221064&amp;h=LY5CSL5aSF7dNRt5TuG2E8S7BmWGKqSUnti-3hIixLQbUJBA" style="float: left; width: 120px; height: 100px;" /><br /> ${subsidiary.mainaddress_text} -->
+    </#if>
+    </td>
+<td rowspan="3">
+<!-- <div style="text-align: center;"><span class="nameandaddress"><span id="cke_bm_977S" style="display: none;">&nbsp;</span><span class="nameandaddress">${companyInformation.companyName}</span></span></div> -->
+<!-- <div style="text-align: center;"><span class="nameandaddress"><span class="nameandaddress">${companyInformation.addressText}</span></span></div> -->
+</td>
+<td style="text-align: right;">
+<pre><span style="font-size: 8px;"><span class="title">${record@title}</span></span></pre>
+</td>
+</tr>
+<tr>
+<td align="right"><span class="number">#${record.tranid}</span></td>
+</tr>
+<tr>
+<td align="right">${record.trandate}</td>
+</tr></table>
+
+        </macro>
+    </macrolist>
+    <style type="text/css">* {
+		<#if .locale == "zh_CN">
+			font-family: NotoSans, NotoSansCJKsc, sans-serif;
+		<#elseif .locale == "zh_TW">
+			font-family: NotoSans, NotoSansCJKtc, sans-serif;
+		<#elseif .locale == "ja_JP">
+			font-family: NotoSans, NotoSansCJKjp, sans-serif;
+		<#elseif .locale == "ko_KR">
+			font-family: NotoSans, NotoSansCJKkr, sans-serif;
+		<#elseif .locale == "th_TH">
+			font-family: NotoSans, NotoSansThai, sans-serif;
+		<#else>
+			font-family: NotoSans, sans-serif;
+		</#if>
+		}
+		table {
+			font-size: 9pt;
+			table-layout: fixed;
+		}
+        th {
+            font-weight: bold;
+            font-size: 8pt;
+            vertical-align: middle;
+            padding: 5px 6px 3px;
+            background-color: #e3e3e3;
+            color: #333333;
+        }
+        td {
+            padding: 4px 6px;
+        }
+		td p { align:left }
+        b {
+            font-weight: bold;
+            color: #333333;
+        }
+        table.header td {
+            padding: 0;
+            font-size: 10pt;
+        }
+        table.footer td {
+            padding: 0;
+            font-size: 8pt;
+        }
+        table.itemtable th {
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+        table.body td {
+            padding-top: 2px;
+        }
+        table.total {
+            page-break-inside: avoid;
+        }
+        tr.totalrow {
+            background-color: #e3e3e3;
+            line-height: 200%;
+        }
+        td.totalboxtop {
+            font-size: 12pt;
+            background-color: #e3e3e3;
+        }
+        td.addressheader {
+            font-size: 8pt;
+            padding-top: 6px;
+            padding-bottom: 2px;
+        }
+        td.address {
+            padding-top: 0;
+        }
+        td.totalboxmid {
+            font-size: 28pt;
+            padding-top: 20px;
+            background-color: #e3e3e3;
+        }
+        td.totalboxbot {
+            background-color: #e3e3e3;
+            font-weight: bold;
+        }
+        span.title {
+            font-size: 28pt;
+        }
+        span.number {
+            font-size: 16pt;
+        }
+        span.itemname {
+            font-weight: bold;
+            line-height: 150%;
+        }
+        hr {
+            width: 100%;
+            color: #d3d3d3;
+            background-color: #d3d3d3;
+            height: 1px;
+        }
+</style>
+</head>
+<body header="nlheader" header-height="10%" padding=".5in .5in 1.5in 0.5in" size="Letter">
+    <table style="width: 1606px;"><tr>
+<td class="addressheader" style="width: 257px;" colspan="6"><strong>${record.billaddress@label}</strong></td>
+<td class="addressheader" style="width: 665px;"><strong>Ship To</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td class="address" style="width: 257px;" colspan="6" rowspan="2">${record.billaddress}</td>
+<td class="address" style="width: 665px;" rowspan="2">${record.shipaddress}</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td class="totalboxbot" style="width: 433px;" colspan="5" align="right">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="6"><strong>&nbsp;</strong></td>
+<td style="width: 665px;"><strong>&nbsp;</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td class="address" style="width: 257px;" colspan="6"><strong>Terms</strong></td>
+<td class="address" style="width: 665px;"><strong>Freight Billing</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td colspan="6">${record.terms}</td>
+<td style="width: 665px;">${record.custbody69}</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td class="address" style="width: 257px;" colspan="6">All invoices must be emailed to <strong>ap@hbno.com</strong>, along with the current <strong>twelve-month transaction history</strong> for timely processing of payment.</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr></table>
+<br /><#if record.item?has_content>
+<table class="itemtable" style="width: 100%;"><!-- start items --><#list record.item as item><#if item_index==0>
+<thead>
+<tr>
+<th colspan="3" align="center">${item.quantity@label}</th>
+<th colspan="2">${item.units@label}</th>
+<th colspan="11">${item.item@label}</th>
+<th colspan="4">${item.custcolpopsslotnumber@label}</th>
+<th colspan="4">${item.custcol26@label}</th>
+<th colspan="4" align="right">${item.rate@label}</th>
+<th colspan="4" align="right">${item.amount@label}</th>
+</tr>
+</thead>
+</#if><tr>
+<td colspan="3" align="center">${item.quantity}</td>
+<td colspan="2">${item.units}</td>
+<td colspan="11"><span class="itemname">${item.item}</span><br />${item.description}</td>
+<td colspan="5">${item.custcolpopsslotnumber}</td>
+<td colspan="4">${item.custcol26}</td>
+<td colspan="4" align="right">${item.rate}</td>
+<td colspan="4" align="right">${item.amount}</td>
+</tr>
+</#list><!-- end items --></table>
+</#if><#if record.expense?has_content>
+<table class="itemtable" style="width: 100%;"><!-- start expenses --><#list record.expense as expense ><#if expense_index==0>
+<thead>
+<tr>
+<th colspan="12">${expense.category@label}</th>
+<th colspan="10">${expense.account@label}</th>
+<th colspan="4" align="right">${expense.amount@label}</th>
+</tr>
+</thead>
+</#if><tr>
+<td colspan="12">${expense.category}</td>
+<td colspan="10"><span class="itemname">${expense.account}</span></td>
+<td colspan="4" align="right">${expense.amount}</td>
+</tr>
+</#list><!-- end expenses --></table>
+</#if><hr />
+<table class="total" style="width: 100%;"><tr class="totalrow">
+<td colspan="4">&nbsp;</td>
+<td align="right">Freight<br />Misc<br />Sales Tax<br />CC Fee<br /><strong>${record.total@label}</strong></td>
+<td align="right">${record.custbody_srp_3pl_con_freight}<br />${record.custbody80}<br />${record.custbody341}<br />${record.custbody342}<br />${record.custbody54}</td>
+</tr></table>
+<table dir="ltr" style="border-collapse: collapse;" border="1" cellspacing="0" cellpadding="5" align="left"><caption>notes</caption>
+<thead>
+<tr>
+<th style="width: 358px;" scope="col">Additional Terms</th>
+<!-- <th style="width: 428px;" scope="col"><strong>Standard Terms and Conditions</strong></th> -->
+</tr>
+</thead><tr>
+<td style="width: 358px;">${record.custbodypoadditionalterms}</td>
+<!-- <td style="width: 428px;">The supplier affirms by fulfilling this order that it does not<br />conduct or commission animal testing of any cosmetics<br />and/or household products,<br /><br />including without limitation, ingredients or formulations<br />of such products, supplied to<br /><br />IL Health &amp;Beauty Natural Oils Co, Inc after 4/6/2020.<br /><br />Please send COA, SDS and spec sheet to QC@hbno.com<br /><br /><span style="color: #e74c3c;">please note it needs to be sent in metal drums and drums<br />need to be up to the standards below, *IF NOT PACKAGED<br />CORRECTLY,&nbsp;HBNO WILL HAVE THE RIGHT TO DEDUCT $180<br />per 180 k/g TO COVER THE COST OF THE PACKING CHANGE<br />REQUIRED ON OUR END*.<br /><br />THE TARE WEIGHT FOR EACH DRUM MUST ALSO BE<br />CLEARLY NOTED ON ALL DRUM LABELS AND PAPERWORK.</span><br /><br /><span style="color: #8e44ad;">THE TOTAL NUMBER OF DRUMS MUST ALSO BE LISTED<br />ON DRUMS AND PAPERWORK. </span><br /><br />1A1: Head type, Closed head with no removable top.<br />&nbsp; &nbsp; &nbsp; &nbsp;- This will always be 1A1<br /><br />X - Packing Groups I, II, III - This is fine.<br />&nbsp; &nbsp; -&nbsp;We only handle PG III.<br /><br />Y - Packing Groups II and III. This is also fine.<br /><br />1.2 - Specific Gravity - This is our minimum, can be higher.<br /><br />100 - Hydraulic Pressure - This is our minimum, can be higher.<br /><br />(OK if the Pack Group is X or Y, but never Z.)<br /><br />Ok if the last two numbers are higher, i.e. Y1.5/150, but cannot be lower.)</td> -->
+</tr></table>
+<div style="text-align: center;">${record.custbody53}</div>
+</body>
+</pdf>

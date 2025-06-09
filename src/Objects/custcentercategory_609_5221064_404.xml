@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory_609_5221064_404">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab26]</centertab>
+  <label>Transfer</label>
+  <links>
+    <link>
+      <linklabel>Account Transfers</linklabel>
+      <linkobject>[scriptid=customscript_jpmc_transfer_s.customdeploy_jpmc_transfer_s]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>History</linklabel>
+      <linkobject>[scriptid=customscript_jpmc_transfer_history_s.customdeploy_jpmc_transfer_history_s]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

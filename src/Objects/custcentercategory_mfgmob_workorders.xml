@@ -1,0 +1,12 @@
+<centercategory scriptid="custcentercategory_mfgmob_workorders">
+  <center>[scriptid=custcenter_mfgmob_manufacturingmobile]</center>
+  <centertab>[scriptid=custcentertab_mfgmob_manufacturingtransactions]</centertab>
+  <label translate="T">[scriptid=custcollection_mfgmob_centersandtabs.manufacturing_key]</label>
+  <links>
+    <link>
+      <linkid>EDIT_TRAN_WORKORD</linkid>
+      <linklabel translate="T">[scriptid=custcollection_mfgmob_centersandtabs.enterworkorders_key]</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

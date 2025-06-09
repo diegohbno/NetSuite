@@ -1,0 +1,37 @@
+<centercategory scriptid="custcentercategory__printsetup">
+  <center>[scriptid=custcenter_shipcentral]</center>
+  <centertab>[scriptid=custcentertab_shipcentralsetup]</centertab>
+  <label translate="T">[scriptid=custcollection_packship_roles.packship_setup_category]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_packship_roles.audit_logs_label]</linklabel>
+      <linkobject>[scriptid=customscript_packship_sl_print_audit.customdeploy_packship_sl_print_audit]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_packship_roles.print_api_key_entry]</linklabel>
+      <linkobject>[scriptid=customscript_packship_sl_print_api_key.customdeploy_packship_sl_print_api_key]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_packship_roles.packship_printers_link]</linklabel>
+      <linkobject>[scriptid=customscript_packship_sl_printers.customdeploy_packship_sl_printers]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_packship_roles.packship_templates_link]</linklabel>
+      <linkobject>[scriptid=customscript_packship_sl_templates.customdeploy_packship_sl_templates]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_packship_roles.packship_reports_link]</linklabel>
+      <linkobject>[scriptid=customscript_packship_printmenu.customdeploy_packship_printmenu]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

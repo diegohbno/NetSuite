@@ -1,0 +1,9 @@
+<advancedpdftemplate scriptid="custtmpl_737_5221064_751" standard="STDTMPLQUOTE">
+  <description></description>
+  <displaysourcecode>T</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>T</preferred>
+  <printtype>TRANSACTION</printtype>
+  <title>Custom Quote PDF/HTML Template</title>
+  <trantype>ESTIMATE</trantype>
+</advancedpdftemplate>

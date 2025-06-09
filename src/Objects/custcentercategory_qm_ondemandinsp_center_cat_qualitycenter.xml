@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_qm_ondemandinsp_center_cat_qualitycenter">
+  <center>[scriptid=custcenter_qm_center]</center>
+  <centertab>[scriptid=custcentertab_qm_qualitymgmt_new_center_tab]</centertab>
+  <label translate="T">[scriptid=custcollection_qm_translation.custcentercategory_qm_center_cat_ondemandinsp_label]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_qm_translation.custcentercategory_qm_center_cat_ondemandinsp_adhoc]</linklabel>
+      <linkobject>[scriptid=customrecord_qm_adhoc_queue_creation]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

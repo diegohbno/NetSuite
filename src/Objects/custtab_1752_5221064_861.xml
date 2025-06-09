@@ -1,0 +1,5 @@
+<subtab scriptid="custtab_1752_5221064_861">
+  <parent>[scriptid=custtab_qm_transactionqualitytab]</parent>
+  <tabtype>TRANSACTION</tabtype>
+  <title>Trial Log</title>
+</subtab>

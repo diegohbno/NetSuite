@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory_packship_shipenginesetup">
+  <center>[scriptid=custcenter_packship]</center>
+  <centertab>[scriptid=custcentertab_packship_setup]</centertab>
+  <label translate="T">[scriptid=custcollection_packship_roles.packship_shipcentral_category]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_packship_roles.manage_integration_carrier_label]</linklabel>
+      <linkobject>[scriptid=customscript_packship_sl_cust_api_key.customdeploy_packship_sl_cust_api_key]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Shipping Cost Distribution</linklabel>
+      <linkobject>[scriptid=customrecord_packship_shipping_cost_dist]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory102">
+  <center>BASIC</center>
+  <centertab>BASICCENTERSETUP</centertab>
+  <label>Injury Report Form</label>
+  <links>
+    <link>
+      <linklabel>New</linklabel>
+      <linkobject>[scriptid=customrecord5352]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

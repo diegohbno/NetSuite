@@ -1,0 +1,20 @@
+<?xml version="1.0"?><!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd"><pdfset>
+<pdf>
+<body padding="0.5in 0.5in 0.5in 0.5in" size="Letter">
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
+<tr>
+<td>
+<table border="0" cellpadding="1" cellspacing="1" style="width:400px;">
+<tr>
+<td>CARTON ID # ${record.custrecord_wms_cartonname}</td>
+</tr>
+<tr><td>ORDER # ${record.custrecord_wms_notes}</td></tr>
+</table>
+</td>
+<td>
+<barcode codetype="datamatrix" showtext="false" height="80" width="80" 
+value="${record.custrecord_wms_cartonname}"/>
+</td>
+</tr></table>
+</body>
+</pdf></pdfset>

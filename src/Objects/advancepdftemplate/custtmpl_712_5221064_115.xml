@@ -1,0 +1,9 @@
+<advancedpdftemplate scriptid="custtmpl_712_5221064_115" standard="STDTMPLSALESORD">
+  <description></description>
+  <displaysourcecode>F</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>F</preferred>
+  <printtype>TRANSACTION</printtype>
+  <title>Custom Sales Order PDF/HTML Template</title>
+  <trantype>SALESORD</trantype>
+</advancedpdftemplate>

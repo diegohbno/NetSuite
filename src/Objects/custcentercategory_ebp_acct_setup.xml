@@ -1,0 +1,43 @@
+<centercategory scriptid="custcentercategory_ebp_acct_setup">
+  <center>ACCOUNTCENTER</center>
+  <centertab>[scriptid=custcentertab_ebp_payments_acct]</centertab>
+  <label translate="T">[scriptid=custcollection_electronic_payments_objects_translations.label_custcentercategory_ebp_acct_setup]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_electronic_payments_objects_translations.linklabel_custcentercategory_ebp_acct_setup_bank_details]</linklabel>
+      <linkobject>[scriptid=customrecord_2663_bank_details]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_electronic_payments_objects_translations.linklabel_custcentercategory_ebp_acct_setup_zengin_bank_fee_]</linklabel>
+      <linkobject>[scriptid=customrecord_11724_bank_fee_sched]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_electronic_payments_objects_translations.linklabel_custcentercategory_ebp_acct_setup_payment_aggregat]</linklabel>
+      <linkobject>[scriptid=customrecord_2663_payment_aggregation]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_electronic_payments_objects_translations.linklabel_custcentercategory_ebp_acct_setup_payment_queue]</linklabel>
+      <linkobject>[scriptid=customsearch_ep_payment_queue]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_electronic_payments_objects_translations.linklabel_custcentercategory_ebp_acct_setup_payment_schedule]</linklabel>
+      <linkobject>[scriptid=customrecord_2663_payment_schedule]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_electronic_payments_objects_translations.linklabel_custcentercategory_ebp_acct_setup_payment_file_tem]</linklabel>
+      <linkobject>[scriptid=customsearch_12194_file_template_request]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

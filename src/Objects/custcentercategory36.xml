@@ -1,0 +1,12 @@
+<centercategory scriptid="custcentercategory36">
+  <center>[scriptid=custcenter1]</center>
+  <centertab>[scriptid=custcentertab9]</centertab>
+  <label>Other Setup</label>
+  <links>
+    <link>
+      <linkid>ADMI_OTHERSTUB</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

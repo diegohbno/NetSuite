@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_ebp_acct_cheques">
+  <center>ACCOUNTCENTER</center>
+  <centertab>[scriptid=custcentertab_ebp_payments_acct]</centertab>
+  <label translate="T">[scriptid=custcollection_electronic_payments_objects_translations.label_custcentercategory_ebp_acct_cheques]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_electronic_payments_objects_translations.linklabel_custcentercategory_ebp_acct_cheques_positive_pay]</linklabel>
+      <linkobject>[scriptid=customscript_15767_positive_pay_su.customdeploy_15767_positive_pay_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

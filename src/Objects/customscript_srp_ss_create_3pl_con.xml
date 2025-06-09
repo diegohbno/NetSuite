@@ -1,0 +1,24 @@
+<scheduledscript scriptid="customscript_srp_ss_create_3pl_con">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>SRP SS create receive 3pl consignment</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <scriptfile>[/SuiteScripts/SRP SS create receive 3pl consignment.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_srp_ss_create_3pl_con">
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <status>NOTSCHEDULED</status>
+      <title>SRP SS create receive 3pl consignment</title>
+      <recurrence>
+        <single>
+          <repeat></repeat>
+          <startdate>2024-09-21</startdate>
+          <starttime>01:00:00Z</starttime>
+        </single>
+      </recurrence>
+    </scriptdeployment>
+  </scriptdeployments>
+</scheduledscript>

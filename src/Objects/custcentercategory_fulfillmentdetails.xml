@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_fulfillmentdetails">
+  <center>[scriptid=custcenter_shipcentral]</center>
+  <centertab>[scriptid=custcentertab_shipcentraloutbound]</centertab>
+  <label translate="T">[scriptid=custcollection_packship_roles.fulfillment_details_label]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_packship_roles.fulfillment_details_list_label]</linklabel>
+      <linkobject>[scriptid=customscript_packship_sl_packing_list.customdeploy_packship_sl_packing_list]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

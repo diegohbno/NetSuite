@@ -1,0 +1,18 @@
+<centercategory scriptid="custcentercategory84">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab30]</centertab>
+  <label>SOR (Sample Order Reservation)</label>
+  <links>
+    <link>
+      <linkid>LIST_TRAN_PURCHREQ</linkid>
+      <linklabel>SORs</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=custlink_39_5221064_672]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

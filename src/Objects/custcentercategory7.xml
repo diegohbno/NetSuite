@@ -1,0 +1,17 @@
+<centercategory scriptid="custcentercategory7">
+  <center>[scriptid=custcenter1]</center>
+  <centertab>[scriptid=custcentertab8]</centertab>
+  <label>Scheduled Reports</label>
+  <links>
+    <link>
+      <linkid>LIST_REPORESULT</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_REPOSCHEDULE</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

@@ -1,0 +1,28 @@
+<centercategory scriptid="custcentercategory_shipcentralpacking">
+  <center>[scriptid=custcenter_shipcentral]</center>
+  <centertab>[scriptid=custcentertab_shipcentralsetup]</centertab>
+  <label translate="T">[scriptid=custcollection_packship_roles.packing_ship_records]</label>
+  <links>
+    <link>
+      <linkid>ADMI_NUMBERING</linkid>
+      <linklabel translate="T">[scriptid=custcollection_packship_roles.packship_auto_id_category_link]</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Packing Items</linklabel>
+      <linkobject>[scriptid=customrecord_packship_shipunittype]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_SHIPITEM</linkid>
+      <linklabel translate="T">[scriptid=custcollection_packship_roles.packship_shipping_items_link]</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_UNITSTYPE</linkid>
+      <linklabel translate="T">[scriptid=custcollection_packship_roles.packship_uom_link]</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

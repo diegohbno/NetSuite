@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_21_t1195985_952">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_nsps_implementationclassic]</centertab>
+  <label>Test Issues</label>
+  <links>
+    <link>
+      <linklabel>Test Issues</linklabel>
+      <linkobject>[scriptid=customrecord_ns_ts_test_issue]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

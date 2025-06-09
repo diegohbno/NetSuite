@@ -1,0 +1,38 @@
+<itemnumbercustomfield scriptid="custitemnumberlotbestbydate">
+  <accesslevel>2</accesslevel>
+  <appliestoallitems>T</appliestoallitems>
+  <appliestogiftcerts>F</appliestogiftcerts>
+  <appliestolots>T</appliestolots>
+  <appliestoserialized>F</appliestoserialized>
+  <applyformatting>F</applyformatting>
+  <checkspelling>F</checkspelling>
+  <defaultchecked>F</defaultchecked>
+  <defaultselection></defaultselection>
+  <defaultvalue>CASE WHEN {custitemnumberlotreevaluationdate4} &gt; {custitemnumberlotnumberlotreevaluationdate3} THEN {custitemnumberlotreevaluationdate4} WHEN {custitemnumberlotnumberlotreevaluationdate3} &gt; {custitemnumberlotnumberlotreevaluationdate2} THEN {custitemnumberlotnumberlotreevaluationdate3} WHEN {custitemnumberlotnumberlotreevaluationdate2} &gt; {custitemnumberlotreevaluationdate1} THEN {custitemnumberlotnumberlotreevaluationdate2} WHEN {custitemnumberlotreevaluationdate1} &gt; {expirationdate} THEN {custitemnumberlotreevaluationdate1} ELSE {expirationdate} END</defaultvalue>
+  <description>Best By Date</description>
+  <displayheight></displayheight>
+  <displaytype>NORMAL</displaytype>
+  <displaywidth></displaywidth>
+  <dynamicdefault></dynamicdefault>
+  <encryptatrest>F</encryptatrest>
+  <fieldtype>DATE</fieldtype>
+  <help></help>
+  <isformula>T</isformula>
+  <ismandatory>F</ismandatory>
+  <label>Best By Date</label>
+  <linktext></linktext>
+  <maxlength></maxlength>
+  <maxvalue></maxvalue>
+  <minvalue></minvalue>
+  <onparentdelete></onparentdelete>
+  <searchcomparefield></searchcomparefield>
+  <searchdefault></searchdefault>
+  <searchlevel>2</searchlevel>
+  <selectrecordtype></selectrecordtype>
+  <showhierarchy>F</showhierarchy>
+  <showinlist>T</showinlist>
+  <sourcefilterby></sourcefilterby>
+  <sourcefrom></sourcefrom>
+  <sourcelist></sourcelist>
+  <storevalue>F</storevalue>
+</itemnumbercustomfield>

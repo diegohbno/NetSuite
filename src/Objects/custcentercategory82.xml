@@ -1,0 +1,25 @@
+<centercategory scriptid="custcentercategory82">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab30]</centertab>
+  <label>Vendors</label>
+  <links>
+    <link>
+      <linklabel>New Vendor - Create</linklabel>
+      <linkobject>[scriptid=custlink_18_5221064_817]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Organic Supplier Status</linklabel>
+      <linkobject>[scriptid=customsearch3032]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=customsearch3702]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

@@ -1,0 +1,22 @@
+<restlet scriptid="customscript_jpmc_entity_void_r">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>J.P. Morgan Entity Void</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteBundles/Bundle 259045/com.fispan.jpmcpay/global/void_entities_restlet.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_jpmc_entity_void_r">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>T</allroles>
+      <audslctrole>[scriptid=customrole1762]|[scriptid=customrole1763]|CUSTOMER_CENTER|EMPLOYEE_CENTER|[scriptid=customrole2007]|NETSUITE_SUPPORT_CENTER|NETSUITE_SUPPORT_CENTER__BASIC|ONLINE_FORM_USER|PARTNER_CENTER|VENDOR_CENTER</audslctrole>
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <status>RELEASED</status>
+      <title>J.P. Morgan Entity Void</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</restlet>

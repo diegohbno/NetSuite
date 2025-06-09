@@ -1,0 +1,17 @@
+<centercategory scriptid="custcentercategory4">
+  <center>[scriptid=custcenter1]</center>
+  <centertab>[scriptid=custcentertab8]</centertab>
+  <label>Integration</label>
+  <links>
+    <link>
+      <linkid>REPO_41</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>REPO_42</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

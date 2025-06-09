@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_c9_reporting">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_cld9_tab]</centertab>
+  <label>Reporting</label>
+  <links>
+    <link>
+      <linklabel>Uninvoiced Time Report</linklabel>
+      <linkobject>[scriptid=customscript_c9_sl21_uninvoiced_time.customdeploy_c9_sl21_uninvoiced_time]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

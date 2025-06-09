@@ -1,0 +1,77 @@
+<centercategory scriptid="custcentercategory_mfgmob_setup_cc">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_mfg_mobile]</centertab>
+  <label translate="T">[scriptid=custcollection_mfgmob_centersandtabs.administrationsetup_key]</label>
+  <links>
+    <link>
+      <linkid>LIST_BIN</linkid>
+      <linklabel>Bins</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Work Centers</linklabel>
+      <linkobject>[scriptid=customsearch_mfgmob_workcenterslist]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_INVENTORYSTATUS</linkid>
+      <linklabel>Inventory Status</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Shifts</linklabel>
+      <linkobject>[scriptid=customrecord_mfgmob_shift]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Downtime Reason Codes</linklabel>
+      <linkobject>[scriptid=customrecord_mfgmob_pausereasoncodes]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Downtime Reason Details</linklabel>
+      <linkobject>[scriptid=customrecord_mfgmob_reasondetails]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Badge Ids</linklabel>
+      <linkobject>[scriptid=customrecord_mfgmob_badgeids]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Mfg Mobile - Badge Log Details</linklabel>
+      <linkobject>[scriptid=customrecord_mfgmob_badgelogdetails]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Mfg Mobile - Badge Status Summary</linklabel>
+      <linkobject>[scriptid=customrecord_mfgmob_badgestatussummary]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Mfg Mobile - Scrap Reason Codes</linklabel>
+      <linkobject>[scriptid=customrecord_mfgmob_scrapreasoncodes]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Mfg Mobile - Scrap Reason Details</linklabel>
+      <linkobject>[scriptid=customrecord_mfgmob_scrapreasondetails]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Item Print Preferences</linklabel>
+      <linkobject>[scriptid=customrecord_mfgmob_print_template]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

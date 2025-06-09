@@ -1,0 +1,22 @@
+<restlet scriptid="customscript_fispan_vbd_analytics_r">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>Entity Bank Details, Analytics Service</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteBundles/Bundle 323878/com.fispan.vbd/general/restlet-analytics.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_fispan_vbd_analytics_r">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>T</allroles>
+      <audslctrole>[scriptid=customrole1762]|[scriptid=customrole1763]|CUSTOMER_CENTER|EMPLOYEE_CENTER|[scriptid=customrole2007]|NETSUITE_SUPPORT_CENTER|NETSUITE_SUPPORT_CENTER__BASIC|ONLINE_FORM_USER|PARTNER_CENTER|VENDOR_CENTER</audslctrole>
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <status>RELEASED</status>
+      <title>Analytics Service</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</restlet>
