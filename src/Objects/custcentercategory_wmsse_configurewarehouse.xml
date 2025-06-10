@@ -1,0 +1,55 @@
+<centercategory scriptid="custcentercategory_wmsse_configurewarehouse">
+  <center>[scriptid=custcenter_wmsse_wms]</center>
+  <centertab>[scriptid=custcentertab_wmsse_wmsconfig]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_configurewarehouse]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_configurewarehouse_sysrules]</linklabel>
+      <linkobject>[scriptid=customrecord_wmsse_sysrules]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_configurewarehouse_service]</linklabel>
+      <linkobject>[scriptid=customrecord_wmsse_carrier]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_configurewarehouse_lbltemp]</linklabel>
+      <linkobject>[scriptid=customrecord_wmsse_label_template]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_configurewarehouse_compositebar]</linklabel>
+      <linkobject>[scriptid=customscript_wmsse_barcodetemplates.customdeploy_wmsse_barcodetemplates]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_configurewarehouse_syncsysrules]</linklabel>
+      <linkobject>[scriptid=customscript_wms_systemrules_sync_tran.customdeploy_wms_systemrules_sync_tran]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_configurewarehouse_blockingbins]</linklabel>
+      <linkobject>[scriptid=customscript_wms_reason_blocking_bin.customdeploy_wms_reason_blocking_bin]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_configurewarehouse_itemimage]</linklabel>
+      <linkobject>[scriptid=customscript_wms_sl_webstore_image.customdeploy_wms_sl_webstore_image]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>WMS Reason for Adjustment</linklabel>
+      <linkobject>[scriptid=customrecord_wms_reason_invenadjustment]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

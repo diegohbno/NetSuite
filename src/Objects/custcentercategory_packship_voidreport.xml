@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_packship_voidreport">
+  <center>[scriptid=custcenter_shipcentral]</center>
+  <centertab>[scriptid=custcentertab_shipcentralreports]</centertab>
+  <label translate="T">[scriptid=custcollection_packship_roles.ship_labels_center_label]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_packship_roles.voided_label_search_link]</linklabel>
+      <linkobject>[scriptid=customsearch_voidlabellist]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

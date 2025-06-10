@@ -1,0 +1,17 @@
+<centercategory scriptid="custcentercategory_105_4971052_570">
+  <center>SHIPPINGCENTER</center>
+  <centertab>[scriptid=custcentertab_atlas_mfg_em_mfg_tab]</centertab>
+  <label>Assemblies</label>
+  <links>
+    <link>
+      <linkid>EDIT_TRAN_BUILD</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>EDIT_TRAN_UNBUILD</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

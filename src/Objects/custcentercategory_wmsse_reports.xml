@@ -1,0 +1,12 @@
+<centercategory scriptid="custcentercategory_wmsse_reports">
+  <center>[scriptid=custcenter_wmsse_warehouse]</center>
+  <centertab>[scriptid=custcentertab_wmsse_receiving]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_reports]</label>
+  <links>
+    <link>
+      <linkid>REPO_278</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

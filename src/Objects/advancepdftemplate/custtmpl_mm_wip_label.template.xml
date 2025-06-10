@@ -1,0 +1,54 @@
+<?xml version="1.0"?><!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdfset>
+    <pdf>
+        <body padding="0.5in 0.5in 0.5in 0.5in" size="Letter">
+            <table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
+                <tr>
+                    <td>
+                        <table border="0" cellpadding="1" cellspacing="1" style="width:400px;">
+                            <tr>
+                                <td>Item:</td>
+                                <td>${record.custrecord_mfgmob_print_assemblyitem}</td>
+                            </tr>
+                            <tr>
+                                <td>${record.custrecord_mfgmob_print_workorder}</td>
+                            </tr>
+                            <#if record.custrecord_mfgmob_print_operationseq?length!=0>
+                                <tr>
+                                    <td>From Operation:</td>
+                                    <td>${record.custrecord_mfgmob_print_operationseq} - ${record.custrecord_mfgmob_print_operationname}</td>
+                                </tr>
+                            </#if>
+                            <#if record.custrecord_mfgmob_print_quantity?length!=0>
+                                <#if !record.custrecord_mfgmob_print_bulkprinting>
+                                    <tr>
+                                        <td>Quantity:</td>
+                                        <td>${record.custrecord_mfgmob_print_quantity}</td>
+                                    </tr>
+                                </#if>
+                            </#if>
+                            <#if record.custrecord_mfgmob_print_nextoperation?length!=0>
+                                <tr>
+                                    <td>Next Operation:</td>
+                                    <td>${record.custrecord_mfgmob_print_nextoperation} - ${record.custrecord_mfgmob_print_nextopname}</td>
+                                </tr>
+                            </#if>
+                            <#if record.custrecord_mfgmob_print_datetimestart?length!=0>
+                                <tr>
+                                    <td>Start Date:</td>
+                                    <td>${record.custrecord_mfgmob_print_datetimestart}</td>
+                                </tr>
+                            </#if>
+                            <#if record.custrecord_mfgmob_print_stagingbin?length!=0>
+                                <tr>
+                                    <td>Stage to Bin:</td>
+                                    <td>${record.custrecord_mfgmob_print_stagingbin}</td>
+                                </tr>
+                            </#if>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </body>
+    </pdf>
+</pdfset>

@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory_mfgmob_savedsearches">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_mfg_mobile]</centertab>
+  <label translate="T">[scriptid=custcollection_mfgmob_centersandtabs.savedsearchescategory_key]</label>
+  <links>
+    <link>
+      <linklabel>Mfg Mobile - Assembly Component Search</linklabel>
+      <linkobject>[scriptid=customsearch_mfgmob_assembly_comp]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Mfg Mobile - BOM Revision Component Search</linklabel>
+      <linkobject>[scriptid=customsearch_mfgmob_bomrev_comp]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

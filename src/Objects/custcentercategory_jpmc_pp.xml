@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory_jpmc_pp">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_jpmc_payments]</centertab>
+  <label translate="T">[scriptid=custcollection_jpmc_centercat_xml.centercat_label__positive_pay]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_jpmc_centercat_xml.centercat_label__transmit]</linklabel>
+      <linkobject>[scriptid=customscript_jpmc_tran_ck_s.customdeploy_jpmc_tran_ck_s]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>History</linklabel>
+      <linkobject>[scriptid=customscript_jpmc_tran_ck_hs_s.customdeploy_jpmc_tran_ck_hs_s]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

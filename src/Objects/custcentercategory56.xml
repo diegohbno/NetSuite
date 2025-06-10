@@ -1,0 +1,50 @@
+<centercategory scriptid="custcentercategory56">
+  <center>[scriptid=custcenter1]</center>
+  <centertab>[scriptid=custcentertab17]</centertab>
+  <label>Tools</label>
+  <links>
+    <link>
+      <linkid>LIST_CUSTJOB</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_PARTNER</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=custlink_1_5221064_416]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>View Customer Groups</linklabel>
+      <linkobject>[scriptid=customsearch_esc_customer_group_search]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>ADMI_IMPORTCSV</linkid>
+      <linklabel>Import Assistant</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>ADMI_SAVEDIMPORTS</linkid>
+      <linklabel>View Saved Imports</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=custlink_2_5221064_225]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>TRAN_PRINT</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

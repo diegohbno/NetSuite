@@ -1,0 +1,67 @@
+<centercategory scriptid="custcentercategory4_3">
+  <center>[scriptid=custcenter_nsps]</center>
+  <centertab>[scriptid=custcentertab_nsps_implementation]</centertab>
+  <label>Project Management</label>
+  <links>
+    <link>
+      <linklabel>Management Summary</linklabel>
+      <linkobject>[scriptid=customrecord_ns_one_pm_summary]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Readiness Scorecard</linklabel>
+      <linkobject>[scriptid=customrecord_ns_pm_readinessscorecard]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Key Project Milestones</linklabel>
+      <linkobject>[scriptid=customrecord_ns_pm_key_milestones]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Gaps</linklabel>
+      <linkobject>[scriptid=customrecord_ns_imp_gap]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Project Issues</linklabel>
+      <linkobject>[scriptid=customrecord_ns_pm_issues]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Project Risks</linklabel>
+      <linkobject>[scriptid=customrecord_ns_pm_project_risks]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Change Log</linklabel>
+      <linkobject>[scriptid=customrecord_ns_one_change_log]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Document Repository</linklabel>
+      <linkobject>[scriptid=custlink_11_5221064_945]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Requirements</linklabel>
+      <linkobject>[scriptid=customrecord_ns_ibe_requirement]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Engagement</linklabel>
+      <linkobject>[scriptid=customrecord_ns_ibe_project]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

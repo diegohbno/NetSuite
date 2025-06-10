@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory_mfgmob_preferences_roles">
+  <center>[scriptid=custcenter_mfgmob_manufacturingmobile]</center>
+  <centertab>[scriptid=custcentertab_mfgmob_manufacturingsetup]</centertab>
+  <label translate="T">[scriptid=custcollection_mfgmob_centersandtabs.preferencescategory_key]</label>
+  <links>
+    <link>
+      <linklabel>Mfg Mobile - Preferences</linklabel>
+      <linkobject>[scriptid=customrecord_mfgmob_preferences]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_mfgmob_centersandtabs.preferencesworkcentpref_key]</linklabel>
+      <linkobject>[scriptid=customrecord_mfgmob_workcenter_pref]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

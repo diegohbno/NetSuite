@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_1238_5221064_944">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab31]</centertab>
+  <label>Manufacturing</label>
+  <links>
+    <link>
+      <linklabel>Schedule </linklabel>
+      <linkobject>[scriptid=customsearch3378]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

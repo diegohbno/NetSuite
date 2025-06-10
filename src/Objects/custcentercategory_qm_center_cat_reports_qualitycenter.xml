@@ -1,0 +1,103 @@
+<centercategory scriptid="custcentercategory_qm_center_cat_reports_qualitycenter">
+  <center>[scriptid=custcenter_qm_center]</center>
+  <centertab>[scriptid=custcentertab_qm_qualitymgmt_new_center_tab]</centertab>
+  <label translate="T">[scriptid=custcollection_qm_translation.custcentercategory_qm_center_cat_reports_qualitycenter]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_qm_translation.reports_specifications_link_label]</linklabel>
+      <linkobject>[scriptid=customscript_qm_sl_report_specification.customdeploy_qm_sl_report_specification]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_qm_translation.reports_insp_queue_link_label]</linklabel>
+      <linkobject>[scriptid=customscript_qm_sl_admin_listqueue.customdeploy_qm_sl_admin_listqueue]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_qm_translation.reports_ss1_link_label]</linklabel>
+      <linkobject>[scriptid=customsearch_qm_inco_insp_scorecard]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_qm_translation.reports_ss2_link_label]</linklabel>
+      <linkobject>[scriptid=customsearch_qm_inco_results_spec_insp]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_qm_translation.reports_ss3_link_label]</linklabel>
+      <linkobject>[scriptid=customsearch_qm_insp_detail_results]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_qm_translation.reports_ss4_link_label]</linklabel>
+      <linkobject>[scriptid=customsearch_qm_insp_detail_scorecard]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_qm_translation.reports_ss5_link_label]</linklabel>
+      <linkobject>[scriptid=customsearch_qm_insp_field_detail]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_qm_translation.reports_ss6_link_label]</linklabel>
+      <linkobject>[scriptid=customsearch_qm_insp_field_scorecard]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_qm_translation.reports_ss7_link_label]</linklabel>
+      <linkobject>[scriptid=customsearch_qm_insp_samples_scorecard]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_qm_translation.reports_ss8_link_label]</linklabel>
+      <linkobject>[scriptid=customsearch_qm_prod_spec_scorecard]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_qm_translation.reports_ss9_link_label]</linklabel>
+      <linkobject>[scriptid=customsearch_qm_insp_queue_assigned]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_qm_translation.reports_ss10_link_label]</linklabel>
+      <linkobject>[scriptid=customsearch_qm_insp_queue_unassigned]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_qm_translation.reports_ss11_link_label]</linklabel>
+      <linkobject>[scriptid=customsearch_qm_insp_results]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_qm_translation.reports_ss12_link_label]</linklabel>
+      <linkobject>[scriptid=customsearch_qm_insp_values_reported]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_qm_translation.reports_ss13_link_label]</linklabel>
+      <linkobject>[scriptid=customsearch_qm_test_required]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_qm_translation.reports_ss14_link_label]</linklabel>
+      <linkobject>[scriptid=customsearch_qm_vendor_scorecard]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

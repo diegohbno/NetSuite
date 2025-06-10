@@ -1,0 +1,25 @@
+<centercategory scriptid="custcentercategory_category_lotsn_traceability">
+  <center>BASIC</center>
+  <centertab>BASICCENTERREPORTS</centertab>
+  <label translate="T">[scriptid=custcollection_lot_and_serial_number_trace.lsnt_lot_serial_trace_categoryname]</label>
+  <links>
+    <link>
+      <linklabel>Trace Preferences</linklabel>
+      <linkobject>[scriptid=customrecord_lotsn_traceability_pref]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_lot_and_serial_number_trace.lsnt_lot_trace_categoryname]</linklabel>
+      <linkobject>[scriptid=customscript_lt_sn_sl_tracingfilter.customdeploy_lt_sn_sl_tracingfilter]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_lot_and_serial_number_trace.lsnt_serial_number_trace_categoryname]</linklabel>
+      <linkobject>[scriptid=customscript_lt_sn_sl_serialize_filter.customdeploy_sn_sl_serial_filter]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

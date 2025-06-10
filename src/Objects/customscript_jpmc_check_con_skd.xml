@@ -1,0 +1,25 @@
+<scheduledscript scriptid="customscript_jpmc_check_con_skd">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>J.P. Morgan Connection Check Skd</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <scriptfile>[/SuiteBundles/Bundle 259045/com.fispan.jpmcpay/connection/check_connection_service.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_jpmc_con_check_skd">
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <status>NOTSCHEDULED</status>
+      <title>J.P. Morgan Connection Check Skd</title>
+      <recurrence>
+        <daily>
+          <everyxdays>1</everyxdays>
+          <repeat>PT15M</repeat>
+          <startdate>2019-07-16</startdate>
+          <starttime>07:00:00Z</starttime>
+        </daily>
+      </recurrence>
+    </scriptdeployment>
+  </scriptdeployments>
+</scheduledscript>

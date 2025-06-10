@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory_mfgmob_savedsearches_roles">
+  <center>[scriptid=custcenter_mfgmob_manufacturingmobile]</center>
+  <centertab>[scriptid=custcentertab_mfgmob_manufacturingsetup]</centertab>
+  <label translate="T">[scriptid=custcollection_mfgmob_centersandtabs.savedsearchescategory_key]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_mfgmob_centersandtabs.ssassemcompsearch_key]</linklabel>
+      <linkobject>[scriptid=customsearch_mfgmob_assembly_comp]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_mfgmob_centersandtabs.ssbomrevcomsearch_key]</linklabel>
+      <linkobject>[scriptid=customsearch_mfgmob_bomrev_comp]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

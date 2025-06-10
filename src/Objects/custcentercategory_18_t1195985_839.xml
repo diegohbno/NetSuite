@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_18_t1195985_839">
+  <center>[scriptid=custcenter_nsps]</center>
+  <centertab>[scriptid=custcentertab_nsps_implementation]</centertab>
+  <label>Account Configuration</label>
+  <links>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=customrecord_ns_ibe_account_config]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

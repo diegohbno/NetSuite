@@ -1,0 +1,37 @@
+<centercategory scriptid="custcentercategory_ebp_acct_globalpayproc">
+  <center>ACCOUNTCENTER</center>
+  <centertab>[scriptid=custcentertab_ebp_payments_acct]</centertab>
+  <label translate="T">[scriptid=custcollection_electronic_payments_objects_translations.label_custcentercategory_ebp_acct_globalpayproc]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_electronic_payments_objects_translations.linklabel_custcentercategory_ebp_acct_globalpayproc_bill_pay]</linklabel>
+      <linkobject>[scriptid=customscript_15767_ge_eft_selection_su.customdeploy_15767_ge_eft_selection_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_electronic_payments_objects_translations.linklabel_custcentercategory_ebp_acct_globalpayproc_inv_pay]</linklabel>
+      <linkobject>[scriptid=customscript_15767_ge_dd_selection_su.customdeploy_15767_ge_dd_selection_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_electronic_payments_objects_translations.linklabel_custcentercategory_ebp_acct_globalpayproc_cust_pay]</linklabel>
+      <linkobject>[scriptid=customscript_15889_ep_ge_cust_refund_su.customdeploy_15889_ep_ge_cust_refund_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_electronic_payments_objects_translations.linklabel_custcentercategory_ebp_acct_globalpayproc_batch_l]</linklabel>
+      <linkobject>[scriptid=customscript_17801_ge_batch_list_su.customdeploy_17801_ge_batch_list_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_electronic_payments_objects_translations.linklabel_custcentercategory_ebp_acct_globalpayproc_batches]</linklabel>
+      <linkobject>[scriptid=customsearch_17801_global_paymnt_batches]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

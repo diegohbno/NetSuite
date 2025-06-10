@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory101">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab32]</centertab>
+  <label>Report Form</label>
+  <links>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=customrecord5352]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

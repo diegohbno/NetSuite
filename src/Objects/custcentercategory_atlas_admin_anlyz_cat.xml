@@ -1,0 +1,29 @@
+<centercategory scriptid="custcentercategory_atlas_admin_anlyz_cat">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_atlas_admin_tab]</centertab>
+  <label>Analyze</label>
+  <links>
+    <link>
+      <linklabel>Login Failures</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_login_failure_rem]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_SYSALERT</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Saved Search Log</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_saved_search_rpt]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_UNCATSITEITEM</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

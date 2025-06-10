@@ -1,0 +1,12 @@
+<emailtemplate scriptid="custemailtmpl_126_5221064_820">
+  <addcompanyaddress>T</addcompanyaddress>
+  <addunsubscribelink>T</addunsubscribelink>
+  <description>Email which requests shipping information on onboarding information from the customer</description>
+  <isinactive>F</isinactive>
+  <isprivate>F</isprivate>
+  <mediaitem></mediaitem>
+  <name>Onboarding Customer address Email</name>
+  <recordtype></recordtype>
+  <subject>Oils from HBNO</subject>
+  <usesmedia>F</usesmedia>
+</emailtemplate>

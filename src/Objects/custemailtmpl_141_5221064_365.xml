@@ -1,0 +1,12 @@
+<emailtemplate scriptid="custemailtmpl_141_5221064_365">
+  <addcompanyaddress>T</addcompanyaddress>
+  <addunsubscribelink>T</addunsubscribelink>
+  <description></description>
+  <isinactive>F</isinactive>
+  <isprivate>F</isprivate>
+  <mediaitem></mediaitem>
+  <name>Outbound Email</name>
+  <recordtype></recordtype>
+  <subject>Elevate Your Wellness Routine with HBNO - Your Trusted Source for Premium Essential Oils</subject>
+  <usesmedia>F</usesmedia>
+</emailtemplate>

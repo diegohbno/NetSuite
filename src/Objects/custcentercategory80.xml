@@ -1,0 +1,103 @@
+<centercategory scriptid="custcentercategory80">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab30]</centertab>
+  <label>Tasks Purchasing</label>
+  <links>
+    <link>
+      <linklabel>Create Task</linklabel>
+      <linkobject>[scriptid=customrecord3625]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=custlink_25_5221064_836]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=custlink_27_5221064_838]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Streamlined Report for Daily Updates by Purchasing</linklabel>
+      <linkobject>[scriptid=custlink_50_5221064_227]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=custlink_30_5221064_609]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>0. Open Tasks</linklabel>
+      <linkobject>[scriptid=customsearch3946]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>1. OOS </linklabel>
+      <linkobject>[scriptid=customsearch3695]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>2. Restock </linklabel>
+      <linkobject>[scriptid=customsearch4300]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>3. Sourcing</linklabel>
+      <linkobject>[scriptid=custlink_24_5221064_546]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>4. Invoice &amp; Billing</linklabel>
+      <linkobject>[scriptid=customsearch3700]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Gabi Tasks</linklabel>
+      <linkobject>[scriptid=customsearch3694]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=custlink_54_5221064_213]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Raja Tasks</linklabel>
+      <linkobject>[scriptid=customsearch3693]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=customsearch3771]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=customsearch3757]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Labels to Order</linklabel>
+      <linkobject>[scriptid=customsearch3761]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

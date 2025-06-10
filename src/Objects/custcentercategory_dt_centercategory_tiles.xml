@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory_dt_centercategory_tiles">
+  <center>BASIC</center>
+  <centertab>BASICCENTERSETUP</centertab>
+  <label translate="T">[scriptid=custcollection_dt_translation.center_dashboard_tiles_label]</label>
+  <links>
+    <link>
+      <linklabel>Manage Dashboard Tiles</linklabel>
+      <linkobject>[scriptid=customrecord_dt_tile]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_dt_translation.center_roles_update_linklabel]</linklabel>
+      <linkobject>[scriptid=customscript_dt_su_updatepage.customdeploy_dt_su_updatepage_admin]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

@@ -1,0 +1,25 @@
+<centercategory scriptid="custcentercategorycustcentercategory_qm_center_cat_pref">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_qm_quality_new_center_tab]</centertab>
+  <label translate="T">[scriptid=custcollection_qm_translation.custcentercategorycustcentercategory_qm_center_cat_pref]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_qm_translation.custcentercategorycustcentercategory_qm_center_cat_pr_stngs]</linklabel>
+      <linkobject>[scriptid=customscript_qm_sl_settings.customdeploy_qm_sl_settings]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_qm_translation.custcentercategorycustcentercategory_qm_center_cat_pref_par]</linklabel>
+      <linkobject>[scriptid=customrecord_qm_dynamic_parameters]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_qm_translation.custcentercategory_qm_center_cat_tablet_role]</linklabel>
+      <linkobject>[scriptid=customrecord_qm_tablet_role_access]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

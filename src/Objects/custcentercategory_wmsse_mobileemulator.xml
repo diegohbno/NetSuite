@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_wmsse_mobileemulator">
+  <center>[scriptid=custcenter_wmsse_wms]</center>
+  <centertab>[scriptid=custcentertab_wmsse_emulator]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_mobileemulator]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_mobilescreen]</linklabel>
+      <linkobject>[scriptid=customscript_wms_mobilemenu.customdeploy_wms_mobilemenu]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

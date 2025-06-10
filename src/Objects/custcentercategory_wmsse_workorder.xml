@@ -1,0 +1,12 @@
+<centercategory scriptid="custcentercategory_wmsse_workorder">
+  <center>[scriptid=custcenter_wmsse_warehouse]</center>
+  <centertab>[scriptid=custcentertab_wmsse_inventory]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_workorder]</label>
+  <links>
+    <link>
+      <linkid>EDIT_TRAN_WORKORD</linkid>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_workorder]</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

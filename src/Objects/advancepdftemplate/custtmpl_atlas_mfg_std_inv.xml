@@ -1,0 +1,9 @@
+<advancedpdftemplate scriptid="custtmpl_atlas_mfg_std_inv" standard="STDTMPLEMPTY">
+  <description></description>
+  <displaysourcecode>T</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>F</preferred>
+  <printtype>TRANSACTION</printtype>
+  <title>MFG STD - Invoice PDF/HTML Template</title>
+  <trantype>CUSTINVC</trantype>
+</advancedpdftemplate>

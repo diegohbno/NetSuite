@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory32_2">
+  <center>[scriptid=custcenter_wmsse_warehouse]</center>
+  <centertab>[scriptid=custcentertab_wmsse_inventory]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory32]</label>
+  <links>
+    <link>
+      <linklabel>Schedule Bin Replenishment</linklabel>
+      <linkobject>[scriptid=customrecord_wms_bin_replen_schedule]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

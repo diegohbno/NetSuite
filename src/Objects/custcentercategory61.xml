@@ -1,0 +1,23 @@
+<centercategory scriptid="custcentercategory61">
+  <center>[scriptid=custcenter1]</center>
+  <centertab>[scriptid=custcentertab20]</centertab>
+  <label>Tools</label>
+  <links>
+    <link>
+      <linkid>LIST_ITEM</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=custlink_6_5221064_779]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>TRAN_PRINT_PRICELIST</linkid>
+      <linklabel>Generate Price Lists (Manage Price Books)</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

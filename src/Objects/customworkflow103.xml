@@ -1,0 +1,170 @@
+<workflow scriptid="customworkflow103">
+  <description></description>
+  <initcontexts>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</initcontexts>
+  <initeventtypes></initeventtypes>
+  <initlocalizationcontext></initlocalizationcontext>
+  <initoncreate>F</initoncreate>
+  <initonvieworupdate>T</initonvieworupdate>
+  <initsavedsearchcondition></initsavedsearchcondition>
+  <inittriggertype></inittriggertype>
+  <isinactive>F</isinactive>
+  <islogenabled>T</islogenabled>
+  <keephistory>ONLYWHENTESTING</keephistory>
+  <name>PO QTY InTransit for Reports</name>
+  <recordtypes>PURCHASEORDER</recordtypes>
+  <releasestatus>TESTING</releasestatus>
+  <runasadmin>F</runasadmin>
+  <initcondition>
+    <formula></formula>
+    <type>VISUAL_BUILDER</type>
+  </initcondition>
+  <workflowstates>
+    <workflowstate scriptid="workflowstate683">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>State 1</name>
+      <positionx>243</positionx>
+      <positiony>133</positiony>
+      <workflowactions triggertype="ONENTRY">
+        <workflowsublistactiongroup scriptid="workflowaction1209">
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</contexttypes>
+          <eventtypes>VIEW</eventtypes>
+          <isinactive>F</isinactive>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <sublist>ITEM</sublist>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+          <setfieldvalueaction scriptid="workflowaction1210">
+            <field>STDCOLLOCATION</field>
+            <isinactive>F</isinactive>
+            <valuechecked>F</valuechecked>
+            <valuedate></valuedate>
+            <valuefield>STDBODYLOCATION</valuefield>
+            <valueformula></valueformula>
+            <valuejoinfield></valuejoinfield>
+            <valueselect></valueselect>
+            <valuetext></valuetext>
+            <valuetype>FIELD</valuetype>
+            <initcondition>
+              <formula></formula>
+              <type>VISUAL_BUILDER</type>
+            </initcondition>
+          </setfieldvalueaction>
+          <setfieldvalueaction scriptid="workflowaction1211">
+            <field>[scriptid=custcol42]</field>
+            <isinactive>F</isinactive>
+            <valuechecked>F</valuechecked>
+            <valuedate></valuedate>
+            <valuefield>[scriptid=custcol43]</valuefield>
+            <valueformula></valueformula>
+            <valuejoinfield></valuejoinfield>
+            <valueselect></valueselect>
+            <valuetext></valuetext>
+            <valuetype>FIELD</valuetype>
+            <initcondition>
+              <formula></formula>
+              <type>VISUAL_BUILDER</type>
+            </initcondition>
+          </setfieldvalueaction>
+        </workflowsublistactiongroup>
+      </workflowactions>
+      <workflowactions triggertype="BEFORELOAD">
+        <addbuttonaction scriptid="workflowaction1207">
+          <checkconditionbeforeexecution>T</checkconditionbeforeexecution>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</contexttypes>
+          <eventtypes>VIEW</eventtypes>
+          <isinactive>F</isinactive>
+          <label>Test QTY on Shipment Update</label>
+          <saverecordfirst>F</saverecordfirst>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </addbuttonaction>
+      </workflowactions>
+      <workflowtransitions>
+        <workflowtransition scriptid="workflowtransition413">
+          <buttonaction>[scriptid=customworkflow103.workflowstate683.workflowaction1207]</buttonaction>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</contexttypes>
+          <eventtypes></eventtypes>
+          <scheduledelay></scheduledelay>
+          <scheduletimeunit>HOUR</scheduletimeunit>
+          <tostate>[scriptid=customworkflow103.workflowstate684]</tostate>
+          <triggertype></triggertype>
+          <waitforworkflow></waitforworkflow>
+          <waitforworkflowstate></waitforworkflowstate>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </workflowtransition>
+      </workflowtransitions>
+    </workflowstate>
+    <workflowstate scriptid="workflowstate684">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>Update Location &amp; Shipment QTY 4 Search</name>
+      <positionx>243</positionx>
+      <positiony>253</positiony>
+      <workflowactions triggertype="ONENTRY">
+        <workflowsublistactiongroup scriptid="workflowaction1205">
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</contexttypes>
+          <eventtypes></eventtypes>
+          <isinactive>F</isinactive>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <sublist>ITEM</sublist>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+          <setfieldvalueaction scriptid="workflowaction1206">
+            <field>[scriptid=custcol42]</field>
+            <isinactive>F</isinactive>
+            <valuechecked>F</valuechecked>
+            <valuedate></valuedate>
+            <valuefield>[scriptid=custcol43]</valuefield>
+            <valueformula></valueformula>
+            <valuejoinfield></valuejoinfield>
+            <valueselect></valueselect>
+            <valuetext></valuetext>
+            <valuetype>FIELD</valuetype>
+            <initcondition>
+              <formula></formula>
+              <type>VISUAL_BUILDER</type>
+            </initcondition>
+          </setfieldvalueaction>
+          <setfieldvalueaction scriptid="workflowaction1208">
+            <field>STDCOLLOCATION</field>
+            <isinactive>F</isinactive>
+            <valuechecked>F</valuechecked>
+            <valuedate></valuedate>
+            <valuefield>STDBODYLOCATION</valuefield>
+            <valueformula></valueformula>
+            <valuejoinfield></valuejoinfield>
+            <valueselect></valueselect>
+            <valuetext></valuetext>
+            <valuetype>FIELD</valuetype>
+            <initcondition>
+              <formula></formula>
+              <type>VISUAL_BUILDER</type>
+            </initcondition>
+          </setfieldvalueaction>
+        </workflowsublistactiongroup>
+      </workflowactions>
+    </workflowstate>
+  </workflowstates>
+</workflow>

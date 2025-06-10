@@ -1,0 +1,69 @@
+<workflow scriptid="customworkflow24">
+  <description></description>
+  <initcontexts>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</initcontexts>
+  <initeventtypes></initeventtypes>
+  <initlocalizationcontext></initlocalizationcontext>
+  <initoncreate>T</initoncreate>
+  <initonvieworupdate>F</initonvieworupdate>
+  <initsavedsearchcondition>[scriptid=customsearch3409]</initsavedsearchcondition>
+  <inittriggertype></inittriggertype>
+  <isinactive>F</isinactive>
+  <islogenabled>T</islogenabled>
+  <keephistory>ALWAYS</keephistory>
+  <name>Bills due date alert</name>
+  <recordtypes>VENDORBILL</recordtypes>
+  <releasestatus>RELEASED</releasestatus>
+  <runasadmin>T</runasadmin>
+  <initcondition>
+    <formula></formula>
+    <type>VISUAL_BUILDER</type>
+  </initcondition>
+  <workflowstates>
+    <workflowstate scriptid="workflowstate222">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>State 1</name>
+      <positionx>243</positionx>
+      <positiony>133</positiony>
+      <workflowactions triggertype="AFTERSUBMIT">
+        <sendemailaction scriptid="workflowaction695">
+          <attachmentfield></attachmentfield>
+          <attachmentfile></attachmentfile>
+          <attachmentjoinfield></attachmentjoinfield>
+          <attachmenttype>SPECIFIC</attachmenttype>
+          <body>&lt;p&gt;Hi,&lt;br /&gt;&lt;br /&gt;A new bill has been created; however, the due date entered has already passed.&lt;/p&gt;</body>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</contexttypes>
+          <eventtypes></eventtypes>
+          <includeformat>PDF</includeformat>
+          <includerecordlink>T</includerecordlink>
+          <includetransaction>T</includetransaction>
+          <isinactive>F</isinactive>
+          <recipient>[ACCOUNT_SPECIFIC_VALUE]</recipient>
+          <recipientbccemail></recipientbccemail>
+          <recipientccemail>priya@hbno.com,ap@hbno.com</recipientccemail>
+          <recipientemail></recipientemail>
+          <recipientfield></recipientfield>
+          <recipientjoinfield></recipientjoinfield>
+          <recipienttype>SPECIFIC</recipienttype>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <sender>[ACCOUNT_SPECIFIC_VALUE]</sender>
+          <senderfield></senderfield>
+          <senderjoinfield></senderjoinfield>
+          <sendertype>SPECIFIC</sendertype>
+          <subject>Alert for Due Date for Newly Created Bill Has Passed</subject>
+          <template></template>
+          <usetemplate>F</usetemplate>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </sendemailaction>
+      </workflowactions>
+    </workflowstate>
+  </workflowstates>
+</workflow>

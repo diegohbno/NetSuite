@@ -1,0 +1,63 @@
+<workflow scriptid="customworkflow83">
+  <description></description>
+  <initcontexts>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</initcontexts>
+  <initeventtypes></initeventtypes>
+  <initlocalizationcontext></initlocalizationcontext>
+  <initoncreate>F</initoncreate>
+  <initonvieworupdate>F</initonvieworupdate>
+  <initsavedsearchcondition></initsavedsearchcondition>
+  <inittriggertype></inittriggertype>
+  <isinactive>T</isinactive>
+  <islogenabled>T</islogenabled>
+  <keephistory>ONLYWHENTESTING</keephistory>
+  <name>Sale Order to Bulk Cart to Create PO</name>
+  <recordtypes>SALESORDER</recordtypes>
+  <releasestatus>TESTING</releasestatus>
+  <runasadmin>T</runasadmin>
+  <initcondition>
+    <formula></formula>
+    <type>VISUAL_BUILDER</type>
+  </initcondition>
+  <workflowstates>
+    <workflowstate scriptid="workflowstate631">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>(Start) Add Button </name>
+      <positionx>243</positionx>
+      <positiony>133</positiony>
+      <workflowactions triggertype="ONENTRY">
+        <addbuttonaction scriptid="workflowaction946">
+          <checkconditionbeforeexecution>T</checkconditionbeforeexecution>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</contexttypes>
+          <eventtypes>VIEW</eventtypes>
+          <isinactive>F</isinactive>
+          <label>Create Bulk Cart PO</label>
+          <saverecordfirst>F</saverecordfirst>
+          <initcondition>
+            <formula><![CDATA["Customer" IN ("{#Customer#}1")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Customer</name>
+                <value>STDBODYCUSTOMER</value>
+              </parameter>
+              <parameter>
+                <name>{#Customer#}1</name>
+                <selectrecordtype>-2</selectrecordtype>
+                <value>[ACCOUNT_SPECIFIC_VALUE]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </addbuttonaction>
+      </workflowactions>
+    </workflowstate>
+    <workflowstate scriptid="workflowstate632">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>(Action) Create Po</name>
+      <positionx>233</positionx>
+      <positiony>273</positiony>
+    </workflowstate>
+  </workflowstates>
+</workflow>

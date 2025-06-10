@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdf>
+<body>
+<table style="border:2px solid #D3D3D3;font-family:sans-serif" >
+<tr>
+<td>
+<table cellpadding="1" cellspacing="1" style="margin:10px;">
+<tr style="border-bottom: 1px solid;">
+<td colspan="2">PALLET LABEL</td>
+</tr>
+<tr>
+<td colspan="4">ITEM DESCRIPTION</td>
+</tr>
+<tr style="border-bottom: 1px solid">
+<td colspan="4">${record.custrecord_wms_item_desc}</td>
+</tr>
+<tr style="border-bottom: 1px solid;padding-top:-1px;padding-bottom:-1px;">
+<td>
+<table>
+<tr>
+<td >QTY</td>
+</tr>
+<tr>
+<td >${record.custrecord_wms_item_qty}</td>
+</tr>
+</table>
+</td>
+<td style="border-left: 1px solid;">
+<table>
+<tr>
+<td >RECEIVED</td>
+</tr>
+<tr>
+<td >${record.custrecord_wms_tran_date}</td>
+</tr>
+<#if record.custrecord_wms_lot_num?length!=0>
+<tr>
+<td>LOT#</td>
+</tr>
+<tr>
+<td>${record.custrecord_wms_lot_num}</td>
+</tr>
+</#if>
+<#if record.custrecord_wms_lot_exp_date?length!=0>
+<tr>
+<td>EXPIRY DATE</td>
+</tr>
+<tr>
+<td>${record.custrecord_wms_lot_exp_date}</td>
+</tr>
+</#if>
+<#if record.custrecord_wms_serial_number?length!=0>
+<tr>
+<td>SERIAL#</td>
+</tr>
+<tr>
+<td>${record.custrecord_wms_serial_number}</td>
+</tr>
+</#if>
+</table>
+</td>
+<td style="border-left: 1px solid;" colspan="2">
+<table>
+<tr>
+<td>SKU:</td>
+<td>${record.custrecord_wms_item}</td>
+</tr>
+<tr>
+<#if record.custrecord_label_barcode_string?length!=0>
+<td>
+<barcode codetype="datamatrix" showtext="false" height="80" width="80" 
+value="${record.custrecord_label_barcode_string}"/>
+</td>
+<#else>
+<td>
+<barcode codetype="datamatrix" showtext="false" height="80" width="80" 
+value="${record.custrecord_wms_item}"/>
+</td>
+</#if>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="border-bottom: 1px solid;padding-top:-1px;padding-bottom:-1px;">
+<td colspan="2">
+<table>
+<tr>
+<td></td>
+<td>RECEIPT#</td>
+</tr>
+<tr>
+<#if record.custrecord_wms_tran_num?length!=0>
+<td>${record.custrecord_wms_tran_num}</td>
+</#if>
+</tr>
+</table>
+</td>
+<td style="border-left: 1px solid;" colspan="2">
+<#if record.custrecord_wms_inbshipment?length!=0>
+<table>
+<tr><td>&nbsp;</td></tr>
+<tr>
+<td>${record.custrecord_wms_inbshipment}</td>
+</tr>
+</table>
+</#if>
+</td>
+<#if record.custrecord_wms_inbshipment?length!=0>                                           
+<td align="right">SHIPMENT#</td>
+</#if>
+</tr>
+<tr>
+<td align="right" colspan="4">BY: ${record.custrecord_wms_user}</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</pdf>

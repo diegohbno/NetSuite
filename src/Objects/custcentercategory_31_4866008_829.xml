@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_31_4866008_829">
+  <center>[scriptid=custcenter_wmsse_warehouse]</center>
+  <centertab>[scriptid=custcentertab_wmsse_shipping]</centertab>
+  <label>Post Item Fulfillment</label>
+  <links>
+    <link>
+      <linklabel>Partially-Picked Orders</linklabel>
+      <linkobject>[scriptid=customscript_wmsse_partial_fulfill.customdeploy_wmsse_partial_fulfill]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

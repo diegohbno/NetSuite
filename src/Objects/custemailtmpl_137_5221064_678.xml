@@ -1,0 +1,12 @@
+<emailtemplate scriptid="custemailtmpl_137_5221064_678">
+  <addcompanyaddress>T</addcompanyaddress>
+  <addunsubscribelink>T</addunsubscribelink>
+  <description></description>
+  <isinactive>F</isinactive>
+  <isprivate>F</isprivate>
+  <mediaitem></mediaitem>
+  <name>PAID LEAD - Promo/Follow up</name>
+  <recordtype></recordtype>
+  <subject>Partnership with HBNO</subject>
+  <usesmedia>F</usesmedia>
+</emailtemplate>

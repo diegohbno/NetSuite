@@ -1,0 +1,385 @@
+<workflow scriptid="customworkflow44">
+  <description>This workflow sends email to users, where supporting document is not attached in Supporting document field</description>
+  <initcontexts>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</initcontexts>
+  <initeventtypes></initeventtypes>
+  <initlocalizationcontext></initlocalizationcontext>
+  <initoncreate>T</initoncreate>
+  <initonvieworupdate>T</initonvieworupdate>
+  <initsavedsearchcondition></initsavedsearchcondition>
+  <inittriggertype></inittriggertype>
+  <isinactive>F</isinactive>
+  <islogenabled>T</islogenabled>
+  <keephistory>ALWAYS</keephistory>
+  <name>Supporting Document for Credit Card</name>
+  <recordtypes>CREDITCARDCHARGE</recordtypes>
+  <releasestatus>RELEASED</releasestatus>
+  <runasadmin>F</runasadmin>
+  <initcondition>
+    <formula></formula>
+    <type>VISUAL_BUILDER</type>
+  </initcondition>
+  <workflowstates>
+    <workflowstate scriptid="workflowstate559">
+      <description>Supporting Document Requirement Check</description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>Supporting Document Requirement Check</name>
+      <positionx>433</positionx>
+      <positiony>73</positiony>
+      <workflowactions triggertype="BEFORELOAD">
+        <addbuttonaction scriptid="workflowaction746">
+          <checkconditionbeforeexecution>T</checkconditionbeforeexecution>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</contexttypes>
+          <eventtypes></eventtypes>
+          <isinactive>F</isinactive>
+          <label>Get Supporting Document</label>
+          <saverecordfirst>T</saverecordfirst>
+          <initcondition>
+            <formula><![CDATA[isEmpty("Supporting Document ") = 'T']]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Supporting Document </name>
+                <value>[scriptid=custbody_hbno_supp_document]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </addbuttonaction>
+      </workflowactions>
+      <workflowtransitions>
+        <workflowtransition scriptid="workflowtransition340">
+          <buttonaction>[scriptid=customworkflow44.workflowstate559.workflowaction746]</buttonaction>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</contexttypes>
+          <eventtypes></eventtypes>
+          <scheduledelay></scheduledelay>
+          <scheduletimeunit></scheduletimeunit>
+          <tostate>[scriptid=customworkflow44.workflowstate560]</tostate>
+          <triggertype></triggertype>
+          <waitforworkflow></waitforworkflow>
+          <waitforworkflowstate></waitforworkflowstate>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </workflowtransition>
+      </workflowtransitions>
+    </workflowstate>
+    <workflowstate scriptid="workflowstate560">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>Emails for Supporting Document</name>
+      <positionx>433</positionx>
+      <positiony>193</positiony>
+      <workflowactions triggertype="ONENTRY">
+        <sendemailaction scriptid="workflowaction747">
+          <attachmentfield></attachmentfield>
+          <attachmentfile></attachmentfile>
+          <attachmentjoinfield></attachmentjoinfield>
+          <attachmenttype>SPECIFIC</attachmenttype>
+          <body>&lt;p&gt;Hi, &lt;/p&gt;&lt;p&gt;Please attach supporting document against Credit Card Transaction. Use Supporting Document field in Primary section of the transaction.&lt;/p&gt;</body>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</contexttypes>
+          <eventtypes></eventtypes>
+          <includeformat>INLINEABOVE</includeformat>
+          <includerecordlink>T</includerecordlink>
+          <includetransaction>T</includetransaction>
+          <isinactive>F</isinactive>
+          <recipient>[ACCOUNT_SPECIFIC_VALUE]</recipient>
+          <recipientbccemail></recipientbccemail>
+          <recipientccemail>rajesh@hbno.com</recipientccemail>
+          <recipientemail></recipientemail>
+          <recipientfield></recipientfield>
+          <recipientjoinfield></recipientjoinfield>
+          <recipienttype>SPECIFIC</recipienttype>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <sender>[ACCOUNT_SPECIFIC_VALUE]</sender>
+          <senderfield></senderfield>
+          <senderjoinfield></senderjoinfield>
+          <sendertype>SPECIFIC</sendertype>
+          <subject>Credit Card Charge Supporting Document Required</subject>
+          <template></template>
+          <usetemplate>F</usetemplate>
+          <initcondition>
+            <formula><![CDATA["Account" IN ("Account1")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Account</name>
+                <value>STDBODYACCOUNT</value>
+              </parameter>
+              <parameter>
+                <name>Account1</name>
+                <selectrecordtype>-112</selectrecordtype>
+                <value>[ACCOUNT_SPECIFIC_VALUE]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </sendemailaction>
+        <sendemailaction scriptid="workflowaction748">
+          <attachmentfield></attachmentfield>
+          <attachmentfile></attachmentfile>
+          <attachmentjoinfield></attachmentjoinfield>
+          <attachmenttype>SPECIFIC</attachmenttype>
+          <body>&lt;p&gt;Hi, &lt;/p&gt;&lt;p&gt;Please attach supporting document against Credit Card Transaction. Use Supporting Document field in Primary section of the transaction.&lt;/p&gt;</body>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</contexttypes>
+          <eventtypes></eventtypes>
+          <includeformat>INLINEABOVE</includeformat>
+          <includerecordlink>T</includerecordlink>
+          <includetransaction>T</includetransaction>
+          <isinactive>F</isinactive>
+          <recipient>[ACCOUNT_SPECIFIC_VALUE]</recipient>
+          <recipientbccemail></recipientbccemail>
+          <recipientccemail>rajesh@hbno.com</recipientccemail>
+          <recipientemail></recipientemail>
+          <recipientfield></recipientfield>
+          <recipientjoinfield></recipientjoinfield>
+          <recipienttype>SPECIFIC</recipienttype>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <sender>[ACCOUNT_SPECIFIC_VALUE]</sender>
+          <senderfield></senderfield>
+          <senderjoinfield></senderjoinfield>
+          <sendertype>SPECIFIC</sendertype>
+          <subject>Credit Card Charge Supporting Document Required</subject>
+          <template></template>
+          <usetemplate>F</usetemplate>
+          <initcondition>
+            <formula><![CDATA["Account" IN ("Account1","Account2","Account3","Account4","Account5")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Account</name>
+                <value>STDBODYACCOUNT</value>
+              </parameter>
+              <parameter>
+                <name>Account1</name>
+                <selectrecordtype>-112</selectrecordtype>
+                <value>[ACCOUNT_SPECIFIC_VALUE]</value>
+              </parameter>
+              <parameter>
+                <name>Account2</name>
+                <selectrecordtype>-112</selectrecordtype>
+                <value>[ACCOUNT_SPECIFIC_VALUE]</value>
+              </parameter>
+              <parameter>
+                <name>Account3</name>
+                <selectrecordtype>-112</selectrecordtype>
+                <value>[ACCOUNT_SPECIFIC_VALUE]</value>
+              </parameter>
+              <parameter>
+                <name>Account4</name>
+                <selectrecordtype>-112</selectrecordtype>
+                <value>[ACCOUNT_SPECIFIC_VALUE]</value>
+              </parameter>
+              <parameter>
+                <name>Account5</name>
+                <selectrecordtype>-112</selectrecordtype>
+                <value>[ACCOUNT_SPECIFIC_VALUE]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </sendemailaction>
+        <sendemailaction scriptid="workflowaction749">
+          <attachmentfield></attachmentfield>
+          <attachmentfile></attachmentfile>
+          <attachmentjoinfield></attachmentjoinfield>
+          <attachmenttype>SPECIFIC</attachmenttype>
+          <body>&lt;p&gt;Hi, &lt;/p&gt;&lt;p&gt;Please attach supporting document against Credit Card Transaction. Use Supporting Document field in Primary section of the transaction.&lt;/p&gt;</body>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</contexttypes>
+          <eventtypes></eventtypes>
+          <includeformat>INLINEABOVE</includeformat>
+          <includerecordlink>T</includerecordlink>
+          <includetransaction>T</includetransaction>
+          <isinactive>F</isinactive>
+          <recipientbccemail>rajesh@hbno.com</recipientbccemail>
+          <recipientccemail></recipientccemail>
+          <recipientemail>ap@hbno.com</recipientemail>
+          <recipientfield></recipientfield>
+          <recipientjoinfield></recipientjoinfield>
+          <recipienttype>ADDRESS</recipienttype>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <sender>[ACCOUNT_SPECIFIC_VALUE]</sender>
+          <senderfield></senderfield>
+          <senderjoinfield></senderjoinfield>
+          <sendertype>SPECIFIC</sendertype>
+          <subject>Credit Card Charge Supporting Document Required</subject>
+          <template></template>
+          <usetemplate>F</usetemplate>
+          <initcondition>
+            <formula><![CDATA["Account" IN ("Account1")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Account</name>
+                <value>STDBODYACCOUNT</value>
+              </parameter>
+              <parameter>
+                <name>Account1</name>
+                <selectrecordtype>-112</selectrecordtype>
+                <value>[ACCOUNT_SPECIFIC_VALUE]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </sendemailaction>
+        <sendemailaction scriptid="workflowaction750">
+          <attachmentfield></attachmentfield>
+          <attachmentfile></attachmentfile>
+          <attachmentjoinfield></attachmentjoinfield>
+          <attachmenttype>SPECIFIC</attachmenttype>
+          <body>&lt;p&gt;Hi, &lt;/p&gt;&lt;p&gt;Please attach supporting document against Credit Card Transaction. Use Supporting Document field in Primary section of the transaction.&lt;/p&gt;</body>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</contexttypes>
+          <eventtypes></eventtypes>
+          <includeformat>INLINEABOVE</includeformat>
+          <includerecordlink>T</includerecordlink>
+          <includetransaction>T</includetransaction>
+          <isinactive>F</isinactive>
+          <recipient>[ACCOUNT_SPECIFIC_VALUE]</recipient>
+          <recipientbccemail>rajesh@hbno.com</recipientbccemail>
+          <recipientccemail></recipientccemail>
+          <recipientemail></recipientemail>
+          <recipientfield></recipientfield>
+          <recipientjoinfield></recipientjoinfield>
+          <recipienttype>SPECIFIC</recipienttype>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <sender>[ACCOUNT_SPECIFIC_VALUE]</sender>
+          <senderfield></senderfield>
+          <senderjoinfield></senderjoinfield>
+          <sendertype>SPECIFIC</sendertype>
+          <subject>Credit Card Charge Supporting Document Required</subject>
+          <template></template>
+          <usetemplate>F</usetemplate>
+          <initcondition>
+            <formula><![CDATA["Account" IN ("Account1")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Account</name>
+                <value>STDBODYACCOUNT</value>
+              </parameter>
+              <parameter>
+                <name>Account1</name>
+                <selectrecordtype>-112</selectrecordtype>
+                <value>[ACCOUNT_SPECIFIC_VALUE]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </sendemailaction>
+        <sendemailaction scriptid="workflowaction751">
+          <attachmentfield></attachmentfield>
+          <attachmentfile></attachmentfile>
+          <attachmentjoinfield></attachmentjoinfield>
+          <attachmenttype>SPECIFIC</attachmenttype>
+          <body>&lt;p&gt;Hi, &lt;/p&gt;&lt;p&gt;Please attach supporting document against Credit Card Transaction. Use Supporting Document field in Primary section of the transaction.&lt;/p&gt;</body>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</contexttypes>
+          <eventtypes></eventtypes>
+          <includeformat>INLINEABOVE</includeformat>
+          <includerecordlink>T</includerecordlink>
+          <includetransaction>T</includetransaction>
+          <isinactive>F</isinactive>
+          <recipient>[ACCOUNT_SPECIFIC_VALUE]</recipient>
+          <recipientbccemail></recipientbccemail>
+          <recipientccemail>rajesh@hbno.com</recipientccemail>
+          <recipientemail></recipientemail>
+          <recipientfield></recipientfield>
+          <recipientjoinfield></recipientjoinfield>
+          <recipienttype>SPECIFIC</recipienttype>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <sender>[ACCOUNT_SPECIFIC_VALUE]</sender>
+          <senderfield></senderfield>
+          <senderjoinfield></senderjoinfield>
+          <sendertype>SPECIFIC</sendertype>
+          <subject>Credit Card Charge Supporting Document Required</subject>
+          <template></template>
+          <usetemplate>F</usetemplate>
+          <initcondition>
+            <formula><![CDATA["Account" IN ("Account1")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Account</name>
+                <value>STDBODYACCOUNT</value>
+              </parameter>
+              <parameter>
+                <name>Account1</name>
+                <selectrecordtype>-112</selectrecordtype>
+                <value>[ACCOUNT_SPECIFIC_VALUE]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </sendemailaction>
+        <sendemailaction scriptid="workflowaction752">
+          <attachmentfield></attachmentfield>
+          <attachmentfile></attachmentfile>
+          <attachmentjoinfield></attachmentjoinfield>
+          <attachmenttype>SPECIFIC</attachmenttype>
+          <body>&lt;p&gt;Hi, &lt;/p&gt;&lt;p&gt;Please attach supporting document against Credit Card Transaction. Use Supporting Document field in Primary section of the transaction.&lt;/p&gt;</body>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</contexttypes>
+          <eventtypes></eventtypes>
+          <includeformat>INLINEABOVE</includeformat>
+          <includerecordlink>T</includerecordlink>
+          <includetransaction>T</includetransaction>
+          <isinactive>F</isinactive>
+          <recipient>[ACCOUNT_SPECIFIC_VALUE]</recipient>
+          <recipientbccemail></recipientbccemail>
+          <recipientccemail>rajesh@hbno.com</recipientccemail>
+          <recipientemail></recipientemail>
+          <recipientfield></recipientfield>
+          <recipientjoinfield></recipientjoinfield>
+          <recipienttype>SPECIFIC</recipienttype>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <sender>[ACCOUNT_SPECIFIC_VALUE]</sender>
+          <senderfield></senderfield>
+          <senderjoinfield></senderjoinfield>
+          <sendertype>SPECIFIC</sendertype>
+          <subject>Credit Card Charge Supporting Document Required</subject>
+          <template></template>
+          <usetemplate>F</usetemplate>
+          <initcondition>
+            <formula><![CDATA["Account" IN ("Account1")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Account</name>
+                <value>STDBODYACCOUNT</value>
+              </parameter>
+              <parameter>
+                <name>Account1</name>
+                <selectrecordtype>-112</selectrecordtype>
+                <value>[ACCOUNT_SPECIFIC_VALUE]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </sendemailaction>
+      </workflowactions>
+    </workflowstate>
+  </workflowstates>
+</workflow>

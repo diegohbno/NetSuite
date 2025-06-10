@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_15_t1195985_381">
+  <center>[scriptid=custcenter_nsps]</center>
+  <centertab>[scriptid=custcentertab_nsps_implementation]</centertab>
+  <label>Cutover Items</label>
+  <links>
+    <link>
+      <linklabel>Cutover Items</linklabel>
+      <linkobject>[scriptid=customrecord_ns_ps_mfg_cutover_items]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

@@ -1,0 +1,12 @@
+<emailtemplate scriptid="custemailtmpl_118_5221064_575">
+  <addcompanyaddress>T</addcompanyaddress>
+  <addunsubscribelink>T</addunsubscribelink>
+  <description></description>
+  <isinactive>F</isinactive>
+  <isprivate>F</isprivate>
+  <mediaitem></mediaitem>
+  <name>REQUEST TESTIMONIAL VIDEO</name>
+  <recordtype></recordtype>
+  <subject>We would love to hear from you!</subject>
+  <usesmedia>F</usesmedia>
+</emailtemplate>

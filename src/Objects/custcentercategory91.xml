@@ -1,0 +1,25 @@
+<centercategory scriptid="custcentercategory91">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab30]</centertab>
+  <label>Inbound Shipments</label>
+  <links>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=custlink_51_5221064_720]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=customsearch3455]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=customsearch3454]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

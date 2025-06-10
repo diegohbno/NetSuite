@@ -1,0 +1,25 @@
+<scheduledscript scriptid="customscript_srp_send_emails_reply_ss">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>SRP Send Emails Reply SS</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <scriptfile>[/SuiteScripts/srp_send_email_replys_ss.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_srp_send_emails_reply_ss">
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <status>NOTSCHEDULED</status>
+      <title>SRP Send Emails Reply SS</title>
+      <recurrence>
+        <daily>
+          <everyxdays>1</everyxdays>
+          <repeat></repeat>
+          <startdate>2025-02-11</startdate>
+          <starttime>02:00:00Z</starttime>
+        </daily>
+      </recurrence>
+    </scriptdeployment>
+  </scriptdeployments>
+</scheduledscript>

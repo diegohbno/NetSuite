@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory2_2">
+  <center>BASIC</center>
+  <centertab>BASICCENTERDOCUMENTS</centertab>
+  <label>Drag and Drop Files</label>
+  <links>
+    <link>
+      <linklabel>File Cabinet</linklabel>
+      <linkobject>[scriptid=customscript_dad_file_cab_front_end_sl.customdeploy_dad_file_cab_front_end_sl]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

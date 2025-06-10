@@ -1,0 +1,12 @@
+<emailtemplate scriptid="custemailtmpl_132_5221064_547">
+  <addcompanyaddress>T</addcompanyaddress>
+  <addunsubscribelink>T</addunsubscribelink>
+  <description></description>
+  <isinactive>F</isinactive>
+  <isprivate>F</isprivate>
+  <mediaitem></mediaitem>
+  <name>FEEDBACK Request</name>
+  <recordtype></recordtype>
+  <subject>Jason, HBNO Essential Oils wants to send you an exclusive offer!</subject>
+  <usesmedia>F</usesmedia>
+</emailtemplate>

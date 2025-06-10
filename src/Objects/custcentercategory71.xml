@@ -1,0 +1,22 @@
+<centercategory scriptid="custcentercategory71">
+  <center>[scriptid=custcenter1]</center>
+  <centertab>[scriptid=custcentertab23]</centertab>
+  <label>Tools</label>
+  <links>
+    <link>
+      <linkid>LIST_TRAN_OPPRTNTY</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_TRAN_ESTIMATE</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_COMPETITOR</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

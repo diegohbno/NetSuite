@@ -1,0 +1,43 @@
+<centercategory scriptid="custcentercategory_108_4971052_829">
+  <center>SHIPPINGCENTER</center>
+  <centertab>[scriptid=custcentertab_atlas_mfg_em_mfg_tab]</centertab>
+  <label>Reporting</label>
+  <links>
+    <link>
+      <linklabel>Work Orders - Built</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_wo_built_kpi]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Work Orders - Released</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_wo_released_rpt]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Work Orders - In Process</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_wip_kpi]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Work Orders - Status</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_wo_wip_rpt]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Work Orders - Closed</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_wo_closed_kpi]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Work Orders - Canceled</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_wo_cancel_kpi]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

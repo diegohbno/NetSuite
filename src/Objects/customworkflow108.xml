@@ -1,0 +1,102 @@
+<workflow scriptid="customworkflow108">
+  <description></description>
+  <initcontexts>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</initcontexts>
+  <initeventtypes></initeventtypes>
+  <initlocalizationcontext></initlocalizationcontext>
+  <initoncreate>F</initoncreate>
+  <initonvieworupdate>T</initonvieworupdate>
+  <initsavedsearchcondition></initsavedsearchcondition>
+  <inittriggertype></inittriggertype>
+  <isinactive>F</isinactive>
+  <islogenabled>T</islogenabled>
+  <keephistory>ALWAYS</keephistory>
+  <name>Auto Email AP_Task when AP Notes Change</name>
+  <recordtypes>[scriptid=customrecord3625]</recordtypes>
+  <releasestatus>RELEASED</releasestatus>
+  <runasadmin>F</runasadmin>
+  <initcondition>
+    <formula></formula>
+    <type>VISUAL_BUILDER</type>
+  </initcondition>
+  <workflowstates>
+    <workflowstate scriptid="workflowstate696">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>State 1</name>
+      <positionx>243</positionx>
+      <positiony>133</positiony>
+      <workflowtransitions>
+        <workflowtransition scriptid="workflowtransition421">
+          <buttonaction></buttonaction>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</contexttypes>
+          <eventtypes></eventtypes>
+          <scheduledelay></scheduledelay>
+          <scheduletimeunit></scheduletimeunit>
+          <tostate>[scriptid=customworkflow108.workflowstate697]</tostate>
+          <triggertype></triggertype>
+          <waitforworkflow></waitforworkflow>
+          <waitforworkflowstate></waitforworkflowstate>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </workflowtransition>
+      </workflowtransitions>
+    </workflowstate>
+    <workflowstate scriptid="workflowstate697">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>State 2</name>
+      <positionx>243</positionx>
+      <positiony>263</positiony>
+      <workflowactions triggertype="ONENTRY">
+        <sendemailaction scriptid="workflowaction1232">
+          <attachmentfield></attachmentfield>
+          <attachmentfile></attachmentfile>
+          <attachmentjoinfield></attachmentjoinfield>
+          <attachmenttype>SPECIFIC</attachmenttype>
+          <body>&lt;p&gt;&lt;span style=&quot;color:rgb(0,0,0);&quot;&gt;Hello, update on AP Task to Purchasing.  &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color:rgb(0,0,0);&quot;&gt;&lt;strong&gt;Please respond to this email chain to manage the task. Thank you. &lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot;color:rgb(0,0,0);&quot;&gt;&lt;strong&gt;Due Date &lt;/strong&gt;is &lt;/span&gt;&lt;span style=&quot;background-color:rgb(255,255,255);color:rgb(0,0,0);font-size:14px;&quot;&gt;&lt;span style=&quot;-webkit-text-stroke-width:0px;display:inline !important;float:none;font-family:&amp;quot;Open Sans&amp;quot;, Helvetica, sans-serif;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;&quot;&gt;{custrecord169} &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color:rgb(0,0,0);&quot;&gt;&lt;strong&gt;Task Status: &lt;/strong&gt;&lt;/span&gt;&lt;span style=&quot;background-color:rgb(255,255,255);color:rgb(0,0,0);font-size:14px;&quot;&gt;&lt;span style=&quot;-webkit-text-stroke-width:0px;display:inline !important;float:none;font-family:&amp;quot;Open Sans&amp;quot;, Helvetica, sans-serif;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;&quot;&gt;{custrecord387}&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color:rgb(255,255,255);color:rgb(0,0,0);font-size:14px;&quot;&gt;&lt;span style=&quot;-webkit-text-stroke-width:0px;display:inline !important;float:none;font-family:&amp;quot;Open Sans&amp;quot;, Helvetica, sans-serif;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;&quot;&gt;&lt;strong&gt;Notes to AP Team: &lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color:rgb(255,255,255);color:rgb(0,0,0);font-size:14px;&quot;&gt;&lt;span style=&quot;-webkit-text-stroke-width:0px;display:inline !important;float:none;font-family:&amp;quot;Open Sans&amp;quot;, Helvetica, sans-serif;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;&quot;&gt;{custrecord775}&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Current Notes/Actions: &lt;/strong&gt;&lt;br /&gt;&lt;span style=&quot;background-color:rgb(255,255,255);color:rgb(0,0,0);font-size:14px;&quot;&gt;&lt;span style=&quot;-webkit-text-stroke-width:0px;display:inline !important;float:none;font-family:&amp;quot;Open Sans&amp;quot;, Helvetica, sans-serif;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;&quot;&gt;{custrecord503}&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot;color:rgb(0,0,0);&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color:rgb(0,0,0);&quot;&gt;&lt;strong&gt;Original Task Details: &lt;/strong&gt;&lt;/span&gt;&lt;span style=&quot;background-color:rgb(255,255,255);color:rgb(0,0,0);font-size:14px;&quot;&gt;&lt;span style=&quot;-webkit-text-stroke-width:0px;display:inline !important;float:none;font-family:&amp;quot;Open Sans&amp;quot;, Helvetica, sans-serif;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;&quot;&gt;{custrecord178}&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;</body>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</contexttypes>
+          <eventtypes></eventtypes>
+          <includerecordlink>T</includerecordlink>
+          <isinactive>F</isinactive>
+          <recipient>[ACCOUNT_SPECIFIC_VALUE]</recipient>
+          <recipientbccemail></recipientbccemail>
+          <recipientccemail>david@hbno.com,sruthi@hbno.com,rajesh@hbno.com,kirupa@hbno.com</recipientccemail>
+          <recipientemail></recipientemail>
+          <recipientfield></recipientfield>
+          <recipientjoinfield></recipientjoinfield>
+          <recipienttype>SPECIFIC</recipienttype>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <sender>[ACCOUNT_SPECIFIC_VALUE]</sender>
+          <senderfield></senderfield>
+          <senderjoinfield></senderjoinfield>
+          <sendertype>SPECIFIC</sendertype>
+          <subject>AP Task # {recordid} | {custrecord197} | {name}</subject>
+          <template></template>
+          <usetemplate>F</usetemplate>
+          <initcondition>
+            <formula><![CDATA["Old Record:Notes to AP" != "Notes to AP"]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Old Record:Notes to AP</name>
+                <value>@OLDRECORD@:[scriptid=customrecord3625.custrecord775]</value>
+              </parameter>
+              <parameter>
+                <name>Notes to AP</name>
+                <value>[scriptid=customrecord3625.custrecord775]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </sendemailaction>
+      </workflowactions>
+    </workflowstate>
+  </workflowstates>
+</workflow>

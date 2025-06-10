@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory_606_5221064_387">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab26]</centertab>
+  <label>Payments</label>
+  <links>
+    <link>
+      <linklabel>Vendor Bills</linklabel>
+      <linkobject>[scriptid=customscript_jpmc_pay_bills_s.customdeploy_jpmc_pay_bills_s]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>History</linklabel>
+      <linkobject>[scriptid=customscript_jpmc_bills_history_s.customdeploy_jpmc_bills_history_s]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

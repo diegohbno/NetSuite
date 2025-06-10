@@ -1,0 +1,54 @@
+<centercategory scriptid="custcentercategory_wms_packstation">
+  <center>[scriptid=custcenter_wmsse_wms]</center>
+  <centertab>[scriptid=custcentertab_wmsse_wmsconfig]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wms_packstation]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wms_packstation_shipsystemrule]</linklabel>
+      <linkobject>[scriptid=customscript_wms_packing_systemrules.customdeploy_wms_packing_systemrules]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wms_packstation_idformat]</linklabel>
+      <linkobject>[scriptid=customscript_wms_packing_autogenerateids.customdeploy_wms_packing_autogenerateids]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wms_packstation_packitems]</linklabel>
+      <linkobject>[scriptid=customscript_wms_packing_pickingitems.customdeploy_wms_packing_pickingitems]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wms_packstation_mobilesetting]</linklabel>
+      <linkobject>[scriptid=customscript_wms_mobilesettings.customdeploy_wms_mobilesettings]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wms_packstation_regapp]</linklabel>
+      <linkobject>[scriptid=customscript_wms_packing_mobileregister.customdeploy_wms_packing_mobileregister]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wms_packstation_itegration]</linklabel>
+      <linkobject>[scriptid=customscript_wms_manage_intandcar.customdeploy_wms_manage_intandcar]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wms_packstation_shippingcost]</linklabel>
+      <linkobject>[scriptid=customscript_wms_shiping_cost_dist.customdeploy_wms_shiping_cost_dist]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>ADMI_MANAGE_PLUGINS</linkid>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wms_packstation_shipcentralplugin]</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

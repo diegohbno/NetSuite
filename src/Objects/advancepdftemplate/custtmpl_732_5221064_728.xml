@@ -1,0 +1,9 @@
+<advancedpdftemplate scriptid="custtmpl_732_5221064_728" standard="STDTMPLITEMLABEL">
+  <description></description>
+  <displaysourcecode>F</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>F</preferred>
+  <printtype>ITEMLABEL</printtype>
+  <title>Custom Item Label PDF/HTML Template</title>
+  <trantype>CUSTPYMT</trantype>
+</advancedpdftemplate>

@@ -1,0 +1,37 @@
+<centercategory scriptid="custcentercategory_wmsse_shipping">
+  <center>[scriptid=custcenter_wmsse_warehouse]</center>
+  <centertab>[scriptid=custcentertab_wmsse_shipping]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_shipping]</label>
+  <links>
+    <link>
+      <linkid>EDIT_TRAN_SALESORD</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>EDIT_TRAN_TRNFRORD</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>TRAN_TRNFRORDAPPRV</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>TRAN_PRINT_PICKINGTICKET</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>TRAN_SALESORDFULFILL</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>TRAN_PRINT_PACKINGSLIP</linkid>
+      <linklabel>Printer Details</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

@@ -1,0 +1,43 @@
+<kpiscorecard scriptid="kpiscorecard_2_t1195985_314">
+  <description></description>
+  <name>NetSuite Action Item KPIs</name>
+  <useperiods>F</useperiods>
+  <custom>
+    <kpi1>[scriptid=customsearch_ns_ps_items_closed_this_wee]</kpi1>
+    <kpi10></kpi10>
+    <kpi2></kpi2>
+    <kpi3></kpi3>
+    <kpi4></kpi4>
+    <kpi5></kpi5>
+    <kpi6></kpi6>
+    <kpi7></kpi7>
+    <kpi8></kpi8>
+    <kpi9></kpi9>
+  </custom>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>T</allroles>
+  </audience>
+  <kpis>
+    <kpi>
+      <comparevalueto></comparevalueto>
+      <comparewithprevious>F</comparewithprevious>
+      <comparisontype></comparisontype>
+      <hidden>F</hidden>
+      <invertcomparison>F</invertcomparison>
+      <kpi>CUSTOM</kpi>
+      <label></label>
+    </kpi>
+  </kpis>
+  <ranges>
+    <range>
+      <comparevalueto>LAST_WEEK</comparevalueto>
+      <comparewithprevious>F</comparewithprevious>
+      <comparisontype>RATIO_ABSOLUTE</comparisontype>
+      <invertcomparison>F</invertcomparison>
+      <label>This Week vs. Last Week</label>
+      <range>THIS_WEEK</range>
+    </range>
+  </ranges>
+</kpiscorecard>

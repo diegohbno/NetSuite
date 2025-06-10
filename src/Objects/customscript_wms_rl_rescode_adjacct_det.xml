@@ -1,0 +1,22 @@
+<restlet scriptid="customscript_wms_rl_rescode_adjacct_det">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>WMS Reason Code Adjustment Account Det</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteBundles/Bundle 554701/com.netsuite.wms/src/Restlets/wms_rl_reasoncodeAdjAcct_getDetails.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_wms_rl_rescode_adjacct_det">
+      <allemployees>T</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>T</allroles>
+      <audslctrole>CUSTOMER_CENTER|EMPLOYEE_CENTER|NETSUITE_SUPPORT_CENTER|NETSUITE_SUPPORT_CENTER__BASIC|ONLINE_FORM_USER|PARTNER_CENTER|VENDOR_CENTER</audslctrole>
+      <isdeployed>T</isdeployed>
+      <loglevel>ERROR</loglevel>
+      <status>RELEASED</status>
+      <title>WMS Reason Code Adjustment Account Det</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</restlet>

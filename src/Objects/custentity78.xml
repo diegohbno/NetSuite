@@ -1,0 +1,60 @@
+<entitycustomfield scriptid="custentity78">
+  <accesslevel>2</accesslevel>
+  <appliestocontact>F</appliestocontact>
+  <appliestocustomer>T</appliestocustomer>
+  <appliestoemployee>F</appliestoemployee>
+  <appliestogenericrsrc>F</appliestogenericrsrc>
+  <appliestogroup>F</appliestogroup>
+  <appliestoothername>F</appliestoothername>
+  <appliestopartner>F</appliestopartner>
+  <appliestopricelist>F</appliestopricelist>
+  <appliestoproject>F</appliestoproject>
+  <appliestoprojecttemplate>F</appliestoprojecttemplate>
+  <appliestostatement>F</appliestostatement>
+  <appliestovendor>F</appliestovendor>
+  <appliestowebsite>F</appliestowebsite>
+  <applyformatting>F</applyformatting>
+  <availableexternally>F</availableexternally>
+  <availabletosso>F</availabletosso>
+  <checkspelling>F</checkspelling>
+  <defaultchecked>F</defaultchecked>
+  <defaultselection></defaultselection>
+  <defaultvalue>TRIM(&#xd;
+DECODE({custentity75}, NULL, &apos;&apos;, {custentity75} || &apos; - &apos;) ||&#xd;
+DECODE({custentity76}, NULL, &apos;&apos;, {custentity76} || &apos; - &apos;) ||&#xd;
+DECODE({custentity77}, NULL, &apos;&apos;, {custentity77} || &apos; - &apos;) ||&#xd;
+DECODE({custentity96}, NULL, &apos;&apos;, {custentity96} || &apos; - &apos;) ||&#xd;
+DECODE({email}, NULL, &apos;No Email&apos;, {email})&#xd;
+)</defaultvalue>
+  <description></description>
+  <displayheight></displayheight>
+  <displaytype>NORMAL</displaytype>
+  <displaywidth></displaywidth>
+  <dynamicdefault></dynamicdefault>
+  <enabletextenhance>F</enabletextenhance>
+  <encryptatrest>F</encryptatrest>
+  <fieldtype>TEXT</fieldtype>
+  <globalsearch>F</globalsearch>
+  <help></help>
+  <isformula>T</isformula>
+  <ismandatory>F</ismandatory>
+  <isparent>F</isparent>
+  <label>Lead Title </label>
+  <linktext></linktext>
+  <maxlength></maxlength>
+  <maxvalue></maxvalue>
+  <minvalue></minvalue>
+  <onparentdelete></onparentdelete>
+  <parentsubtab></parentsubtab>
+  <searchcomparefield></searchcomparefield>
+  <searchdefault></searchdefault>
+  <searchlevel>2</searchlevel>
+  <selectrecordtype></selectrecordtype>
+  <showhierarchy>F</showhierarchy>
+  <showinlist>T</showinlist>
+  <sourcefilterby></sourcefilterby>
+  <sourcefrom></sourcefrom>
+  <sourcelist></sourcelist>
+  <storevalue>F</storevalue>
+  <subtab>ENTITYMAIN</subtab>
+</entitycustomfield>

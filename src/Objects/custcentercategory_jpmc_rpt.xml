@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory_jpmc_rpt">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_jpmc_payments]</centertab>
+  <label translate="T">[scriptid=custcollection_jpmc_centercat_xml.centercat_label__reports]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_jpmc_centercat_xml.centercat_linklabel__bal_tran]</linklabel>
+      <linkobject>[scriptid=customscript_jpmc_rpt_bal_tx_s.customdeploy_jpmc_rpt_bal_tx_s]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>VC Reconciliation</linklabel>
+      <linkobject>[scriptid=customscript_jpmc_rpt_vcc_s.customdeploy_jpmc_rpt_vcc_s]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

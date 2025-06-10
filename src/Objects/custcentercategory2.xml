@@ -1,0 +1,30 @@
+<centercategory scriptid="custcentercategory2">
+  <center>[scriptid=custcenter1]</center>
+  <centertab>[scriptid=custcentertab7]</centertab>
+  <label>Tools</label>
+  <links>
+    <link>
+      <linkid>LIST_CRMGROUP</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Contact Groups</linklabel>
+      <linkobject>[scriptid=customsearch_esc_contact_grp_search]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Customer Groups</linklabel>
+      <linkobject>[scriptid=customsearch_esc_customer_group_search]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=custlink_5_5221064_147]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

@@ -1,0 +1,12 @@
+<centercategory scriptid="custcentercategory66">
+  <center>[scriptid=custcenter1]</center>
+  <centertab>[scriptid=custcentertab22]</centertab>
+  <label>Directories</label>
+  <links>
+    <link>
+      <linkid>EXTL_2</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory_shipcentralpreference">
+  <center>[scriptid=custcenter_shipcentral]</center>
+  <centertab>[scriptid=custcentertab_shipcentralsetup]</centertab>
+  <label translate="T">[scriptid=custcollection_packship_roles.ship_pref_settings_label]</label>
+  <links>
+    <link>
+      <linklabel>Ship Central Preferences</linklabel>
+      <linkobject>[scriptid=customrecord_packship_shippreference]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_packship_suitescript_translations.carrier_mapping_title]</linklabel>
+      <linkobject>[scriptid=customscript_carrier_suitelet.customdeploy_carrier_suitelet]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

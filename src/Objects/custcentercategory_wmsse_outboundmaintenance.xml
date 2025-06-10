@@ -1,0 +1,31 @@
+<centercategory scriptid="custcentercategory_wmsse_outboundmaintenance">
+  <center>[scriptid=custcenter_wmsse_wms]</center>
+  <centertab>[scriptid=custcentertab_wmsse_wmsoutbound]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_outboundmaintenance]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory30_reversepicks]</linklabel>
+      <linkobject>[scriptid=customscript_wms_guipickreversal.customdeploy_wms_guipickreversal]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory30_markopenpicksdone]</linklabel>
+      <linkobject>[scriptid=customscript_wms_gui_mrkcmp_partial_pick.customdeploy_wms_gui_mrkcmp_partial_pick]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_outboundmaintenance_blockbin]</linklabel>
+      <linkobject>[scriptid=customscript_wms_releaseholdbin.customdeploy_wms_releaseholdbin]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_outboundmaintenance_bulkassign]</linklabel>
+      <linkobject>[scriptid=customscript_wms_sl_bulk_pickerassignmnt.customdeploy_wms_sl_bulk_pickerassignmnt]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

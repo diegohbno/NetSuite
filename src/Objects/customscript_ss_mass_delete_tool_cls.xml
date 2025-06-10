@@ -1,0 +1,10 @@
+<clientscript scriptid="customscript_ss_mass_delete_tool_cls">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>ss_mass_delete_tool_cls</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>F</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/Starling/SS2/Mass Delete Tool/ss_mass_delete_tool_cls.js]</scriptfile>
+</clientscript>

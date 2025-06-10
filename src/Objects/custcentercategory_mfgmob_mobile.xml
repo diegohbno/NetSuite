@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_mfgmob_mobile">
+  <center>[scriptid=custcenter_mfgmob_manufacturingmobile]</center>
+  <centertab>[scriptid=custcentertab_mfgmob_mobile]</centertab>
+  <label translate="T">[scriptid=custcollection_mfgmob_centersandtabs.mobile_key]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_mfgmob_centersandtabs.mobileapp_key]</linklabel>
+      <linkobject>[scriptid=customscript_mfgmob_mobilelauncher.customdeploy_mfgmob_mobilelauncher]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

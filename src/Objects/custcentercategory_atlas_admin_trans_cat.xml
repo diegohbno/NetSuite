@@ -1,0 +1,43 @@
+<centercategory scriptid="custcentercategory_atlas_admin_trans_cat">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_atlas_admin_tab]</centertab>
+  <label>Transactions</label>
+  <links>
+    <link>
+      <linklabel>Purchase Order Rate Changes</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_poratechange]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Returns by Employee</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_returnbyemployee_rpt]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Sales Detail Query</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_salesdetail_query_rpt]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Transactions Audit</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_transaction_audit_rpt]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Transactions Approved By Creator</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_trns_apprv_alert]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Transactions Missing Taxes</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_trans_missing_tax_rem]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

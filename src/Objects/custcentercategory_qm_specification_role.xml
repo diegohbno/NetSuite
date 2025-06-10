@@ -1,0 +1,5 @@
+<centercategory scriptid="custcentercategory_qm_specification_role">
+  <center>[scriptid=custcenter_qm_center]</center>
+  <centertab>[scriptid=custcentertab_qm_qualitymgmt_new_center_tab]</centertab>
+  <label translate="T">[scriptid=custcollection_qm_translation.custcentercategory_qm_specification_role]</label>
+</centercategory>

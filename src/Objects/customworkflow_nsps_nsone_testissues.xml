@@ -1,0 +1,197 @@
+<workflow scriptid="customworkflow_nsps_nsone_testissues">
+  <description></description>
+  <initcontexts></initcontexts>
+  <initeventtypes></initeventtypes>
+  <initlocalizationcontext></initlocalizationcontext>
+  <initoncreate>T</initoncreate>
+  <initonvieworupdate>T</initonvieworupdate>
+  <initsavedsearchcondition></initsavedsearchcondition>
+  <inittriggertype></inittriggertype>
+  <isinactive>F</isinactive>
+  <islogenabled>F</islogenabled>
+  <keephistory>ALWAYS</keephistory>
+  <name>NetSuite One Workflows - Test Issues</name>
+  <recordtypes>[scriptid=customrecord_ns_ts_test_issue]</recordtypes>
+  <releasestatus>RELEASED</releasestatus>
+  <runasadmin>T</runasadmin>
+  <initcondition>
+    <formula></formula>
+    <type>VISUAL_BUILDER</type>
+  </initcondition>
+  <workflowstates>
+    <workflowstate scriptid="workflowstate2">
+      <description></description>
+      <donotexitworkflow>T</donotexitworkflow>
+      <name>State 1: Data Entry</name>
+      <positionx>200</positionx>
+      <positiony>50</positiony>
+      <workflowactions triggertype="AFTERFIELDEDIT">
+        <setfieldmandatoryaction scriptid="workflowaction4">
+          <clienttriggerfields>[scriptid=customrecord_ns_ts_test_issue.custrecord_ns_ts_base_status_field]</clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <field>[scriptid=customrecord_ns_ts_test_issue.custrecord_ns_ts_fix_type]</field>
+          <isinactive>F</isinactive>
+          <ismandatory>T</ismandatory>
+          <issublistfield>F</issublistfield>
+          <initcondition>
+            <formula><![CDATA["Base Status" IN ("NetSuite TS Base Status List1","NetSuite TS Base Status List2")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Base Status</name>
+                <value>[scriptid=customrecord_ns_ts_test_issue.custrecord_ns_ts_base_status_field]</value>
+              </parameter>
+              <parameter>
+                <name>NetSuite TS Base Status List1</name>
+                <selectrecordtype>[scriptid=customlist_ns_ts_base_status_list]</selectrecordtype>
+                <value>[scriptid=customlist_ns_ts_base_status_list.value_2_t1195985_512]</value>
+              </parameter>
+              <parameter>
+                <name>NetSuite TS Base Status List2</name>
+                <selectrecordtype>[scriptid=customlist_ns_ts_base_status_list]</selectrecordtype>
+                <value>[scriptid=customlist_ns_ts_base_status_list.value_3_t1195985_512]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </setfieldmandatoryaction>
+        <setfieldmandatoryaction scriptid="workflowaction5">
+          <clienttriggerfields>[scriptid=customrecord_ns_ts_test_issue.custrecord_ns_ts_base_status_field]</clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <field>[scriptid=customrecord_ns_ts_test_issue.custrecord_ns_ts_fix_type]</field>
+          <isinactive>F</isinactive>
+          <ismandatory>F</ismandatory>
+          <issublistfield>F</issublistfield>
+          <initcondition>
+            <formula><![CDATA["Base Status" IN ("NetSuite TS Base Status List1")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Base Status</name>
+                <value>[scriptid=customrecord_ns_ts_test_issue.custrecord_ns_ts_base_status_field]</value>
+              </parameter>
+              <parameter>
+                <name>NetSuite TS Base Status List1</name>
+                <selectrecordtype>[scriptid=customlist_ns_ts_base_status_list]</selectrecordtype>
+                <value>[scriptid=customlist_ns_ts_base_status_list.value_1_t1195985_512]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </setfieldmandatoryaction>
+        <setfieldmandatoryaction scriptid="workflowaction6">
+          <clienttriggerfields>[scriptid=customrecord_ns_ts_test_issue.custrecord_ns_ts_base_status_field]</clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <field>[scriptid=customrecord_ns_ts_test_issue.custrecord_ns_ts_resolution_details]</field>
+          <isinactive>F</isinactive>
+          <ismandatory>T</ismandatory>
+          <issublistfield>F</issublistfield>
+          <initcondition>
+            <formula><![CDATA["Base Status" IN ("NetSuite TS Base Status List1","NetSuite TS Base Status List2")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Base Status</name>
+                <value>[scriptid=customrecord_ns_ts_test_issue.custrecord_ns_ts_base_status_field]</value>
+              </parameter>
+              <parameter>
+                <name>NetSuite TS Base Status List1</name>
+                <selectrecordtype>[scriptid=customlist_ns_ts_base_status_list]</selectrecordtype>
+                <value>[scriptid=customlist_ns_ts_base_status_list.value_3_t1195985_512]</value>
+              </parameter>
+              <parameter>
+                <name>NetSuite TS Base Status List2</name>
+                <selectrecordtype>[scriptid=customlist_ns_ts_base_status_list]</selectrecordtype>
+                <value>[scriptid=customlist_ns_ts_base_status_list.value_2_t1195985_512]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </setfieldmandatoryaction>
+        <setfieldmandatoryaction scriptid="workflowaction7">
+          <clienttriggerfields>[scriptid=customrecord_ns_ts_test_issue.custrecord_ns_ts_base_status_field]</clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <field>[scriptid=customrecord_ns_ts_test_issue.custrecord_ns_ts_resolution_details]</field>
+          <isinactive>F</isinactive>
+          <ismandatory>F</ismandatory>
+          <issublistfield>F</issublistfield>
+          <initcondition>
+            <formula><![CDATA["Base Status" IN ("NetSuite TS Base Status List1")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Base Status</name>
+                <value>[scriptid=customrecord_ns_ts_test_issue.custrecord_ns_ts_base_status_field]</value>
+              </parameter>
+              <parameter>
+                <name>NetSuite TS Base Status List1</name>
+                <selectrecordtype>[scriptid=customlist_ns_ts_base_status_list]</selectrecordtype>
+                <value>[scriptid=customlist_ns_ts_base_status_list.value_1_t1195985_512]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </setfieldmandatoryaction>
+        <setfieldmandatoryaction scriptid="workflowaction8">
+          <clienttriggerfields>[scriptid=customrecord_ns_ts_test_issue.custrecord_ns_ts_base_status_field]</clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <field>[scriptid=customrecord_ns_ts_test_issue.custrecord_ns_ts_date_completed]</field>
+          <isinactive>F</isinactive>
+          <ismandatory>T</ismandatory>
+          <issublistfield>F</issublistfield>
+          <initcondition>
+            <formula><![CDATA["Base Status" IN ("NetSuite TS Base Status List1")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Base Status</name>
+                <value>[scriptid=customrecord_ns_ts_test_issue.custrecord_ns_ts_base_status_field]</value>
+              </parameter>
+              <parameter>
+                <name>NetSuite TS Base Status List1</name>
+                <selectrecordtype>[scriptid=customlist_ns_ts_base_status_list]</selectrecordtype>
+                <value>[scriptid=customlist_ns_ts_base_status_list.value_3_t1195985_512]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </setfieldmandatoryaction>
+        <setfieldmandatoryaction scriptid="workflowaction9">
+          <clienttriggerfields>[scriptid=customrecord_ns_ts_test_issue.custrecord_ns_ts_base_status_field]</clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <field>[scriptid=customrecord_ns_ts_test_issue.custrecord_ns_ts_date_completed]</field>
+          <isinactive>F</isinactive>
+          <ismandatory>F</ismandatory>
+          <issublistfield>F</issublistfield>
+          <initcondition>
+            <formula><![CDATA["Base Status" IN ("NetSuite TS Base Status List1","NetSuite TS Base Status List2")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Base Status</name>
+                <value>[scriptid=customrecord_ns_ts_test_issue.custrecord_ns_ts_base_status_field]</value>
+              </parameter>
+              <parameter>
+                <name>NetSuite TS Base Status List1</name>
+                <selectrecordtype>[scriptid=customlist_ns_ts_base_status_list]</selectrecordtype>
+                <value>[scriptid=customlist_ns_ts_base_status_list.value_1_t1195985_512]</value>
+              </parameter>
+              <parameter>
+                <name>NetSuite TS Base Status List2</name>
+                <selectrecordtype>[scriptid=customlist_ns_ts_base_status_list]</selectrecordtype>
+                <value>[scriptid=customlist_ns_ts_base_status_list.value_2_t1195985_512]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </setfieldmandatoryaction>
+      </workflowactions>
+    </workflowstate>
+  </workflowstates>
+</workflow>

@@ -1,0 +1,16 @@
+<transactionForm scriptid="custform_293_5221064_114" standard="STANDARDBOM">
+  <name>Custom BOM David</name>
+  <recordType>WORKORDER</recordType>
+  <inactive>F</inactive>
+  <preferred>T</preferred>
+  <mainFields>
+    <defaultFieldGroup/>
+  </mainFields>
+  <emailMessageTemplate>USE_DEFAULT</emailMessageTemplate>
+  <printingType>
+    <advanced>
+      <printTemplate>[scriptid=custtmpl_724_5221064_775]</printTemplate>
+      <emailTemplate>[scriptid=custtmpl_724_5221064_775]</emailTemplate>
+    </advanced>
+  </printingType>
+</transactionForm>

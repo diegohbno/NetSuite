@@ -1,0 +1,9 @@
+<advancedpdftemplate scriptid="custtmpl_3761957_102" standard="STDTMPLEMPTY">
+  <description></description>
+  <displaysourcecode>F</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>F</preferred>
+  <printtype>TRANSACTION</printtype>
+  <title>SCM Sales Order - Customer Part No.</title>
+  <trantype>SALESORD</trantype>
+</advancedpdftemplate>

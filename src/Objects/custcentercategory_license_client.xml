@@ -1,0 +1,31 @@
+<centercategory scriptid="custcentercategory_license_client">
+  <center>BASIC</center>
+  <centertab>BASICCENTERSETUP</centertab>
+  <label>License Client</label>
+  <links>
+    <link>
+      <linklabel>License Dashboard</linklabel>
+      <linkobject>[scriptid=customscript_8299_client_admin_page.customdeploy_8299_client_admin_page]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Manual License Request</linklabel>
+      <linkobject>[scriptid=customscript_8299_manual_request_su.customdeploy_8299_manual_request_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Audit Trail</linklabel>
+      <linkobject>[scriptid=customrecord_8299_client_audit_trail]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>License Test Mode</linklabel>
+      <linkobject>[scriptid=customscript_8299_su_set_test_mode.customdeploy_8299_su_set_test_mode]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

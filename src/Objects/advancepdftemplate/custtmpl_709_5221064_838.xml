@@ -1,0 +1,9 @@
+<advancedpdftemplate scriptid="custtmpl_709_5221064_838" standard="STDTMPLPURCHORD">
+  <description>David Test PDF for Purchasing</description>
+  <displaysourcecode>T</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>T</preferred>
+  <printtype>TRANSACTION</printtype>
+  <title>Custom HBNO Purchase PDF/HTML Template</title>
+  <trantype>PURCHORD</trantype>
+</advancedpdftemplate>

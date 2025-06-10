@@ -1,0 +1,133 @@
+<workflow scriptid="customworkflow_ns_ps_meeting_note_delive">
+  <description>Workflow to automate delivery of meeting notes summary</description>
+  <initcontexts></initcontexts>
+  <initeventtypes></initeventtypes>
+  <initlocalizationcontext></initlocalizationcontext>
+  <initoncreate>T</initoncreate>
+  <initonvieworupdate>T</initonvieworupdate>
+  <initsavedsearchcondition></initsavedsearchcondition>
+  <inittriggertype></inittriggertype>
+  <isinactive>F</isinactive>
+  <islogenabled>F</islogenabled>
+  <keephistory>ALWAYS</keephistory>
+  <name>NetSuite One Workflows - Meeting Notes</name>
+  <recordtypes>[scriptid=customrecord_ns_ps_meeting_notes]</recordtypes>
+  <releasestatus>RELEASED</releasestatus>
+  <runasadmin>T</runasadmin>
+  <initcondition>
+    <formula></formula>
+    <type>VISUAL_BUILDER</type>
+  </initcondition>
+  <workflowstates>
+    <workflowstate scriptid="workflowstate1">
+      <description></description>
+      <donotexitworkflow>T</donotexitworkflow>
+      <name>State 1: Data Entry</name>
+      <positionx>200</positionx>
+      <positiony>50</positiony>
+      <workflowactions triggertype="AFTERSUBMIT">
+        <customaction scriptid="workflowaction3">
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <isinactive>F</isinactive>
+          <resultfield></resultfield>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <scripttype>[scriptid=customscript_mfgi_rf_send_email]</scripttype>
+          <initcondition>
+            <formula><![CDATA[isChecked("Email Attendees") = 'T']]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Email Attendees</name>
+                <value>[scriptid=customrecord_ns_ps_meeting_notes.custrecord_ns_ps_meeting_note_email]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </customaction>
+        <sendemailaction scriptid="workflowaction1">
+          <attachmentfield></attachmentfield>
+          <attachmentfile></attachmentfile>
+          <attachmentjoinfield></attachmentjoinfield>
+          <attachmenttype>SPECIFIC</attachmenttype>
+          <body>&lt;div style=&quot;font-size: 8pt;&quot;&gt;&lt;font face=&quot;arial&quot;&gt;&lt;font color=&quot;#0000ff&quot; style=&quot;font-size: 8pt;&quot;&gt;&lt;u&gt;&lt;b&gt;Meeting Notes Information&lt;/b&gt;&lt;/u&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 8pt;&quot;&gt;&lt;b&gt;Meeting Date:&lt;/b&gt;&amp;nbsp;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;font-family: Verdana, sans-serif; font-size: x-small;&quot;&gt;&lt;NLCUSTRECORD_NS_PS_MEETING_DATE&gt;&lt;/span&gt;&lt;font face=&quot;arial&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;font style=&quot;font-size: 8pt;&quot;&gt;&lt;b&gt;Topic:&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;font-family: Verdana, sans-serif; font-size: x-small;&quot;&gt;&lt;NLCUSTRECORD_NS_PS_MEETING_TOPIC&gt;&lt;/span&gt;&lt;font face=&quot;arial&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;font style=&quot;font-size: 8pt;&quot;&gt;&lt;b&gt;Attendees:&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;font-family: Verdana, sans-serif; font-size: x-small;&quot;&gt;&lt;NLCUSTRECORD_NS_PS_ATTENDEES&gt;&lt;/span&gt;&lt;font face=&quot;arial&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;font style=&quot;font-size: 8pt;&quot;&gt;&lt;b&gt;Meeting Summary:&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;font-family: Verdana, sans-serif; font-size: x-small;&quot;&gt;&lt;NLCUSTRECORD_NS_PS_MEETING_SUMMARY&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 8pt;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;font face=&quot;arial&quot;&gt;&lt;b style=&quot;font-size: 8pt;&quot;&gt;&lt;u&gt;&lt;font size=&quot;2&quot; color=&quot;#0000ff&quot;&gt;Next Meeting Information&lt;/font&gt;&lt;/u&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 8pt;&quot;&gt;&lt;b&gt;Next Meeting Date:&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;font-family: verdana; font-size: x-small;&quot;&gt;&lt;NLCUSTRECORD_NS_PS_NEXT_MEETING_DATE&gt;&lt;/span&gt;&lt;font face=&quot;arial&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;font style=&quot;font-size: 8pt;&quot;&gt;&lt;b&gt;Next Meeting Agenda/Topics: &amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;font-family: verdana; font-size: x-small;&quot;&gt;&lt;NLCUSTRECORD_NS_PS_NEXT_MEETING_TOPICS&gt;&lt;/span&gt;&lt;font face=&quot;arial&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#ff0000&quot; style=&quot;font-size: 8pt;&quot;&gt;&lt;b&gt;Please be sure to review and complete any action items that have been assigned.&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;&lt;br&gt;&lt;font face=&quot;arial&quot; style=&quot;font-size: 8pt;&quot;&gt;&lt;font color=&quot;#ff0000&quot; style=&quot;font-size: 8pt;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;&lt;br&gt;&lt;font face=&quot;arial&quot; style=&quot;font-size: 8pt;&quot;&gt;&lt;font color=&quot;#ff0000&quot; style=&quot;font-size: 8pt;&quot;&gt;&lt;b&gt;Please do not respond to this email.&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;</body>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <includerecordlink>F</includerecordlink>
+          <isinactive>T</isinactive>
+          <recipientbccemail></recipientbccemail>
+          <recipientccemail></recipientccemail>
+          <recipientemail></recipientemail>
+          <recipientfield>[scriptid=customrecord_ns_ps_meeting_notes.custrecord_ns_ps_attendees]</recipientfield>
+          <recipientjoinfield></recipientjoinfield>
+          <recipienttype>FIELD</recipienttype>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <senderfield>STDUSERUSER</senderfield>
+          <senderjoinfield></senderjoinfield>
+          <sendertype>FIELD</sendertype>
+          <subject>Meeting Notes Summary</subject>
+          <template></template>
+          <usetemplate>F</usetemplate>
+          <initcondition>
+            <formula><![CDATA[isChecked("Email Attendees") = 'T']]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Email Attendees</name>
+                <value>[scriptid=customrecord_ns_ps_meeting_notes.custrecord_ns_ps_meeting_note_email]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </sendemailaction>
+        <sendemailaction scriptid="workflowaction2">
+          <attachmentfield></attachmentfield>
+          <attachmentfile></attachmentfile>
+          <attachmentjoinfield></attachmentjoinfield>
+          <attachmenttype>SPECIFIC</attachmenttype>
+          <body>&lt;div style=&quot;font-size: 8pt;&quot;&gt;&lt;font face=&quot;arial&quot;&gt;&lt;font color=&quot;#0000ff&quot; style=&quot;font-size: 8pt;&quot;&gt;&lt;u&gt;&lt;b&gt;Meeting Notes Information&lt;/b&gt;&lt;/u&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 8pt;&quot;&gt;&lt;b&gt;Meeting Date:&lt;/b&gt;&amp;nbsp;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;font-family: Verdana, sans-serif; font-size: x-small;&quot;&gt;&lt;NLCUSTRECORD_NS_PS_MEETING_DATE&gt;&lt;/span&gt;&lt;font face=&quot;arial&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;font style=&quot;font-size: 8pt;&quot;&gt;&lt;b&gt;Topic:&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;font-family: Verdana, sans-serif; font-size: x-small;&quot;&gt;&lt;NLCUSTRECORD_NS_PS_MEETING_TOPIC&gt;&lt;/span&gt;&lt;font face=&quot;arial&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;font style=&quot;font-size: 8pt;&quot;&gt;&lt;b&gt;Attendees:&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;font-family: Verdana, sans-serif; font-size: x-small;&quot;&gt;&lt;NLCUSTRECORD_NS_PS_ATTENDEES&gt;&lt;/span&gt;&lt;font face=&quot;arial&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;font style=&quot;font-size: 8pt;&quot;&gt;&lt;b&gt;Meeting Summary:&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;font-family: Verdana, sans-serif; font-size: x-small;&quot;&gt;&lt;NLCUSTRECORD_NS_PS_MEETING_SUMMARY&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 8pt;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;font face=&quot;arial&quot;&gt;&lt;b style=&quot;font-size: 8pt;&quot;&gt;&lt;u&gt;&lt;font size=&quot;2&quot; color=&quot;#0000ff&quot;&gt;Next Meeting Information&lt;/font&gt;&lt;/u&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 8pt;&quot;&gt;&lt;b&gt;Next Meeting Date:&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;font-family: verdana; font-size: x-small;&quot;&gt;&lt;NLCUSTRECORD_NS_PS_NEXT_MEETING_DATE&gt;&lt;/span&gt;&lt;font face=&quot;arial&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;font style=&quot;font-size: 8pt;&quot;&gt;&lt;b&gt;Next Meeting Agenda/Topics: &amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;font-family: verdana; font-size: x-small;&quot;&gt;&lt;NLCUSTRECORD_NS_PS_NEXT_MEETING_TOPICS&gt;&lt;/span&gt;&lt;font face=&quot;arial&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#ff0000&quot; style=&quot;font-size: 8pt;&quot;&gt;&lt;b&gt;Please be sure to review and complete any action items that have been assigned.&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;&lt;br&gt;&lt;font face=&quot;arial&quot; style=&quot;font-size: 8pt;&quot;&gt;&lt;font color=&quot;#ff0000&quot; style=&quot;font-size: 8pt;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;&lt;br&gt;&lt;font face=&quot;arial&quot; style=&quot;font-size: 8pt;&quot;&gt;&lt;font color=&quot;#ff0000&quot; style=&quot;font-size: 8pt;&quot;&gt;&lt;b&gt;Please do not respond to this email.&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;</body>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <includerecordlink>F</includerecordlink>
+          <isinactive>T</isinactive>
+          <recipientbccemail></recipientbccemail>
+          <recipientccemail></recipientccemail>
+          <recipientemail></recipientemail>
+          <recipientfield>[scriptid=customrecord_ns_ps_meeting_notes.custrecord_ns_ps_meeting_note_cc_email]</recipientfield>
+          <recipientjoinfield></recipientjoinfield>
+          <recipienttype>FIELD</recipienttype>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <senderfield>STDUSERUSER</senderfield>
+          <senderjoinfield></senderjoinfield>
+          <sendertype>FIELD</sendertype>
+          <subject>Meeting Notes Summary</subject>
+          <template></template>
+          <usetemplate>F</usetemplate>
+          <initcondition>
+            <formula><![CDATA[isChecked("Email Attendees") = 'T']]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Email Attendees</name>
+                <value>[scriptid=customrecord_ns_ps_meeting_notes.custrecord_ns_ps_meeting_note_email]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </sendemailaction>
+      </workflowactions>
+    </workflowstate>
+  </workflowstates>
+</workflow>

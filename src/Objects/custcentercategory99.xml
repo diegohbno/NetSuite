@@ -1,0 +1,31 @@
+<centercategory scriptid="custcentercategory99">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab30]</centertab>
+  <label>Purchase Order Approvals</label>
+  <links>
+    <link>
+      <linklabel>Purchase Order Pending Approval</linklabel>
+      <linkobject>[scriptid=customsearch3947]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Approved PO - Pending Email to Vendor</linklabel>
+      <linkobject>[scriptid=customsearch3948]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=custlink_37_5221064_692]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=custlink_38_5221064_279]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

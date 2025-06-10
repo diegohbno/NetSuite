@@ -1,0 +1,9 @@
+<advancedpdftemplate scriptid="custtmpl_atlas_mfg_std_cm" standard="STDTMPLEMPTY">
+  <description></description>
+  <displaysourcecode>T</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>F</preferred>
+  <printtype>TRANSACTION</printtype>
+  <title>MFG STD -Credit Memo PDF/HTML Template</title>
+  <trantype>CUSTCRED</trantype>
+</advancedpdftemplate>

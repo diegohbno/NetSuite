@@ -1,0 +1,25 @@
+<centercategory scriptid="custcentercategory92">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab30]</centertab>
+  <label>B2B</label>
+  <links>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=customsearchdavidpsslotreport_3]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=customsearch3699]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=customsearchdavidpsslotreport_3_2]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

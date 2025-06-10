@@ -1,0 +1,12 @@
+<emailtemplate scriptid="custemailtmpl_144_5221064_848">
+  <addcompanyaddress>T</addcompanyaddress>
+  <addunsubscribelink>T</addunsubscribelink>
+  <description></description>
+  <isinactive>F</isinactive>
+  <isprivate>F</isprivate>
+  <mediaitem></mediaitem>
+  <name>BOL Request</name>
+  <recordtype></recordtype>
+  <subject>HBNO:  Sales Order # XXXXX- Request for BOL/Shipping instructions</subject>
+  <usesmedia>F</usesmedia>
+</emailtemplate>

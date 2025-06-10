@@ -1,0 +1,12 @@
+<emailtemplate scriptid="custemailtmpl_131_5221064_955">
+  <addcompanyaddress>T</addcompanyaddress>
+  <addunsubscribelink>T</addunsubscribelink>
+  <description></description>
+  <isinactive>F</isinactive>
+  <isprivate>F</isprivate>
+  <mediaitem></mediaitem>
+  <name>Special Offer for larger Website customers</name>
+  <recordtype></recordtype>
+  <subject>We have an offer for website customers like YOU!</subject>
+  <usesmedia>F</usesmedia>
+</emailtemplate>

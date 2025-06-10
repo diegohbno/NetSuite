@@ -1,0 +1,10 @@
+<advancedpdftemplate scriptid="custtmpl_738_5221064_769" standard="STDTMPLPRCH_SRP_3PL_PURCHASE_ORDER">
+  <description></description>
+  <displaysourcecode>T</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>T</preferred>
+  <printtype>TRANSACTION</printtype>
+  <recordtype>[scriptid=custompurchase_srp_3pl_purchase_order]</recordtype>
+  <title>Custom 3 PL Consignment PDF/HTML Template</title>
+  <trantype>CUTRPRCH</trantype>
+</advancedpdftemplate>

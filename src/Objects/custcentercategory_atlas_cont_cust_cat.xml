@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory_atlas_cont_cust_cat">
+  <center>ACCOUNTCENTER</center>
+  <centertab>[scriptid=custcentertab_atlas_sales_audit]</centertab>
+  <label>Customer</label>
+  <links>
+    <link>
+      <linklabel>Customer Status Audit</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_cust_status_chnge_rpt]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Customer Address Change</linklabel>
+      <linkobject>[scriptid=customsearch_atlas_address_change_rpt]</linkobject>
+      <linktasktype>SRCH_FORM</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

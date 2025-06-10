@@ -1,0 +1,44 @@
+<centercategory scriptid="custcentercategory_wmsse_inbound">
+  <center>[scriptid=custcenter_wmsse_wms]</center>
+  <centertab>[scriptid=custcentertab_wmsse_wmsinbound]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentertab_wmsse_wmsinbound]</label>
+  <links>
+    <link>
+      <linkid>EDIT_TRAN_PURCHORD</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>EDIT_TRAN_TRNFRORD</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>EDIT_TRAN_RTNAUTH</linkid>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentertab_wmsse_wmsinbound_createrma]</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_receiving_inbreversal]</linklabel>
+      <linkobject>[scriptid=customscript_wms_inboundreversal.customdeploy_wms_inboundreversal]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_postitemreceipt]</linklabel>
+      <linkobject>[scriptid=customscript_wms_gui_postitemreceipt.customdeploy_wms_gui_postitemreceipt]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>EDIT_INBOUNDSHIPMENT</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_TRAN_VENDAUTH</linkid>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentertab_wmsse_wmsinbound_createvra]</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

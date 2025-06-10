@@ -1,0 +1,31 @@
+<centercategory scriptid="custcentercategory_wmsse_warehouse">
+  <center>[scriptid=custcenter_wmsse_warehouse]</center>
+  <centertab>[scriptid=custcentertab_wmsse_setup]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_warehouse]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_warehouse_putstrategies]</linklabel>
+      <linkobject>[scriptid=customrecord_wmsse_putstrategies]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Pick Strategies</linklabel>
+      <linkobject>[scriptid=customrecord_wmsse_pickstrategies]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_warehouse_systemrules]</linklabel>
+      <linkobject>[scriptid=customrecord_wmsse_sysrules]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>WMS Order Type</linklabel>
+      <linkobject>[scriptid=customrecord_wmsse_ordertype]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

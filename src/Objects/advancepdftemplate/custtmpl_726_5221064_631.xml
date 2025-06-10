@@ -1,0 +1,9 @@
+<advancedpdftemplate scriptid="custtmpl_726_5221064_631" standard="STDTMPLSHIPPINGLABEL">
+  <description></description>
+  <displaysourcecode>F</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>T</preferred>
+  <printtype>SHIPPINGLABEL</printtype>
+  <title>Custom David Shipping Label PDF/HTML Template</title>
+  <trantype>CUSTINVC</trantype>
+</advancedpdftemplate>

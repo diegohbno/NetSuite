@@ -1,0 +1,25 @@
+<centercategory scriptid="custcentercategory_mobile_settings">
+  <center>[scriptid=custcenter_mobile_administrator]</center>
+  <centertab>[scriptid=custcentertab_mobile_setup]</centertab>
+  <label translate="T">[scriptid=custcollection_mobile_bundle_translations.centername_settings]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_mobile_bundle_translations.centerlink_hamburger_menu]</linklabel>
+      <linkobject>[scriptid=customrecord_mobile_menu_items]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_mobile_bundle_translations.centerlink_page_elements]</linklabel>
+      <linkobject>[scriptid=customrecord_mobile_page_element]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_mobile_bundle_translations.centerlink_mobile_settings]</linklabel>
+      <linkobject>[scriptid=customscript_mobile_sl_settings.customdeploy_mobile_sl_settings]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory96">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab30]</centertab>
+  <label>Non Conformance</label>
+  <links>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=customrecord4737]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=customrecord4756]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

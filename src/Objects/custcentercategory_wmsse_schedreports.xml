@@ -1,0 +1,5 @@
+<centercategory scriptid="custcentercategory_wmsse_schedreports">
+  <center>[scriptid=custcenter_wmsse_warehouse]</center>
+  <centertab>[scriptid=custcentertab_wmsse_reports]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_schedreports]</label>
+</centercategory>

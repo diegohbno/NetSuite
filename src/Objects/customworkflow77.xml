@@ -1,0 +1,37 @@
+<workflow scriptid="customworkflow77">
+  <description></description>
+  <initcontexts></initcontexts>
+  <initeventtypes></initeventtypes>
+  <initlocalizationcontext></initlocalizationcontext>
+  <initoncreate>F</initoncreate>
+  <initonvieworupdate>F</initonvieworupdate>
+  <initsavedsearchcondition></initsavedsearchcondition>
+  <initsavedsearchfilter>[scriptid=customsearch4003]</initsavedsearchfilter>
+  <inittriggertype></inittriggertype>
+  <isinactive>T</isinactive>
+  <islogenabled>T</islogenabled>
+  <keephistory>ALWAYS</keephistory>
+  <name>Change Customer Status Sample</name>
+  <recordtypes>SALESORDER</recordtypes>
+  <releasestatus>NOTINITIATING</releasestatus>
+  <runasadmin>T</runasadmin>
+  <recurrence>
+    <every30minutes>
+      <enddate></enddate>
+      <startdate>2024-12-16</startdate>
+    </every30minutes>
+  </recurrence>
+  <initcondition>
+    <formula></formula>
+    <type>VISUAL_BUILDER</type>
+  </initcondition>
+  <workflowstates>
+    <workflowstate scriptid="workflowstate620">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>State 1</name>
+      <positionx>243</positionx>
+      <positiony>133</positiony>
+    </workflowstate>
+  </workflowstates>
+</workflow>

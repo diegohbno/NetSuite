@@ -1,0 +1,43 @@
+<centercategory scriptid="custcentercategory_wmsse_invreporting">
+  <center>[scriptid=custcenter_wmsse_wms]</center>
+  <centertab>[scriptid=custcentertab_wmsse_wmsreporting]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_invreporting]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_invreporting_invopentask]</linklabel>
+      <linkobject>[scriptid=customsearch_wmsse_inventory_opentask]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_invreporting_invclosedtask]</linklabel>
+      <linkobject>[scriptid=customsearch_wmsse_inventory_closedtask]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_invreporting_lotexpirydates]</linklabel>
+      <linkobject>[scriptid=customsearch_wmsse_lot_expiration_search]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_cyclecount_cyccpendingreview]</linklabel>
+      <linkobject>[scriptid=customsearch_wmsse_to_do_cyclecount_rev]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_cyclecount_cyccrecounts]</linklabel>
+      <linkobject>[scriptid=customsearch_wmsse_cyclecount_review_rec]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_invreporting_geninvreport]</linklabel>
+      <linkobject>[scriptid=customscript_wms_inventoryreport.customdeploy_wms_inventoryreport]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

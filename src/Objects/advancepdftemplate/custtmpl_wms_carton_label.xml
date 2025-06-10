@@ -1,0 +1,10 @@
+<advancedpdftemplate scriptid="custtmpl_wms_carton_label" standard="STDTMPLCR_WMS_RULE_EVALUATN_AUTOPRINT">
+  <description></description>
+  <displaysourcecode>T</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>F</preferred>
+  <printtype>CUSTOMRECORD</printtype>
+  <recordtype>[scriptid=customrecord_wms_rule_evaluatn_autoprint]</recordtype>
+  <title>Standard WMS Carton Label PDF Template</title>
+  <trantype>CUSTOM</trantype>
+</advancedpdftemplate>

@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory89">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab30]</centertab>
+  <label>Promotion</label>
+  <links>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=customsearch2711]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

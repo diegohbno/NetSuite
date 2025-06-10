@@ -1,0 +1,302 @@
+<?xml version="1.0"?><!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdf>
+<head>
+	<link name="NotoSans" type="font" subtype="truetype" src="${nsfont.NotoSans_Regular}" src-bold="${nsfont.NotoSans_Bold}" src-italic="${nsfont.NotoSans_Italic}" src-bolditalic="${nsfont.NotoSans_BoldItalic}" bytes="2" />
+	<#if .locale == "zh_CN">
+		<link name="NotoSansCJKsc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKsc_Regular}" src-bold="${nsfont.NotoSansCJKsc_Bold}" bytes="2" />
+	<#elseif .locale == "zh_TW">
+		<link name="NotoSansCJKtc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKtc_Regular}" src-bold="${nsfont.NotoSansCJKtc_Bold}" bytes="2" />
+	<#elseif .locale == "ja_JP">
+		<link name="NotoSansCJKjp" type="font" subtype="opentype" src="${nsfont.NotoSansCJKjp_Regular}" src-bold="${nsfont.NotoSansCJKjp_Bold}" bytes="2" />
+	<#elseif .locale == "ko_KR">
+		<link name="NotoSansCJKkr" type="font" subtype="opentype" src="${nsfont.NotoSansCJKkr_Regular}" src-bold="${nsfont.NotoSansCJKkr_Bold}" bytes="2" />
+	<#elseif .locale == "th_TH">
+		<link name="NotoSansThai" type="font" subtype="opentype" src="${nsfont.NotoSansThai_Regular}" src-bold="${nsfont.NotoSansThai_Bold}" bytes="2" />
+	</#if>
+    <macrolist>
+        <macro id="nlheader">
+            <table class="header" style="width: 100%;"><tr>
+	<td rowspan="3"><#if companyInformation.logoUrl?length != 0>
+      <#if subsidiary.id == '3'><@filecabinet nstype="image" src="${subsidiary.logo@url}" style="float: left; margin: 7px; width: 225px; height: 75px;" />
+          <#elseif subsidiary.id == '2'><@filecabinet nstype="image" src="${subsidiary.logo@url}" style="float: left; margin: 7px; width: 120px; height: 100px;" />
+       </#if> </#if>
+        <br /><span class="nameandaddress">${subsidiary.mainaddress_text}</span></td>
+	<td align="right"><span class="title">${record@title}</span></td>
+	</tr>
+	<tr>
+	<td align="right"><span class="number">#${record.tranid}</span></td>
+	</tr>
+	<tr>
+	<td align="right">${record.custbody36}</td>
+	</tr></table>
+        </macro>
+        <macro id="nlfooter">
+          <table class="footer" style="width: 100%;">
+           
+            <!-- <tr>
+              <td style="width: 90%; padding-bottom: 10px; padding-left: 10px;"><strong>Disclaimer: </strong>${record.custbody_hbno_pdf_disclaimer}</td>
+            </tr> -->
+          
+            <tr>
+		 		<td><barcode codetype="code128" showtext="true" value="${record.tranid}"/></td>
+		 		<td align="right"><pagenumber/> of <totalpages/></td>
+                  
+		 	</tr>
+            </table>
+        </macro>
+    </macrolist>
+    <style type="text/css">* {
+		<#if .locale == "zh_CN">
+			font-family: NotoSans, NotoSansCJKsc, sans-serif;
+		<#elseif .locale == "zh_TW">
+			font-family: NotoSans, NotoSansCJKtc, sans-serif;
+		<#elseif .locale == "ja_JP">
+			font-family: NotoSans, NotoSansCJKjp, sans-serif;
+		<#elseif .locale == "ko_KR">
+			font-family: NotoSans, NotoSansCJKkr, sans-serif;
+		<#elseif .locale == "th_TH">
+			font-family: NotoSans, NotoSansThai, sans-serif;
+		<#else>
+			font-family: NotoSans, sans-serif;
+		</#if>
+		}
+		table {
+			font-size: 9pt;
+			table-layout: fixed;
+		}
+        th {
+            font-weight: bold;
+            font-size: 8pt;
+            vertical-align: middle;
+            padding: 5px 6px 3px;
+            background-color: #e3e3e3;
+            color: #333333;
+        }
+        td {
+            padding: 4px 6px;
+        }
+		td p { align:left }
+        b {
+            font-weight: bold;
+            color: #333333;
+        }
+        table.header td {
+            padding: 0px;
+            font-size: 10pt;
+        }
+        table.footer td {
+            padding: 0px;
+            font-size: 8pt;
+        }
+        table.itemtable th {
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+        table.body td {
+            padding-top: 2px;
+        }
+        table.total {
+            page-break-inside: avoid;
+        }
+        tr.totalrow {
+            background-color: #e3e3e3;
+            line-height: 200%;
+        }
+        td.totalboxtop {
+            font-size: 12pt;
+            background-color: #e3e3e3;
+        }
+        td.addressheader {
+            font-size: 8pt;
+            padding-top: 6px;
+            padding-bottom: 2px;
+        }
+        td.address {
+            padding-top: 0px;
+        }
+        td.totalboxmid {
+            font-size: 28pt;
+            padding-top: 20px;
+            background-color: #e3e3e3;
+        }
+        td.totalboxbot {
+            background-color: #e3e3e3;
+            font-weight: bold;
+        }
+        span.title {
+            font-size: 28pt;
+        }
+        span.number {
+            font-size: 16pt;
+        }
+        span.itemname {
+            font-weight: bold;
+            line-height: 150%;
+        }
+        hr {
+            width: 100%;
+            color: #d3d3d3;
+            background-color: #d3d3d3;
+            height: 1px;
+        }
+</style>
+</head>
+<body header="nlheader" header-height="10%" footer="nlfooter" footer-height="40pt" padding="0.5in 0.5in 0.5in 0.5in" size="Letter">
+    <table style="width: 100%; margin-top: 10px;"><tr>
+	<td class="addressheader" colspan="3">&nbsp;</td>
+	<td class="addressheader" colspan="3">&nbsp;</td>
+	<td class="totalboxtop" colspan="5" style="text-align: right;">${record.trandate}</td>
+	</tr>
+	<tr>
+	<td class="addressheader" colspan="3"><b>${record.billaddress@label}</b></td>
+	<td class="addressheader" colspan="3"><b>${record.shipaddress@label}</b></td>
+	<td class="totalboxtop" colspan="5"><b>${record.total@label?upper_case}</b></td>
+	</tr>
+	<tr>
+	<td class="address" colspan="3" rowspan="2">${record.billaddress}</td>
+	<td class="address" colspan="3" rowspan="2">${record.shipaddress}</td>
+	<td align="right" class="totalboxmid" colspan="5">${record.total}</td>
+	</tr>
+	<tr>
+	<td align="right" class="totalboxbot" colspan="5"><b>${record.duedate@label}:</b> ${record.duedate}</td>
+	</tr></table>
+
+<table class="body" style="width: 100%; margin-top: 10px;"><tr>
+	<th>${record.terms@label}</th>
+	<th>${record.duedate@label}</th>
+	<th>${record.otherrefnum@label}</th>
+	<th>${record.salesrep@label}</th>
+	<th>${record.shipmethod@label}</th>
+	<th>${record.partner@label}</th>
+	</tr>
+	<tr>
+	<td>${record.terms}</td>
+	<td>${record.duedate}</td>
+	<td>${record.otherrefnum}</td>
+	<td>${record.salesrep}</td>
+	<td>${record.shipmethod}</td>
+	<td>${record.partner}</td>
+	</tr></table>
+<#if record.item?has_content>
+
+<table class="itemtable" style="width: 100%; margin-top: 10px;"><!-- start items --><#list record.item as item><#if item_index==0>
+<thead>
+	<tr>
+	<th align="center" colspan="3">${item.quantity@label}</th>
+	<th colspan="12">${item.item@label}</th>
+	<th colspan="3">${item.options@label}</th>
+	<th align="right" colspan="4">${item.rate@label}</th>
+	<th align="right" colspan="4">${item.amount@label}</th>
+	</tr>
+</thead>
+</#if><tr>
+	<td align="center" colspan="3" line-height="150%">${item.quantity}</td>
+	<td colspan="12"><span class="itemname">${item.item}</span><br />${item.description}</td>
+	<td colspan="3">${item.options}</td>
+	<td align="right" colspan="4">${item.rate}</td>
+	<td align="right" colspan="4">${item.amount}</td>
+	</tr>
+	</#list><!-- end items --></table>
+
+<hr /></#if>
+<table class="total" style="width: 100%; margin-top: 10px;"><tr>
+	<td colspan="4">&nbsp;</td>
+	<td align="right"><b>${record.subtotal@label}</b></td>
+	<td align="right">${record.subtotal}</td>
+	</tr>
+	<tr>
+	<td colspan="4">&nbsp;</td>
+	<td align="right">Shipping</td>
+	<td align="right">${record.shippingcost}</td>
+	</tr>
+	<tr>
+	<td colspan="4">&nbsp;</td>
+	<td align="right"><b>${record.taxtotal@label} (${record.taxrate}%)</b></td>
+	<td align="right">${record.taxtotal}</td>
+	</tr>
+	<tr class="totalrow">
+	<td background-color="#ffffff" colspan="4">&nbsp;</td>
+	<td align="right"><b>${record.total@label}</b></td>
+	<td align="right">${record.total}</td>
+	</tr></table>
+
+  <table style="width: 100%; margin-top: 10px;"><tr>
+	<td colspan="5"><strong>Amount Deposited / Paid</strong>&nbsp;${record.custbody49}</td>
+	<td align="right" colspan="5"><strong>Amount Due</strong>&nbsp;${record.amountremaining}</td>
+	</tr>
+  </table>
+  <br /><br /><br /><br /><br /><br /><br /><br />
+  <div style="margin-left: 50px; margin-right: 50px; font-size: 8pt;"><strong>Notes: </strong>${record.custbody_hbno_pdf_notes}</div>
+
+  
+  <!-- Terms and Conditions Section -->
+<div style="margin-top: 20px; font-size: 7.8pt;">
+    <strong>STANDARD TERMS AND CONDITIONS</strong><br /><br />
+    <p>Any and all purchases and agreements for IL HEALTH &amp; BEAUTY NATURAL OILS, INC., referred to herein as “Seller,” are made subject to the following terms and conditions (“Terms”) of the customer, referred to herein as “Buyer.”</p>
+    <ol >
+      
+        <li><strong>WARRANTY AND LIMITATION OF LIABILITY AND DISCLAIMER OF MERCHANTIBILITY: THE FOLLOWING WARRANTIES AND DISCLAIMERS OF WARRANTIES SHALL SUPPLANT ANY AND ALL STATEMENTS SET FORTH IN ANY SALES ORDER, PURCHASE ORDER OR INVOICE (INTERCHANGEABLY REFERRED TO HEREIN AS “INVOICE”) OR OTHER AGREEMENTS BETWEEN BUYER AND SELLER OR ANY PUBLISHED INFORMATION THAT PROVIDES OTHERWISE.</strong>
+            <ul style="list-style-type: lower-alpha;">
+               <li><strong>DISCLAIMER OF WARRANTY OF TITLE: OTHER THAN AS SET FORTH IN THE INVOICE, SELLER IS SELLING ONLY SUCH RIGHT OR TITLE TO THE GOODS BEING SOLD AS SELLER MAY HAVE ON THE DATE THIS AGREEMENT IS EXECUTED AND DISCLAIMS ANY WARRANTY OF TITLE TO SUCH GOODS.</strong></li>
+               <li><strong>DISCLAIMER OF WARRANTY AGAINST INFRINGEMENT: SELLER MAKES NO REPRESENTATIONS THAT THE GOODS BEING SOLD ARE FREE OF THE RIGHTFUL CLAIM OF ANY THIRD PERSON OR PARTY BY WAY OF INFRINGEMENT OR THE LIKE AND DISCLAIMS ANY WARRANTY AGAINST INFRINGEMENT WITH RESPECT TO THE GOODS.</strong></li>
+              <li><strong>DISCLAIMER OF EXPRESS WARRANTY: SELLER HAS MADE NO AFFIRMATION OF FACT OR PROMISE RELATING TO THE GOODS BEING SOLD THAT HAS BECOME ANY BASIS OF THE BARGAIN.  FURTHER, SELLER HAS MADE NO STATEMENT, REPRESENTATION, AFFIRMATION OF FACT OR PROMISE RELATING TO THE GOODS BEING SOLD THAT HAS CREATED OR AMOUNTED TO AN EXPRESS WARRANTY THAT THE GOODS WOULD CONFORM TO ANY AFFIRMATION OR PROMISE. ANY DESCRIPTION OF THE GOODS CONTAINED IN THIS AGREEMENT IS FOR THE SOLE PURPOSE OF IDENTIFYING THE GOODS.  NO DESCRIPTION OF THE GOODS BEING SOLD HAS BEEN MADE PART OF THE BASIS OF THE BARGAIN OR HAS CREATED OR AMOUNTED TO AN EXPRESS WARRANTY THAT THE GOODS WOULD CONFORM TO ANY DESCRIPTION MADE BY SELLER.</strong></li>
+              <li><strong>DISCLAIMER OF IMPLIED WARRANTY OF MERCHANTABILITY: SELLER MAKES NO WARRANTY OF MERCHANTABILITY WITH RESPECT TO THE GOODS BEING SOLD UNDER THIS AGREEMENT. THE INTENT OF THE PARTIES IS TO DISCLAIM ANY WARRANTY OF MERCHANTABILITY WITH RESPECT TO THE GOODS, AND BUYER AGREES TO ACCEPT THE GOODS WITHOUT ANY WARRANTY OF MERCHANTABILITY.</strong></li>
+              <li><strong>DISCLAIMER OF IMPLIED WARRANTY OF FITNESS: SELLER MAKES NO WARRANTY OF FITNESS FOR ANY PARTICULAR PURPOSES WHATSOEVER WITH RESPECT TO THE GOODS BEING SOLD.</strong></li>
+              <li><strong>DISCLAIMER OF ALL IMPLIED WARRANTIES: (I) THERE ARE NO WARRANTIES, EXPRESS OR IMPLIED, WHICH EXTEND BEYOND THE DESCRIPTION ON THE FACE OF THIS AGREEMENT. SELLER DISCLAIMS ANY IMPLIED WARRANTY OF MERCHANTABILITY WITH REGARD TO ANY GOODS AND BUYER AGREES THAT THE GOODS ARE SOLD "AS IS." (II) SELLER AND BUYER AGREE THAT, UPON REQUEST, BUYER WILL HAVE THE FULL RIGHT TO EXAMINE, OR REFUSE TO SO EXAMINE, AN APPROPRIATE SAMPLE OF THE GOODS BEING SOLD UNDER THIS AGREEMENT.  SELLER DISCLAIMS ANY IMPLIED WARRANTY AS TO THE GOODS WITH REGARD TO ANY DEFECT WHICH AN EXAMINATION BY BUYER WOULD HAVE REVEALED.</strong></li>
+            </ul>
+        </li>
+        <li><strong>Offer and Acceptance.</strong> The Invoice is an offer by the Seller or its applicable affiliate to enter into the agreement it describes, including, without limitation, to sell the goods, materials or services (collectively, “Goods”) identified in such Invoice, and such Invoice and Terms shall together be the complete and exclusive statement of such agreement (“Agreement”) between Buyer and Seller.  Buyer  will  be  deemed  to  have  accepted  Seller's offer and this Agreement in its entirety without modification, upon the earliest of Buyer's acceptance via a written acknowledgment to the Seller, Seller’s delivery of any Goods that are the subject of this Agreement or any other conduct by Buyer that recognizes the existence of this Agreement, including, but without limitation, preparation for the commencement of any of the work stated in the Invoice. Acceptance is expressly limited to these Terms and such other terms and conditions as are expressly referenced on the face of the Invoice. Any addition or modification proposed by Buyer are expressly rejected by Seller and are not part of this Agreement in the absence of an agreement in writing signed by an authorized representative of Seller. In no event shall an Invoice constitute acceptance of any offer/invoice made by Buyer. By purchasing Seller’s Goods set forth in the Invoice, Buyer agrees to be bound by these Terms.</li>
+        <li><strong>Samples.</strong> Buyer may request pre-ship samples (“Samples”) separately in addition to the quantities set forth in the Invoice. Buyer acknowledges that the Goods provided by Seller are sold “as is” and that Buyer has not been induced by any statements or representations of any person with respect to the quality or condition of the Goods and that no such statements or representations have been made.  Buyer is given the opportunity to inspect the Samples and notify Seller if Buyer will accept the Goods in accordance with the Samples. Seller may discontinue selling any product at any time without notice or approval from Buyer.</li>
+      <li><strong>Packaging, Enclosures, Marking.</strong> Buyer shall be responsible for the cost and expense of obtaining and using specific packaging or coding requested for any Goods, as well as bear any liability with respect to the packaging.</li>
+      <li><strong></strong>Shipment, Delivery and Title. Except as otherwise specifically provided in any Invoice, shipment of all goods shall be pursuant to Incoterms 2010. Title and risk of loss will transfer to Buyer upon shipping. Shipping dates are based on conditions at the time of quotation and are subject to changes at the time the order is placed. All reasonable efforts will be made to fill orders within the time promised. In no event will Seller be made to fill orders within the time promised. In no event will Seller be liable for any consequential damages for delay in performance or failure to perform. In the absence of Buyer's instructions, Seller will use its own discretion in choice of carrier. Seller assumes no responsibility for loss or damage during shipment. All shipping risks are assumed and accepted by Buyer. Because many instances may occur at Buyer’s delivery address that are beyond our control, Buyer agrees that any delivery confirmation provided by the carrier is deemed sufficient proof of delivery to the Buyer, even without a signature.</li>
+      <li><strong>Insurance.</strong> Buyer shall maintain any and all insurance on the Goods allocated by the Seller for shipment under this Agreement for not less than the shipping invoice value, including all charges therein and any freight not included in the invoice covering against “All Risks”, providing coverage for all time in shipment from the time the Goods are shipped until they are received by Buyer.</li>
+     
+      <li><strong>Returns and Refunds.</strong> Seller will accept a return of unopened Goods for a refund of Buyer’s purchase price, less the original shipping and handling costs provided such return is made within 30 days of delivery with valid proof of purchase and provided such Goods are returned in their original condition. To return Goods, Buyer must call (530) 399-3782 to obtain a Return Merchandise Authorization ("RMA") number before shipping your Goods. No returns of any type will be accepted without an RMA number. Buyer is responsible for all shipping and handling charges on returned items. Buyer bears the risk of loss during shipment. Seller therefore strongly recommends that Buyer fully insure Buyer’s return shipment against loss or damage and that Buyer use a carrier that can provide Buyer with proof of delivery for Buyer’s protection. Refunds are processed within approximately 10 business days of Seller’s receipt of Buyer’s merchandise. Buyer’s refund will be credited back to the same payment method used to make the original purchase on this Invoice. SELLER OFFERS NO REFUNDS ON ANY GOODS DESIGNATED ON THIS INVOICE AS NON-RETURNABLE. </li>
+    </ol>
+</div>
+  <div style="margin-top: 20px; font-size: 7.8pt;">
+    <ol start="8">
+      <li><strong>Inspection; Nonconforming Goods.</strong> Once a Good is opened, Buyer shall inspect Goods received under this Agreement within ten (10) days of receipt of such Goods (”Inspection Period”) and either accept or, only if any such Goods are Nonconforming Goods, reject such Goods. Buyer will be deemed to have accepted Goods unless it provides Seller with written Notice of any Nonconforming Goods within five (5) days following the Inspection Period, stating with specificity all defects and nonconformities, and furnishing such other written evidence or other documentation as may be reasonably required by Seller (including the subject Goods, or a representative sample thereof, which Buyer contends are Nonconforming Goods). All defects and nonconformities that are not so specified will be deemed waived by Buyer, such Goods shall be deemed to have been accepted by Buyer, and no attempted revocation of acceptance will be effective. If Buyer timely notifies Seller of any Nonconforming Goods, Seller shall determine, in its reasonable discretion, whether the Goods are Nonconforming Goods. If Seller determines that such Goods are Nonconforming Goods, Seller shall, in its sole discretion, either:
+        <ul><li>replace such Nonconforming Goods with conforming Goods; or</li>
+          <li>refund to Buyer such amount paid by Buyer to Seller for such Nonconforming Goods returned by Buyer to Seller.</li> </ul>
+Buyer shall ship, at Buyer’s expense and risk of loss, all Nonconforming Goods to Seller’s facility located in Chico, California or to such other location as Seller may instruct Buyer in writing. If Seller exercises its option to replace Nonconforming Goods, Seller shall ship to Buyer’s delivery location, at Seller’s expense and risk of loss, the replacement Goods.
+THE REMEDIES SET FORTH IN THIS SECTION ARE BUYER’S EXCLUSIVE REMEDY FOR THE DELIVERY OF NONCONFORMING GOODS.
+</li>
+      <li><strong>Compliance with Laws.</strong> Both Buyer and Seller agree to use their best efforts to comply with all federal, state, local and foreign laws, orders, rules, regulations and ordinances that may be applicable.</li>
+      <li><strong>Prices, Invoices and Payment Terms.</strong> Except as otherwise expressly provided on the Invoice, all prices for Goods are subject to change in Seller’s sole discretion. All prices are exclusive of all federal, state, and local taxes and any duties applicable to the provision of the Goods and all other expenses and charges of Seller which shall be invoiced separately. Payment terms for all Goods are due as stated on the Invoice. Seller accepts Visa, MasterCard, American Express, Discover and wire transfer for all purchases. The billing address and shipping address must match for any purchases via credit card. Buyer represents and warrants that (i) the credit card information Buyer supplies to Seller is true, correct and complete, (ii) Buyer is duly authorized to use such credit card for the purchase, (iii) charges incurred by Buyer will be honored by Buyer’s credit card company, and (iv) Buyer will pay charges incurred by Buyer at the time of purchase, including shipping and handling charges and all applicable taxes, if any, regardless of the amount quoted in the Invoice. Seller may charge at Seller’s discretion a Three Percent (3%) credit card service fee. Buyer agrees to pay Seller any and all costs associated with receipt of wires. The Buyer shall pay a delinquency charge of the lesser of (1) 1% per month and (2) the highest rate allowed under applicable law on all overdue amounts until the amounts are paid. Buyer agrees to pay all attorney fees and costs of collection incurred by Seller. Buyer agrees to pay Seller $50.00 for each dishonored check and all costs associated with receipt of wires.</li>
+      <li><strong>Amendments.</strong> No amendment to this Agreement will be effective unless it is in writing and signed by both parties. Buyer shall be responsible for paying any and all costs associated with any such amendments.  In the event of cancelation of an order, Buyer shall be liable for all costs and expenses incurred in the performance of the order including, but not limited to, contract value for any parts completed, material and subcontractor commitments, costs and profits on work in progress and any costs incurred, including reasonable attorneys' fees.</li>
+      <li><strong>Limitation of Liability; Indemnification.</strong> Seller shall not be liable for any consequential, special, direct, incidental, indirect, exemplary, punitive, enhanced or other damages incurred by Buyer or any individual or entity that claims any such damages from delivery or use of any Good despite the fact that Buyer may claim that the damage is foreseeable or that Seller's actions were negligent, grossly negligent or reckless. All Goods are being sold “as is” and there shall be no third-party beneficiaries with respect to any Goods. Buyer shall indemnify and hold Seller harmless with respect to any and all actions, claims, demands, judgments, recall campaigns and other customer satisfaction or corrective  service actions, losses, costs, liabilities,  damages, including,  but  not limited to, property damage, personal or bodily injury, or death, expenses and/or fees including  attorney's  fees,  penalties and/or citations of whatsoever kind, character, or  descriptions  (“Claims”)  that  are  incurred  by or asserted against Seller that are related in any way to, or arise in any way from, the Goods which Buyer had an opportunity to inspect and failed to reject, Buyer’s breach of the Agreement, or Buyer’s negligence or willful misconduct. All claims resulting from differences in quality, weights, shortages, damages or otherwise shall be made in writing within 10 days of delivery. Failure to make such a claim within that time period shall constitute an irrevocable acceptance of the shipment and an admission and/or acknowledgement that the Goods shipped fully comply with all terms and conditions of the Invoice. Seller shall not be liable for losses or damages resulting from the storage, handling, consumption or processing of Goods when under Buyer's control, or if Buyer determines not to inspect such Goods, which an examination by Buyer would have revealed the need to make such a claim. Notwithstanding, Seller's liability shall be limited to repair, replacement or the amount paid for any product plus $100.00 in liquidated damages per Invoice.</li>
+      <li><strong>Confidentiality.</strong> Buyer acknowledges and agrees that Buyer may have access to certain Confidential Information. Buyer acknowledges and agrees that it will not, without the prior written consent of an authorized representative of Seller, directly or indirectly disclose any Confidential Information to any third party or directly or indirectly use, exploit, copy or summarize any Confidential Information in any way except as necessary in connection with its transactions with Seller. If requested, Buyer shall require its employees to execute confidentiality agreements prohibiting use or disclosure of Confidential Information. “Confidential Information” means all information (regardless of medium) that is disclosed or otherwise made available to Buyer by Seller or its representatives or subcontractors at any time and that concerns Seller in any manner, including  its business,  programs,  Goods,  pricing,  and other terms of the Agreement, software programs, computer codes, software documentation, methodology documentation, design concepts, blueprints, recipes and engineering date, manufacturing, packaging and shipping processes and technology, reference manuals, any knowledge, data  or  records  concerning  the  operations,  policies, procedures, personnel matters, finances, business and marketing  plans,  strategic  and/or  operational  plans, company contracts or any other information  relating  to the ownership operation  of Seller  and any of its affiliates;  and  any and all information, knowledge, date or records concerning any officer,  director,  owner,  shareholder,  employee,  agent, representative, consultant, client or customer of Seller.</li>
+      <li><strong>Ownership, Proprietary Rights.</strong> Buyer acknowledges that a Good and/or deliverables provided to Buyer under this Agreement may be original to Seller or may incorporate intellectual property rights that are owned by Third Parties.  Seller agrees that all works of original authorship created by Seller in connection with this Agreement are “works made for hire” as that term is issued in connection with the United States Copyright Act. To the extent that, by operation of law, Seller owns any intellectual property rights in any of the Goods and/or other deliverables, Buyer acknowledges and agrees that all rights, title and interest, including copyrights and patent rights, in those particular Goods and deliverables belong solely to Seller, unless otherwise agreed by Seller in writing.</li>
+      <li><strong>Buyer's Financial Condition.</strong> If the Buyer fails to make timely payment of any invoice submitted to it, thereafter, Seller shall be permitted to withhold placement of any other orders in its sole discretion without submission by Buyer of a Letter of Credit to cover the cost of any future orders.</li>
+     </ol>
+</div>
+  <div style="margin-top: 20px; font-size: 7.8pt;">
+    <ol start="16">
+      <li><strong>Termination.</strong> In addition to any remedies that may be provided in this Agreement, Seller may terminate this Agreement with immediate effect upon written notice to Buyer, if Buyer: (a) fails to pay any amount when due under this Agreement; (b) has not otherwise performed or complied with any of the terms of this Agreement, in whole or in part; or (c) becomes insolvent, files a petition for bankruptcy, or commences or has commenced against it proceedings relating to bankruptcy, receivership, reorganization, or assignment for the benefit of creditors.</li>
+      <li><strong>No Setoff.</strong> Buyer shall not, and acknowledges that it will have no right, under this Agreement, any other agreement, document, or law, to withhold, offset, recoup, or debit any amounts owed (or to become due and owing ) to Seller or any of its affiliates, whether under this Agreement or otherwise, against any other amount owed (or to become due and owing) to it by Seller or its affiliates, whether relating to Seller’s or its affiliates’ breach or non-performance of this Agreement or any other agreement between Buyer or any of its affiliates, and Seller or any of its affiliates, or otherwise.</li>
+      <li><strong>Force Majeure.</strong> Seller will not be liable or responsible to Buyer, nor be deemed to have defaulted or breached this Agreement, for any failure or delay in Seller’s performance under this Agreement when and to the extent such failure or delay is caused by or results from acts or circumstances beyond Seller’s reasonable control, including, without limitation, acts of God, flood, fire, earthquake, explosion, governmental actions, war, invasion or hostilities (whether war is declared or not), terrorist threats or acts, riot or other civil unrest, national emergency, revolution, insurrection, epidemic, lockouts, strikes or other labor disputes (whether or not relating to Seller’s workforce), or restraints or delays affecting carriers or inability or delay in obtaining supplies of adequate or suitable materials, materials or telecommunication breakdown or power outage.</li>
+      <li><strong>No Waiver.</strong> The failure by Seller to enforce any right or provision of these Terms will not constitute a waiver of future enforcement of that right or provision. The waiver of any right or provision will be effective only if in writing and signed by a duly authorized representative of Seller. </li>
+      <li><strong>Severability.</strong> If any provision of these Terms is invalid, illegal, void or unenforceable, then that provision will be deemed severed from these Terms. The remainder shall not be affected thereby shall be valid and be enforced to the fullest extent permitted by law.</li>
+      <li><strong>Notices. All notices shall be in writing.</strong> No course of prior dealings or performance between the parties, nor usage of trade shall be relevant to supplement, change or explain any term herein.
+a)	To Buyer. Seller may provide any notice to Buyer under these Terms by: (i) sending a message to the email address provided by Buyer, or (ii) by personal delivery, overnight courier, or registered or certified mail to Buyer’s address provided by Buyer. It is Buyer’s responsibility to keep Buyer’s email address and mailing address current. 
+b)	To Seller. To give Seller notice under these Terms, Buyer must contact Seller by personal delivery, overnight courier, or registered or certified mail to 2644 Hegan Lane, Chico, California 95928 USA. Seller may update the address for notices to Seller by posting a notice on Seller’s website: www.essentialnaturaloils.com. 
+Notices provided by email will be effective upon sending the email. Notices provided by personal delivery will be effective immediately. Notices provided by overnight courier will be effective one business day after they are sent. Notices provided by registered or certified mail will be effective three business days after they are sent.
+</li>
+      <li><strong>Counterparts.</strong>  This Agreement may be executed by PDF or other electronic means and in counterparts, each of which shall be deemed to be an original, and all of which, taken together, shall constitute one agreement binding on both parties hereto.</li>
+      <li><strong>Entire Agreement.</strong> This Agreement sets forth the entire, final and integrated understanding between Buyer and Seller with respect to the subject matter herein and supersedes and replaces the terms of all prior agreements or understandings. No joint venture, partnership, employment, or agency relationship exists between Buyer and Seller as a result of this Agreement.</li>
+      <li><strong>Assignment.</strong> Buyer will not assign any of its rights or delegate any of its obligations under these Terms without Seller’s prior written consent. Any purported assignment or delegation in violation of this Section 25 is null and void. No assignment or delegation relieves Buyer of any of its obligations under these Terms.</li>
+    <li><strong>Choice of Law and Venue.</strong> This Agreement is entered into in the State of California and shall be governed by and construed in accordance with the laws of the State of California exclusive of its choice of law rules. Both parties submit to the exclusive jurisdiction of the state and federal courts sitting in the County of Butte in the State of California, and waives any jurisdictional, venue, or inconvenient forum objections to such courts. In any action to enforce this Agreement, the prevailing party will be entitled to costs and attorney's fees. In the event that any of these Terms are held by a court or other tribunal of competent jurisdiction to be unenforceable, those provisions shall be limited or eliminated to the minimum extent necessary so that these Terms shall otherwise remain in full force and effect.</li>
+      <li><strong>DISPUTE RESOLUTION; BINDING ARBITRATION.</strong>
+        <ul >
+          <li>SELLER AND BUYER AGREE TO GIVE UP ANY RIGHTS TO LITIGATE CLAIMS IN A COURT OR BEFORE A JURY, OR TO PARTICIPATE IN A CLASS ACTION OR REPRESENTATIVE ACTION WITH RESPECT TO A CLAIM. OTHER RIGHTS THAT BUYER WOULD HAVE IF BUYER WENT TO COURT MAY ALSO BE UNAVAILABLE OR MAY BE LIMITED IN ARBITRATION. ANY CLAIM, DISPUTE OR CONTROVERSY (WHETHER IN CONTRACT, TORT OR OTHERWISE, WHETHER PRE-EXISTING, PRESENT OR FUTURE, AND INCLUDING STATUTORY, CONSUMER PROTECTION, COMMON LAW, INTENTIONAL TORT, INJUNCTIVE AND EQUITABLE CLAIMS) BETWEEN BUYER AND SELLER ARISING FROM OR RELATING IN ANY WAY TO BUYER’S PURCHASE OF PRODUCTS OR SERVICES, WILL BE RESOLVED EXCLUSIVELY AND FINALLY BY BINDING ARBITRATION. </li>
+          <li>The arbitration will be administered by the American Arbitration Association ("AAA") in accordance with the Consumer Arbitration Rules (the "AAA Rules") then in effect, except as modified by this Section 27. (The AAA Rules are available at www.adr.org/arb_med or by calling the AAA at 1-800-778-7879.) The Federal Arbitration Act will govern the interpretation and enforcement of this section. </li>
+          <li>The arbitrator will have exclusive authority to resolve any dispute relating to arbitrability and/or enforceability of this arbitration provision, including any unconscionability challenge or any other challenge that the arbitration provision or the agreement is void, voidable, or otherwise invalid. The arbitrator will be empowered to grant whatever relief would be available in court under law or in equity. Any award of the arbitrator(s) will be final and binding on each of the parties, and may be entered as a judgment in any court of competent jurisdiction. </li>
+          <li>Buyer agrees to an arbitration on an individual basis. In any dispute, NEITHER BUYER NOR SELLER WILL BE ENTITLED TO JOIN OR CONSOLIDATE CLAIMS BY OR AGAINST OTHER CUSTOMERS IN COURT OR IN ARBITRATION OR OTHERWISE PARTICIPATE IN ANY CLAIM AS A CLASS REPRESENTATIVE, CLASS MEMBER OR IN A PRIVATE ATTORNEY GENERAL CAPACITY. The arbitral tribunal may not consolidate more than one person's claims and may not otherwise preside over any form of a representative or class proceeding. The arbitral tribunal has no power to consider the enforceability of this class arbitration waiver and any challenge to the class arbitration waiver may only be raised in a court of competent jurisdiction. </li>
+        </ul>
+      </li>
+    </ol>
+  
+</div>
+</body>
+</pdf>

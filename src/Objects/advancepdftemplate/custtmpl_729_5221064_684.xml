@@ -1,0 +1,9 @@
+<advancedpdftemplate scriptid="custtmpl_729_5221064_684" standard="STDTMPLCUSTINVC">
+  <description></description>
+  <displaysourcecode>F</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>F</preferred>
+  <printtype>TRANSACTION</printtype>
+  <title>Bulk Cart Invoice PDF/HTML Template</title>
+  <trantype>CUSTINVC</trantype>
+</advancedpdftemplate>

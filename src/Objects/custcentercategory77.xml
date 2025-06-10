@@ -1,0 +1,43 @@
+<centercategory scriptid="custcentercategory77">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab30]</centertab>
+  <label>Purchase Orders Create</label>
+  <links>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=custlink_36_5221064_126]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>HBNO Other PO - Create</linklabel>
+      <linkobject>[scriptid=custlink_20_5221064_738]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Bulk Cart from HBNO PO - Create</linklabel>
+      <linkobject>[scriptid=custlink_19_5221064_257]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=custlink_53_5221064_410]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=custlink_35_5221064_905]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=custlink_47_5221064_504]</linkobject>
+      <linktasktype>LINK</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

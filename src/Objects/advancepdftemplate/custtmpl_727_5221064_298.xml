@@ -1,0 +1,9 @@
+<advancedpdftemplate scriptid="custtmpl_727_5221064_298" standard="STDTMPLPURCHORD">
+  <description></description>
+  <displaysourcecode>F</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>F</preferred>
+  <printtype>TRANSACTION</printtype>
+  <title>Custom Bulk Cart Purchase PDF/HTML Template</title>
+  <trantype>PURCHORD</trantype>
+</advancedpdftemplate>

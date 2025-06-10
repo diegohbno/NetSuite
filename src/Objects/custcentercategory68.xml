@@ -1,0 +1,27 @@
+<centercategory scriptid="custcentercategory68">
+  <center>[scriptid=custcenter1]</center>
+  <centertab>[scriptid=custcentertab22]</centertab>
+  <label>Help</label>
+  <links>
+    <link>
+      <linkid>SUPT_HELP</linkid>
+      <linklabel>Help, Guides, Tips and more</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>SUPT_RELEASENOTES</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>SUPT_VERSION_10_5</linkid>
+      <linklabel>Sneak Peeks</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>SUPT_GLOSSARY</linkid>
+      <linklabel>Glossary</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

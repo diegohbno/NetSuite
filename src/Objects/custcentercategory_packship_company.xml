@@ -1,0 +1,17 @@
+<centercategory scriptid="custcentercategory_packship_company">
+  <center>[scriptid=custcenter_packship]</center>
+  <centertab>[scriptid=custcentertab_packship_setup]</centertab>
+  <label translate="T">[scriptid=custcollection_packship_roles.packship_company_center_category]</label>
+  <links>
+    <link>
+      <linkid>LIST_SHIPITEM</linkid>
+      <linklabel>Shipping Items</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_UNITSTYPE</linkid>
+      <linklabel>Units Of Measure</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

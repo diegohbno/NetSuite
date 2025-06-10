@@ -1,0 +1,31 @@
+<centercategory scriptid="custcentercategory_wmsse_ibreporting">
+  <center>[scriptid=custcenter_wmsse_wms]</center>
+  <centertab>[scriptid=custcentertab_wmsse_wmsreporting]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_ibreporting]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_ibreporting_inbopentasks]</linklabel>
+      <linkobject>[scriptid=customsearch_wmsse_inbound_opentask]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_ibreporting_inbclosedtask]</linklabel>
+      <linkobject>[scriptid=customsearch_wmsse_inbound_closedtask]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_ibreporting_receivedpo]</linklabel>
+      <linkobject>[scriptid=customsearch_wmsse_poreceive_today]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_ibreporting_receivedrma]</linklabel>
+      <linkobject>[scriptid=customsearch_wmsse_return_received_today]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

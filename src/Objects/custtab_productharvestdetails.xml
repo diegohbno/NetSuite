@@ -1,0 +1,5 @@
+<subtab scriptid="custtab_productharvestdetails">
+  <parent>[scriptid=custtab_itemproductdetails]</parent>
+  <tabtype>ITEM</tabtype>
+  <title>Harvest Details</title>
+</subtab>

@@ -1,0 +1,5 @@
+<subtab scriptid="custtab_mfgmobile_entity">
+  <parent></parent>
+  <tabtype>ENTITY</tabtype>
+  <title translate="T">[scriptid=custcollection_mfgmob_centersandtabs.manufacturingmobile_key]</title>
+</subtab>

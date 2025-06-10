@@ -1,0 +1,43 @@
+<centercategory scriptid="custcentercategory_mobile_auto_printing">
+  <center>[scriptid=custcenter_mobile_administrator]</center>
+  <centertab>[scriptid=custcentertab_mobile_setup]</centertab>
+  <label translate="T">[scriptid=custcollection_mobile_bundle_translations.centername_label_printing]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_mobile_bundle_translations.centerlink_report_types]</linklabel>
+      <linkobject>[scriptid=customscript_print_report_list_ui.customdeploy_print_report_list_ui]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_mobile_bundle_translations.centerlink_printers]</linklabel>
+      <linkobject>[scriptid=customrecord_print_printers]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_mobile_bundle_translations.centerlink_templates]</linklabel>
+      <linkobject>[scriptid=customrecord_print_templates]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_mobile_bundle_translations.centerlink_audits]</linklabel>
+      <linkobject>[scriptid=customrecord_print_audit]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_mobile_bundle_translations.centerlink_print_api_key]</linklabel>
+      <linkobject>[scriptid=customscript_print_sl_api_key.customdeploy_print_sl_api_key]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Printer Groups</linklabel>
+      <linkobject>[scriptid=customrecord_print_printer_group]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

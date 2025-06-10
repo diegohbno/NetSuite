@@ -1,0 +1,5 @@
+<centercategory scriptid="custcentercategory_atlas_acct_access_cat">
+  <center>ACCOUNTCENTER</center>
+  <centertab>[scriptid=custcentertab_atlas_act_accounting]</centertab>
+  <label>Access</label>
+</centercategory>

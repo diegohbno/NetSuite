@@ -1,0 +1,5 @@
+<subtab scriptid="custtab_qm_itemquality">
+  <parent></parent>
+  <tabtype>ITEM</tabtype>
+  <title translate="T">[scriptid=custcollection_qm_translation.customtab_custtab_qm_itemquality_item]</title>
+</subtab>

@@ -1,0 +1,52 @@
+<itemcustomfield scriptid="custitemdemoforlotqualityresults">
+  <accesslevel>2</accesslevel>
+  <appliestogroup>F</appliestogroup>
+  <appliestoinventory>T</appliestoinventory>
+  <appliestoitemassembly>T</appliestoitemassembly>
+  <appliestokit>F</appliestokit>
+  <appliestononinventory>F</appliestononinventory>
+  <appliestoothercharge>F</appliestoothercharge>
+  <appliestopricelist>F</appliestopricelist>
+  <appliestoservice>F</appliestoservice>
+  <appliestospecificitems>F</appliestospecificitems>
+  <appliestosubplan>F</appliestosubplan>
+  <applyformatting>F</applyformatting>
+  <checkspelling>F</checkspelling>
+  <defaultchecked>F</defaultchecked>
+  <defaultselection></defaultselection>
+  <defaultvalue></defaultvalue>
+  <description>Demo for Lot Quality Results</description>
+  <displayheight></displayheight>
+  <displaytype>NORMAL</displaytype>
+  <displaywidth></displaywidth>
+  <dynamicdefault></dynamicdefault>
+  <enabletextenhance>F</enabletextenhance>
+  <encryptatrest>F</encryptatrest>
+  <fieldtype>SELECT</fieldtype>
+  <globalsearch>F</globalsearch>
+  <help></help>
+  <includechilditems>F</includechilditems>
+  <isformula>F</isformula>
+  <ismandatory>F</ismandatory>
+  <isparent>F</isparent>
+  <itemmatrix>F</itemmatrix>
+  <itemsubtype>BOTH</itemsubtype>
+  <label>Demo for Lot Quality Results</label>
+  <linktext></linktext>
+  <maxlength></maxlength>
+  <maxvalue></maxvalue>
+  <minvalue></minvalue>
+  <onparentdelete></onparentdelete>
+  <parentsubtab></parentsubtab>
+  <searchcomparefield></searchcomparefield>
+  <searchdefault></searchdefault>
+  <searchlevel>2</searchlevel>
+  <selectrecordtype>[scriptid=customlist_qm_result_status]</selectrecordtype>
+  <showhierarchy>F</showhierarchy>
+  <showinlist>T</showinlist>
+  <sourcefilterby></sourcefilterby>
+  <sourcefrom></sourcefrom>
+  <sourcelist></sourcelist>
+  <storevalue>F</storevalue>
+  <subtab>[appid=com.netsuite.autolotnumbering, scriptid=custtab_aln_item_subtab]</subtab>
+</itemcustomfield>

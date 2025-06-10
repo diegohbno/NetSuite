@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_mobileemulator">
+  <center>[scriptid=custcenter_shipcentral]</center>
+  <centertab>[scriptid=custcentertab_shipcentralmobile]</centertab>
+  <label translate="T">[scriptid=custcollection_packship_roles.mobile_emulator_label_link]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_packship_roles.open_mobile_emulator_label]</linklabel>
+      <linkobject>[scriptid=customscript_packship_mobilemenu.customdeploy_packship_mobile_menu]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

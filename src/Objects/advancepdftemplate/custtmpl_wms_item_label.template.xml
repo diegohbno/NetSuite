@@ -1,0 +1,42 @@
+<?xml version="1.0"?><!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd"><pdfset>
+<pdf>
+<body padding="0.5in 0.5in 0.5in 0.5in" size="Letter">
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px;">
+<tr>
+<td>
+<table border="0" cellpadding="1" cellspacing="1" style="width:400px;">
+<tr>
+<td>Item Desc: ${record.custrecord_wms_item_desc}</td>
+</tr>
+<tr><td>${record.custrecord_wms_item}</td></tr>
+<#if record.custrecord_wms_lot_num?length!=0>
+<tr>
+<td>LOT# ${record.custrecord_wms_lot_num}</td>
+</tr>
+</#if>
+<#if record.custrecord_wms_lot_exp_date?length!=0>
+<tr>
+<td>EXPIRY DATE ${record.custrecord_wms_lot_exp_date}</td>
+</tr>
+</#if>
+<#if record.custrecord_wms_serial_number?length!=0>
+<tr>
+<td>SERIAL# ${record.custrecord_wms_serial_number}</td>
+</tr>
+</#if>
+</table>
+</td>
+<#if record.custrecord_label_barcode_string?length!=0>
+<td>
+<barcode codetype="datamatrix" showtext="false" height="80" width="80" 
+value="${record.custrecord_label_barcode_string}"/>
+</td>
+<#else>
+<td>
+<barcode codetype="datamatrix" showtext="false" height="80" width="80" 
+value="${record.custrecord_wms_item}"/>
+</td>
+</#if>
+</tr></table>
+</body>
+</pdf></pdfset>

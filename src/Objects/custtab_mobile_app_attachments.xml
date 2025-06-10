@@ -1,0 +1,5 @@
+<subtab scriptid="custtab_mobile_app_attachments">
+  <parent></parent>
+  <tabtype>TRANSACTION</tabtype>
+  <title translate="T">[scriptid=custcollection_mobile_bundle_translations.custom_tab_name_mobile_app_attachments]</title>
+</subtab>

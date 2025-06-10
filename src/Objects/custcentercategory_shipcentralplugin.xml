@@ -1,0 +1,12 @@
+<centercategory scriptid="custcentercategory_shipcentralplugin">
+  <center>[scriptid=custcenter_shipcentral]</center>
+  <centertab>[scriptid=custcentertab_shipcentralsetup]</centertab>
+  <label translate="T">[scriptid=custcollection_packship_roles.ship_central_plugin]</label>
+  <links>
+    <link>
+      <linkid>ADMI_MANAGE_PLUGINS</linkid>
+      <linklabel translate="T">[scriptid=custcollection_packship_roles.manage_plugin_label]</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

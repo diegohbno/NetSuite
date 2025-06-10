@@ -1,0 +1,42 @@
+<centercategory scriptid="custcentercategory_wmsse_obreporting">
+  <center>[scriptid=custcenter_wmsse_wms]</center>
+  <centertab>[scriptid=custcentertab_wmsse_wmsreporting]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_obreporting]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_obreporting_woreview]</linklabel>
+      <linkobject>[scriptid=customsearch_wmsse_todo_wo_reviewrelease]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_obreporting_wopending]</linklabel>
+      <linkobject>[scriptid=customsearch_wmsse_todo_wo_pendingfulfil]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_obreporting_printlabels]</linklabel>
+      <linkobject>[scriptid=customsearch_wmsse_label_printing_search]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_PICKTASK</linkid>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_obreporting_picktask]</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_obreporting_fullfilldetails]</linklabel>
+      <linkobject>[scriptid=customscript_packship_sl_packingdetails.customdeploy_packship_sl_packingdetails]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_obreporting_picktaskfailures]</linklabel>
+      <linkobject>[scriptid=customscript_wms_sl_picktaskfailures.customdeploy_wms_sl_picktaskfailures]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_ed_classic_setup">
+  <center>BASIC</center>
+  <centertab>BASICCENTERSETUP</centertab>
+  <label>Employee Directory/Org Browser</label>
+  <links>
+    <link>
+      <linklabel>Preferences</linklabel>
+      <linkobject>[scriptid=customscript_ed_preferences_su.customdeploy_ed_preferences_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

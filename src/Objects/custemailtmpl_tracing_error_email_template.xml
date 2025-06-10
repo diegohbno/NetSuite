@@ -1,0 +1,12 @@
+<emailtemplate scriptid="custemailtmpl_tracing_error_email_template">
+  <addcompanyaddress>T</addcompanyaddress>
+  <addunsubscribelink>T</addunsubscribelink>
+  <description>Email template for failed lot and serial number trace</description>
+  <isinactive>F</isinactive>
+  <isprivate>F</isprivate>
+  <mediaitem></mediaitem>
+  <name>Trace – Export Errors</name>
+  <recordtype></recordtype>
+  <subject>Lot/Serial Number Trace - Export Error</subject>
+  <usesmedia>F</usesmedia>
+</emailtemplate>

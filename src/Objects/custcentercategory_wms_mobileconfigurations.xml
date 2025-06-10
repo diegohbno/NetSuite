@@ -1,0 +1,25 @@
+<centercategory scriptid="custcentercategory_wms_mobileconfigurations">
+  <center>[scriptid=custcenter_wmsse_wms]</center>
+  <centertab>[scriptid=custcentertab_wmsse_wmsconfig]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wms_mobileconfigurations]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wms_mobileconfigurations_app]</linklabel>
+      <linkobject>[scriptid=customscript_wms_mobileapplication.customdeploy_wms_mobileapplication]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wms_mobileconfigurations_importprocess]</linklabel>
+      <linkobject>[scriptid=customscript_wms_mobileprocess.customdeploy_wms_mobileprocess]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wms_mobileconfigurations_labelerid]</linklabel>
+      <linkobject>[scriptid=customscript_wms_hibc_labeler_id.customdeploy_wms_hibc_labeler_id]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

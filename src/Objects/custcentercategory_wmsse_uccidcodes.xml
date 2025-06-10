@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory_wmsse_uccidcodes">
+  <center>[scriptid=custcenter_wmsse_wms]</center>
+  <centertab>[scriptid=custcentertab_wmsse_wmsconfig]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_uccidcodes]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_uccidcodes_idformat]</linklabel>
+      <linkobject>[scriptid=customrecord_wmsse_lp_range]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_uccidcodes_idcodes]</linklabel>
+      <linkobject>[scriptid=customrecord_wmsse_ucc_master]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

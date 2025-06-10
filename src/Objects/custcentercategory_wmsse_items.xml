@@ -1,0 +1,36 @@
+<centercategory scriptid="custcentercategory_wmsse_items">
+  <center>[scriptid=custcenter_wmsse_warehouse]</center>
+  <centertab>[scriptid=custcentertab_wmsse_setup]</centertab>
+  <label translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_items]</label>
+  <links>
+    <link>
+      <linkid>LIST_ITEM</linkid>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_items]</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_items_itemalias]</linklabel>
+      <linkobject>[scriptid=customrecord_wmsse_sku_alias]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custrecord_cycc_itemprocessfamily]</linklabel>
+      <linkobject>[scriptid=customrecord_wmsse_item_family]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custrecord_cycc_itemprocessgroup]</linklabel>
+      <linkobject>[scriptid=customrecord_wmsse_itemgroup]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_wms_bundlecomponents_translation.custcentercategory_wmsse_configureitems_itemstock]</linklabel>
+      <linkobject>[scriptid=customrecord_wms_item_stocklocation]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

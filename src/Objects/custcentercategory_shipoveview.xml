@@ -1,0 +1,12 @@
+<centercategory scriptid="custcentercategory_shipoveview">
+  <center>[scriptid=custcenter_shipcentral]</center>
+  <centertab>[scriptid=custcentertab_shipcentraloutbound]</centertab>
+  <label translate="T">[scriptid=custcollection_packship_roles.ship_central_overview]</label>
+  <links>
+    <link>
+      <linkid>LIST_KPIREPORT</linkid>
+      <linklabel translate="T">[scriptid=custcollection_packship_roles.kpi_reminders_link]</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

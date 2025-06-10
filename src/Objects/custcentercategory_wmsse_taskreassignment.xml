@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_wmsse_taskreassignment">
+  <center>[scriptid=custcenter_wmsse_wms]</center>
+  <centertab>[scriptid=custcentertab_wmsse_wmsreporting]</centertab>
+  <label>Task Reassignment</label>
+  <links>
+    <link>
+      <linklabel>Task Reassignments</linklabel>
+      <linkobject>[scriptid=customsearch_wmsse_task_reassignment]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>
