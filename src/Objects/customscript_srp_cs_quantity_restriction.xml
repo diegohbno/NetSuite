@@ -1,6 +1,6 @@
 <clientscript scriptid="customscript_srp_cs_quantity_restriction">
   <description></description>
-  <isinactive>F</isinactive>
+  <isinactive>T</isinactive>
   <name>SRP CS Quantity Restriction</name>
   <notifyadmins>F</notifyadmins>
   <notifyemails></notifyemails>
@@ -16,7 +16,7 @@
       <audslctrole></audslctrole>
       <eventtype></eventtype>
       <executioncontext>ACTION|ADVANCEDREVREC|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CONSOLRATEADJUSTOR|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OTHER|PAYMENTGATEWAY|PAYMENTPOSTBACK|PLATFORMEXTENSION|PORTLET|PROMOTIONS|RECORDACTION|RESTLET|RESTWEBSERVICES|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WEBSERVICES|WORKBOOKBUILDER|WORKFLOW</executioncontext>
-      <isdeployed>T</isdeployed>
+      <isdeployed>F</isdeployed>
       <loglevel>DEBUG</loglevel>
       <recordtype>[scriptid=customsale_srp_f3plo]</recordtype>
       <status>RELEASED</status>
