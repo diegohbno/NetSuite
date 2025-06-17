@@ -12,7 +12,17 @@ define(['N/currentRecord'],
          * @returns {boolean} - Return false to prevent record submission.
          */
         const saveRecord = () => {
-            return validateQuantitiesBeforeSave();
+            const rec = currentRecord.get();
+
+            // If the record has no ID, it's in Create mode
+            const isCreateMode = !rec.id;
+
+            if (isCreateMode) {
+                return validateQuantitiesBeforeSave();
+            }
+
+            // Allow save without validation if not in Create mode
+            return true;
         };
 
         /**
