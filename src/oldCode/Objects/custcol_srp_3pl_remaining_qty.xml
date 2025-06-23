@@ -30,7 +30,7 @@
   <defaultvalue>NVL({quantity}, 0) - NVL({custcol_srp_3pl_quantity}, 0)</defaultvalue>
   <description></description>
   <displayheight></displayheight>
-  <displaytype>LOCKED</displaytype>
+  <displaytype>NORMAL</displaytype>
   <displaywidth></displaywidth>
   <dynamicdefault></dynamicdefault>
   <encryptatrest>F</encryptatrest>

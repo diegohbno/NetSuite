@@ -1,25 +1,26 @@
-<clientscript scriptid="customscript_hbno_cs_3pl_shipment_notes">
+<usereventscript scriptid="customscript_3pl_consignment_button_ue">
   <description></description>
   <isinactive>F</isinactive>
-  <name>HBNO | CS | 3PL Shipment Notes</name>
+  <name>SRP HBNO 3pl consignment button UE</name>
   <notifyadmins>F</notifyadmins>
   <notifyemails></notifyemails>
   <notifyowner>T</notifyowner>
   <notifyuser>F</notifyuser>
-  <scriptfile>[/SuiteScripts/hbno_cs_3pl_shipmentNotes.js]</scriptfile>
+  <scriptfile>[/SuiteScripts/consignment_3pl/user_event/spr_hbno_3pl_consignment_btn_ue.js]</scriptfile>
   <scriptdeployments>
-    <scriptdeployment scriptid="customdeploy_hbno_cs_3pl_shipment_notes">
-      <allemployees>T</allemployees>
+    <scriptdeployment scriptid="customdeploy_3pl_consignment_button_ue">
+      <allemployees>F</allemployees>
       <alllocalizationcontexts>T</alllocalizationcontexts>
-      <allpartners>T</allpartners>
-      <allroles>T</allroles>
+      <allpartners>F</allpartners>
+      <allroles>F</allroles>
       <audslctrole></audslctrole>
       <eventtype></eventtype>
       <executioncontext>ACTION|ADVANCEDREVREC|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CONSOLRATEADJUSTOR|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OTHER|PAYMENTGATEWAY|PAYMENTPOSTBACK|PLATFORMEXTENSION|PORTLET|PROMOTIONS|RECORDACTION|RESTLET|RESTWEBSERVICES|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WEBSERVICES|WORKBOOKBUILDER|WORKFLOW</executioncontext>
       <isdeployed>T</isdeployed>
       <loglevel>DEBUG</loglevel>
-      <recordtype>[scriptid=customsale_srp_f3plo]</recordtype>
+      <recordtype>ITEMFULFILLMENT</recordtype>
+      <runasrole></runasrole>
       <status>RELEASED</status>
     </scriptdeployment>
   </scriptdeployments>
-</clientscript>
+</usereventscript>
