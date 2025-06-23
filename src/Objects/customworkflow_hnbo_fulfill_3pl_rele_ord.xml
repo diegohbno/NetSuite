@@ -8,15 +8,26 @@
   <initsavedsearchcondition></initsavedsearchcondition>
   <inittriggertype></inittriggertype>
   <isinactive>F</isinactive>
-  <islogenabled>F</islogenabled>
+  <islogenabled>T</islogenabled>
   <keephistory>ALWAYS</keephistory>
-  <name>Fulfill 3PL Release Order</name>
+  <name>HBNO | Fulfill 3PL Release Order</name>
   <recordtypes>[scriptid=customsale_srp_3_pl_salesorder]</recordtypes>
   <releasestatus>RELEASED</releasestatus>
   <runasadmin>F</runasadmin>
   <initcondition>
-    <formula></formula>
+    <formula><![CDATA["3 PL Release Order:Status" NOT IN ("Transaction Status1")]]></formula>
     <type>VISUAL_BUILDER</type>
+    <parameters>
+      <parameter>
+        <name>3 PL Release Order:Status</name>
+        <value>[scriptid=custbody_srp_3_pl_sales_order]:STDBODYSTATUS</value>
+      </parameter>
+      <parameter>
+        <name>Transaction Status1</name>
+        <selectrecordtype>-164</selectrecordtype>
+        <value>[scriptid=customsale_srp_3_pl_salesorder.status_10020_5221064_652]</value>
+      </parameter>
+    </parameters>
   </initcondition>
   <workflowstates>
     <workflowstate scriptid="workflowstate709">
@@ -30,7 +41,7 @@
           <checkconditionbeforeexecution>T</checkconditionbeforeexecution>
           <conditionsavedsearch></conditionsavedsearch>
           <contexttypes>ACTION|BANKCONNECTIVITY|BANKSTATEMENTPARSER|BUNDLEINSTALLATION|CLIENT|CSVIMPORT|CUSTOMGLLINES|CUSTOMMASSUPDATE|RECORDACTION|DATASETBUILDER|DEBUGGER|EMAILCAPTURE|FICONNECTIVITY|FIPARSER|MAPREDUCE|OCRPLUGIN|OFFLINECLIENT|OTHER|PAYMENTPOSTBACK|PAYMENTGATEWAY|PLATFORMEXTENSION|PORTLET|PROMOTIONS|CONSOLRATEADJUSTOR|RESTWEBSERVICES|RESTLET|ADVANCEDREVREC|SCHEDULED|SDFINSTALLATION|SHIPPINGPARTNERS|WEBSERVICES|SUITELET|TAXCALCULATION|USEREVENT|USERINTERFACE|WORKBOOKBUILDER|WORKFLOW</contexttypes>
-          <eventtypes></eventtypes>
+          <eventtypes>VIEW</eventtypes>
           <isinactive>F</isinactive>
           <label>Fulfill</label>
           <saverecordfirst>F</saverecordfirst>

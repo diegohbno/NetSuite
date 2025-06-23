@@ -1,0 +1,25 @@
+<suitelet scriptid="customscript_3pl_create_record_sl">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>srp_hbno_3pl_create_rec_sl</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/consignment_3pl/suitelet/srp_hbno_3pl_consignment_sl.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_3pl_create_record_sl">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>F</allroles>
+      <audslctrole></audslctrole>
+      <eventtype></eventtype>
+      <isdeployed>T</isdeployed>
+      <isonline>F</isonline>
+      <loglevel>DEBUG</loglevel>
+      <runasrole></runasrole>
+      <status>RELEASED</status>
+      <title>srp_hbno_3pl_create_rec_sl</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</suitelet>
