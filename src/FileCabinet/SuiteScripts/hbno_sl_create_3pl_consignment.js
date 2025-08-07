@@ -29,6 +29,7 @@ define(['N/record', 'N/search', 'N/runtime'],
                 }
 
                 const consignmentId = createConsignment(recordId);
+
                 if (!consignmentId) {
                     log.error('Consignment Creation Failed', 'Could not create consignment record');
                     response.write(JSON.stringify({success: false, message: 'Failed to create consignment'}));
@@ -41,10 +42,13 @@ define(['N/record', 'N/search', 'N/runtime'],
                     response.write(JSON.stringify({success: false, message: 'Failed to create receive consignment'}));
                     return;
                 }
-
+                log.debug('1111111111', '1111111111111111')
                 createInventoryAdjustment(receiveConsignmentId);
+                log.debug('22222222', '2222222222222')
 
                 const releaseOrderId = createReleaseOrder(receiveConsignmentId);
+                log.debug('releaseOrderId', releaseOrderId)
+
                 if (!releaseOrderId) {
                     log.error('Release Order Creation Failed', 'Could not create release order');
                     response.write(JSON.stringify({success: false, message: 'Failed to create release order'}));
@@ -62,232 +66,241 @@ define(['N/record', 'N/search', 'N/runtime'],
             }
         };
 
+        function wait(seconds) {
+            const end = Date.now() + (seconds * 1000);
+            while (Date.now() < end) {
+            }
+        }
+
         /**
          * Creates a consignment record from an Item Fulfillment.
          * @param {string|number} paramData - Item Fulfillment internal ID.
          * @returns {string|number|null} Consignment record ID or null on failure.
          */
         function createConsignment(paramData) {
-            try {
-                if (!paramData) {
-                    log.error('createConsignment', 'paramData is required');
-                    return null;
-                }
-
-                const currentRecord = record.load({
-                    type: record.Type.ITEM_FULFILLMENT,
-                    id: paramData,
-                });
-
-                const consignmentRecord = record.create({
-                    type: "custompurchase_srp_3pl_purchase_order",
-                    isDynamic: true,
-                });
-
-                // Set main fields
-                consignmentRecord.setValue({fieldId: 'entity', value: currentRecord.getValue({fieldId: 'entity'})});
-                consignmentRecord.setValue({
-                    fieldId: 'subsidiary',
-                    value: runtime.getCurrentScript().getParameter({name: "custscript_hbno_3pl_cnsgnmt_subsdiary"})
-                });
-                consignmentRecord.setValue({
-                    fieldId: 'location',
-                    value: runtime.getCurrentScript().getParameter({name: "custscript_hbno_3pl_cnsgnmt_location"})
-                });
-                consignmentRecord.setValue({
-                    fieldId: 'custbody_srp_createdfromsample_so',
-                    value: currentRecord.getValue({fieldId: 'createdfrom'})
-                });
-                consignmentRecord.setValue({fieldId: 'custbody_created_form', value: paramData});
-                consignmentRecord.setValue({fieldId: 'trandate', value: currentRecord.getValue({fieldId: 'trandate'})});
-                consignmentRecord.setValue({fieldId: 'transtatus', value: 'B'});
-
-                const lineCount = currentRecord.getLineCount({sublistId: 'item'});
-
-                // --- Batch SO item rates/amounts ---
-                const createdfrom = currentRecord.getValue({fieldId: 'createdfrom'});
-                const itemIds = [];
-                for (let i = 0; i < lineCount; i++) {
-                    const item = currentRecord.getSublistValue({sublistId: 'item', fieldId: 'item', line: i});
-                    if (item && !itemIds.includes(item)) itemIds.push(item);
-                }
-                const soRates = getSoRates(createdfrom, itemIds);
-                // --- End batch SO item rates/amounts ---
-
-                // --- Gather all bin numbers from all inventory detail lines ---
-                const allBinNumbers = new Set();
-                for (let i = 0; i < lineCount; i++) {
-                    let currentSubrecord = null;
-                    try {
-                        currentSubrecord = currentRecord.getSublistSubrecord({
-                            sublistId: 'item',
-                            fieldId: 'inventorydetail',
-                            line: i
-                        });
-                    } catch (e) {
-                        log.debug('No inventorydetail subrecord for line', {line: i, error: e.message});
-                    }
-                    if (currentSubrecord) {
-                        const inventoryDetailLineCount = currentSubrecord.getLineCount({sublistId: 'inventoryassignment'});
-                        for (let count = 0; count < inventoryDetailLineCount; count++) {
-                            const binnumber = currentSubrecord.getSublistValue({
-                                sublistId: 'inventoryassignment',
-                                fieldId: 'binnumber',
-                                line: count
-                            });
-                            if (binnumber) {
-                                allBinNumbers.add(binnumber);
-                            }
-                        }
-                    }
-                }
-
-                // --- Batch map bin numbers to 3PL bins ---
-                const default3plBin = runtime.getCurrentScript().getParameter({name: "custscript_hbno_3pl_create_hbno_bin"});
-                const binMap = getBinMap(Array.from(allBinNumbers), default3plBin);
-
-                for (let i = 0; i < lineCount; i++) {
-                    consignmentRecord.selectNewLine({sublistId: 'item'});
-
-                    const item = currentRecord.getSublistValue({sublistId: 'item', fieldId: 'item', line: i});
-                    const quantity = currentRecord.getSublistValue({sublistId: 'item', fieldId: 'quantity', line: i});
-
-                    // Validate item and quantity
-                    if (!item || !quantity) {
-                        log.error('Invalid Item/Quantity', {item, quantity, line: i});
-                        continue;
-                    }
-
-                    consignmentRecord.setCurrentSublistValue({
-                        sublistId: 'item',
-                        fieldId: 'item',
-                        value: item,
-                        ignoreFieldChange: false,
-                        forceSyncSourcing: true
-                    });
-                    consignmentRecord.setCurrentSublistValue({
-                        sublistId: 'item',
-                        fieldId: 'quantity',
-                        value: quantity,
-                        ignoreFieldChange: false,
-                        forceSyncSourcing: true
-                    });
-
-                    // Use batch SO search results
-                    let rate = 1, amount = 1;
-                    if (soRates[item]) {
-                        rate = soRates[item].rate;
-                        amount = soRates[item].amount;
-                    }
-
-                    consignmentRecord.setCurrentSublistValue({sublistId: 'item', fieldId: 'rate', value: rate});
-                    consignmentRecord.setCurrentSublistValue({sublistId: 'item', fieldId: 'amount', value: amount});
-
-                    // Copy inventory detail if present
-                    let currentSubrecord = null;
-                    try {
-                        currentSubrecord = currentRecord.getSublistSubrecord({
-                            sublistId: 'item',
-                            fieldId: 'inventorydetail',
-                            line: i
-                        });
-                    } catch (e) {
-                        log.debug('No inventorydetail subrecord for line', {line: i, error: e.message});
-                    }
-
-                    if (currentSubrecord) {
-                        const inventorySubrecord = consignmentRecord.getCurrentSublistSubrecord({
-                            sublistId: 'item',
-                            fieldId: 'inventorydetail',
-                        });
-
-                        const inventoryDetailLineCount = currentSubrecord.getLineCount({sublistId: 'inventoryassignment'});
-                        for (let count = 0; count < inventoryDetailLineCount; count++) {
-                            inventorySubrecord.selectNewLine({sublistId: 'inventoryassignment'});
-
-                            // Lot/serial number
-                            const lotnoText = currentSubrecord.getSublistText({
-                                sublistId: 'inventoryassignment',
-                                fieldId: 'issueinventorynumber',
-                                line: count
-                            });
-                            if (lotnoText) {
-                                inventorySubrecord.setCurrentSublistValue({
-                                    sublistId: 'inventoryassignment',
-                                    fieldId: 'receiptinventorynumber',
-                                    value: lotnoText
-                                });
-                            }
-                            const lotnoValue = currentSubrecord.getSublistValue({
-                                sublistId: 'inventoryassignment',
-                                fieldId: 'issueinventorynumber',
-                                line: count
-                            });
-                            if (lotnoValue) {
-                                inventorySubrecord.setCurrentSublistValue({
-                                    sublistId: 'inventoryassignment',
-                                    fieldId: 'issueinventorynumber',
-                                    value: lotnoValue
-                                });
-                            }
-
-                            // Bin number (use batch map)
-                            let binnumber = currentSubrecord.getSublistValue({
-                                sublistId: 'inventoryassignment',
-                                fieldId: 'binnumber',
-                                line: count
-                            });
-                            let mappedBin = default3plBin;
-                            if (binnumber && binMap[binnumber]) {
-                                mappedBin = binMap[binnumber];
-                            }
-                            if (binnumber) {
-                                inventorySubrecord.setCurrentSublistValue({
-                                    sublistId: 'inventoryassignment',
-                                    fieldId: 'binnumber',
-                                    value: mappedBin
-                                });
-                            }
-
-                            // Quantity
-                            const invQuantity = currentSubrecord.getSublistValue({
-                                sublistId: 'inventoryassignment',
-                                fieldId: 'quantity',
-                                line: count
-                            });
-                            if (invQuantity) {
-                                inventorySubrecord.setCurrentSublistValue({
-                                    sublistId: 'inventoryassignment',
-                                    fieldId: 'quantity',
-                                    value: invQuantity
-                                });
-                            }
-
-                            inventorySubrecord.commitLine({sublistId: 'inventoryassignment'});
-                        }
-                    }
-
-                    consignmentRecord.commitLine({sublistId: 'item'});
-                }
-
-                const consignmentRecordId = consignmentRecord.save({
-                    enableSourcing: true,
-                    ignoreMandatoryFields: true
-                });
-
-                // Link consignment to fulfillment
-                record.submitFields({
-                    type: record.Type.ITEM_FULFILLMENT,
-                    id: paramData,
-                    values: {'custbody_created_form': consignmentRecordId},
-                    options: {enableSourcing: false, ignoreMandatoryFields: true}
-                });
-                return consignmentRecordId;
-
-            } catch (e) {
-                log.error('createConsignment Exception', e);
+            if (!paramData) {
+                log.error('createConsignment', 'paramData is required');
                 return null;
             }
+
+            log.debug('paramData', paramData);
+
+            const currentRecord = record.load({
+                type: record.Type.ITEM_FULFILLMENT,
+                id: paramData,
+            });
+            log.debug('ITEM_FULFILLMENT loaded');
+
+            const consignmentRecord = record.create({
+                type: "custompurchase_srp_3pl_purchase_order",
+                isDynamic: true,
+            });
+            log.debug('Consignment record created');
+
+
+            // Set entity (vendor) first
+            var entityId = currentRecord.getValue({fieldId: 'entity'});
+            consignmentRecord.setValue({
+                fieldId: 'entity',
+                value: entityId
+            });
+            log.debug('Entity set', entityId);
+            var vendorSubsidiary = record.load({
+                type: record.Type.VENDOR,
+                id: entityId
+            }).getValue({fieldId: 'subsidiary'});
+
+            log.debug("Vendor's subsidiary", vendorSubsidiary);
+
+            // Wait before setting subsidiary
+            log.audit("Start", "Esperando 1 segundo...");
+            wait(1);
+            log.audit("End", "1 segundo pasó");
+
+            // Set subsidiary after entity
+            const subsidiaryParam = runtime.getCurrentScript().getParameter({name: "custscript_hbno_3pl_cnsgnmt_subsdiary"});
+            const subsidiaryId = parseInt(subsidiaryParam);
+            if (!isNaN(subsidiaryId)) {
+                consignmentRecord.setValue({
+                    fieldId: 'subsidiary',
+                    value: subsidiaryId
+                });
+                log.debug('Subsidiary set', subsidiaryId);
+            } else {
+                log.error('Invalid subsidiary param', subsidiaryParam);
+            }
+
+            // Wait before setting location
+            log.audit("Start", "Esperando 1 segundo...");
+            wait(1);
+            log.audit("End", "1 segundo pasó");
+
+            // Set location
+            const locationParam = runtime.getCurrentScript().getParameter({name: "custscript_hbno_3pl_cnsgnmt_location"});
+            const locationId = parseInt(locationParam) || 40;
+            consignmentRecord.setValue({
+                fieldId: 'location',
+                value: locationId
+            });
+            log.debug('Location set', locationId);
+
+            // Set additional fields
+            consignmentRecord.setValue({
+                fieldId: 'custbody_srp_createdfromsample_so',
+                value: currentRecord.getValue({fieldId: 'createdfrom'})
+            });
+
+            consignmentRecord.setValue({
+                fieldId: 'custbody_created_form',
+                value: paramData
+            });
+
+            consignmentRecord.setValue({
+                fieldId: 'trandate',
+                value: currentRecord.getValue({fieldId: 'trandate'})
+            });
+
+            consignmentRecord.setValue({
+                fieldId: 'transtatus',
+                value: 'B'
+            });
+
+            const lineCount = currentRecord.getLineCount({sublistId: 'item'});
+            const createdfrom = currentRecord.getValue({fieldId: 'createdfrom'});
+            const itemIds = [];
+
+            for (let i = 0; i < lineCount; i++) {
+                const item = currentRecord.getSublistValue({sublistId: 'item', fieldId: 'item', line: i});
+                if (item && !itemIds.includes(item)) itemIds.push(item);
+            }
+
+            const soRates = getSoRates(createdfrom, itemIds);
+
+            // Bins
+            const allBinNumbers = new Set();
+            for (let i = 0; i < lineCount; i++) {
+                try {
+                    const invDetail = currentRecord.getSublistSubrecord({
+                        sublistId: 'item',
+                        fieldId: 'inventorydetail',
+                        line: i
+                    });
+                    const count = invDetail.getLineCount({sublistId: 'inventoryassignment'});
+                    for (let j = 0; j < count; j++) {
+                        const bin = invDetail.getSublistValue({
+                            sublistId: 'inventoryassignment',
+                            fieldId: 'binnumber',
+                            line: j
+                        });
+                        if (bin) allBinNumbers.add(bin);
+                    }
+                } catch (e) {
+                    log.debug(`No inventory detail for line ${i}`, e.message);
+                }
+            }
+
+            const default3plBin = runtime.getCurrentScript().getParameter({name: "custscript_hbno_3pl_create_hbno_bin"});
+            const binMap = getBinMap(Array.from(allBinNumbers), default3plBin);
+
+            for (let i = 0; i < lineCount; i++) {
+                const item = currentRecord.getSublistValue({sublistId: 'item', fieldId: 'item', line: i});
+                const quantity = currentRecord.getSublistValue({sublistId: 'item', fieldId: 'quantity', line: i});
+                if (!item || !quantity) continue;
+
+                consignmentRecord.selectNewLine({sublistId: 'item'});
+                consignmentRecord.setCurrentSublistValue({sublistId: 'item', fieldId: 'item', value: item});
+                consignmentRecord.setCurrentSublistValue({sublistId: 'item', fieldId: 'quantity', value: quantity});
+
+                const rate = soRates[item]?.rate || 1;
+                const amount = soRates[item]?.amount || 1;
+
+                consignmentRecord.setCurrentSublistValue({sublistId: 'item', fieldId: 'rate', value: rate});
+                consignmentRecord.setCurrentSublistValue({sublistId: 'item', fieldId: 'amount', value: amount});
+
+                try {
+                    const currentSubrecord = currentRecord.getSublistSubrecord({
+                        sublistId: 'item',
+                        fieldId: 'inventorydetail',
+                        line: i
+                    });
+                    const inventorySubrecord = consignmentRecord.getCurrentSublistSubrecord({
+                        sublistId: 'item',
+                        fieldId: 'inventorydetail'
+                    });
+                    const detailCount = currentSubrecord.getLineCount({sublistId: 'inventoryassignment'});
+
+                    for (let j = 0; j < detailCount; j++) {
+                        inventorySubrecord.selectNewLine({sublistId: 'inventoryassignment'});
+
+                        const lotText = currentSubrecord.getSublistText({
+                            sublistId: 'inventoryassignment',
+                            fieldId: 'issueinventorynumber',
+                            line: j
+                        });
+                        const lotValue = currentSubrecord.getSublistValue({
+                            sublistId: 'inventoryassignment',
+                            fieldId: 'issueinventorynumber',
+                            line: j
+                        });
+                        const bin = currentSubrecord.getSublistValue({
+                            sublistId: 'inventoryassignment',
+                            fieldId: 'binnumber',
+                            line: j
+                        });
+                        const invQty = currentSubrecord.getSublistValue({
+                            sublistId: 'inventoryassignment',
+                            fieldId: 'quantity',
+                            line: j
+                        });
+
+                        if (lotText) inventorySubrecord.setCurrentSublistValue({
+                            sublistId: 'inventoryassignment',
+                            fieldId: 'receiptinventorynumber',
+                            value: lotText
+                        });
+                        if (lotValue) inventorySubrecord.setCurrentSublistValue({
+                            sublistId: 'inventoryassignment',
+                            fieldId: 'issueinventorynumber',
+                            value: lotValue
+                        });
+                        if (invQty) inventorySubrecord.setCurrentSublistValue({
+                            sublistId: 'inventoryassignment',
+                            fieldId: 'quantity',
+                            value: invQty
+                        });
+
+                        const mappedBin = binMap[bin] || default3plBin;
+                        if (bin) inventorySubrecord.setCurrentSublistValue({
+                            sublistId: 'inventoryassignment',
+                            fieldId: 'binnumber',
+                            value: mappedBin
+                        });
+
+                        inventorySubrecord.commitLine({sublistId: 'inventoryassignment'});
+                    }
+                } catch (e) {
+                    log.debug(`No inventorydetail for line ${i}`, e.message);
+                }
+
+                consignmentRecord.commitLine({sublistId: 'item'});
+            }
+
+            const consignmentRecordId = consignmentRecord.save({
+                enableSourcing: true,
+                ignoreMandatoryFields: true
+            });
+            log.debug('consignmentRecordId', consignmentRecordId)
+
+            record.submitFields({
+                type: record.Type.ITEM_FULFILLMENT,
+                id: paramData,
+                values: {'custbody_created_form': consignmentRecordId},
+                options: {enableSourcing: false, ignoreMandatoryFields: true}
+            });
+
+            return consignmentRecordId;
+
+
         }
 
         /**
@@ -498,208 +511,218 @@ define(['N/record', 'N/search', 'N/runtime'],
          * @returns {string|number|null} Release order ID or null on failure.
          */
         function createReleaseOrder(receiveConsignment) {
-            try {
-                if (!receiveConsignment) {
-                    log.error('createReleaseOrder', 'receiveConsignment is required');
-                    return null;
-                }
-
-                const currentRecord = record.load({
-                    type: 'custompurchase_srp_r3plo',
-                    id: receiveConsignment,
-                });
-
-                const createRecord = record.create({
-                    type: "customsale_srp_3_pl_salesorder",
-                    isDynamic: true,
-                });
-
-                createRecord.setValue({
-                    fieldId: 'customform',
-                    value: runtime.getCurrentScript().getParameter({name: "custscript_hbno_3pl_connected_shipment_f"})
-                });
-                createRecord.setValue({fieldId: 'entity', value: currentRecord.getValue({fieldId: 'entity'})});
-                createRecord.setValue({fieldId: 'subsidiary', value: currentRecord.getValue({fieldId: 'subsidiary'})});
-                createRecord.setValue({fieldId: 'transtatus', value: 'E'});
-                createRecord.setValue({
-                    fieldId: 'custbody_srp_createdfromsample_so',
-                    value: currentRecord.getValue({fieldId: 'custbody_srp_createdfromsample_so'})
-                });
-                createRecord.setValue({fieldId: 'custbody_created_form', value: receiveConsignment});
-
-                // Set location from createdfrom record
-                const createdfrom = currentRecord.getValue({fieldId: 'createdfrom'});
-                if (createdfrom) {
-                    const createdfromRecord = search.lookupFields({
-                        type: "custompurchase_srp_3pl_purchase_order",
-                        id: createdfrom,
-                        columns: ['location']
-                    });
-                    if (createdfromRecord.location && createdfromRecord.location[0] && createdfromRecord.location[0].value) {
-                        createRecord.setValue({fieldId: 'location', value: createdfromRecord.location[0].value});
-                    }
-                }
-
-                // --- Set tranid before saving ---
-                let tranid = '';
-                const soId = currentRecord.getValue({fieldId: 'custbody_srp_createdfromsample_so'});
-                if (soId) {
-                    const salesorderRecord = search.lookupFields({
-                        type: record.Type.SALES_ORDER,
-                        id: soId,
-                        columns: ['tranid']
-                    });
-                    if (salesorderRecord.tranid) {
-                        // Build base tranid
-                        let baseTranid = salesorderRecord.tranid + '-3PL';
-                        tranid = baseTranid;
-                        // Ensure uniqueness
-                        let suffix = 1;
-                        let isUnique = false;
-                        while (!isUnique) {
-                            // Fetch all results in batches of 1000 to check for duplicates
-                            let found = false;
-                            let start = 0;
-                            const pageSize = 1000;
-                            do {
-                                const existing = search.create({
-                                    type: "customsale_srp_3_pl_salesorder",
-                                    filters: [["tranid", "is", tranid]],
-                                    columns: ["internalid"]
-                                }).run().getRange({start, end: start + pageSize});
-                                if (existing && existing.length > 0) {
-                                    found = true;
-                                    tranid = baseTranid + '-' + suffix;
-                                    suffix++;
-                                    break;
-                                }
-                                if (!existing || existing.length < pageSize) {
-                                    break;
-                                }
-                                start += pageSize;
-                            } while (true);
-
-                            if (!found) {
-                                isUnique = true;
-                            }
-                        }
-                        createRecord.setValue({fieldId: 'tranid', value: tranid});
-                    }
-                }
-                // --- End set tranid ---
-
-                const lineCount = currentRecord.getLineCount({sublistId: 'item'});
-                for (let i = 0; i < lineCount; i++) {
-                    createRecord.selectNewLine({sublistId: 'item'});
-
-                    const item = currentRecord.getSublistValue({sublistId: 'item', fieldId: 'item', line: i});
-                    const quantity = currentRecord.getSublistValue({sublistId: 'item', fieldId: 'quantity', line: i});
-                    let rate = currentRecord.getSublistValue({sublistId: 'item', fieldId: 'rate', line: i}) || 1;
-                    let amount = currentRecord.getSublistValue({
-                        sublistId: 'item',
-                        fieldId: 'amount',
-                        line: i
-                    }) || rate * quantity;
-
-
-                    if (!item || !quantity) {
-                        log.error('Invalid Release Order Line', {item, quantity, line: i});
-                        continue;
-                    }
-
-                    createRecord.setCurrentSublistValue({sublistId: 'item', fieldId: 'item', value: item});
-                    createRecord.setCurrentSublistValue({sublistId: 'item', fieldId: 'quantity', value: quantity});
-                    createRecord.setCurrentSublistValue({sublistId: 'item', fieldId: 'rate', value: rate});
-                    createRecord.setCurrentSublistValue({sublistId: 'item', fieldId: 'amount', value: amount});
-
-                    // Copy inventory detail if present
-                    let currentSubrecord = null;
-                    try {
-                        currentSubrecord = currentRecord.getSublistSubrecord({
-                            sublistId: 'item',
-                            fieldId: 'inventorydetail',
-                            line: i
-                        });
-                    } catch (e) {
-                        log.debug('No inventorydetail subrecord for release order line', {line: i, error: e.message});
-                    }
-
-                    if (currentSubrecord) {
-                        const inventorySubrecord = createRecord.getCurrentSublistSubrecord({
-                            sublistId: 'item',
-                            fieldId: 'inventorydetail',
-                        });
-
-                        const inventoryDetailLineCount = currentSubrecord.getLineCount({sublistId: 'inventoryassignment'});
-                        for (let count = 0; count < inventoryDetailLineCount; count++) {
-                            inventorySubrecord.selectNewLine({sublistId: 'inventoryassignment'});
-
-                            const lotno = currentSubrecord.getSublistValue({
-                                sublistId: 'inventoryassignment',
-                                fieldId: 'receiptinventorynumber',
-                                line: count
-                            });
-                            if (lotno) {
-                                inventorySubrecord.setCurrentSublistText({
-                                    sublistId: 'inventoryassignment',
-                                    fieldId: 'issueinventorynumber',
-                                    text: lotno
-                                });
-                            }
-
-                            const binnumber = currentSubrecord.getSublistValue({
-                                sublistId: 'inventoryassignment',
-                                fieldId: 'binnumber',
-                                line: count
-                            });
-                            if (binnumber) {
-                                inventorySubrecord.setCurrentSublistValue({
-                                    sublistId: 'inventoryassignment',
-                                    fieldId: 'binnumber',
-                                    value: binnumber
-                                });
-                            }
-
-                            const invQuantity = currentSubrecord.getSublistValue({
-                                sublistId: 'inventoryassignment',
-                                fieldId: 'quantity',
-                                line: count
-                            });
-                            if (invQuantity) {
-                                inventorySubrecord.setCurrentSublistValue({
-                                    sublistId: 'inventoryassignment',
-                                    fieldId: 'quantity',
-                                    value: invQuantity
-                                });
-                            }
-
-                            inventorySubrecord.commitLine({sublistId: 'inventoryassignment'});
-                        }
-                    }
-
-                    createRecord.commitLine({sublistId: 'item'});
-                }
-
-                const releaseOrderId = createRecord.save({
-                    enableSourcing: true,
-                    ignoreMandatoryFields: true
-                });
-
-                if (releaseOrderId) {
-                    record.submitFields({
-                        type: "custompurchase_srp_r3plo",
-                        id: receiveConsignment,
-                        values: {custbody_srp_ro: releaseOrderId},
-                        options: {enableSourcing: false, ignoreMandatoryFields: true}
-                    });
-                }
-
-                return releaseOrderId;
-
-            } catch (e) {
-                log.error('createReleaseOrder Exception', e);
+            if (!receiveConsignment) {
+                log.error('createReleaseOrder', 'receiveConsignment is required');
                 return null;
             }
+
+            const currentRecord = record.load({
+                type: 'custompurchase_srp_r3plo',
+                id: receiveConsignment,
+            });
+
+            const createRecord = record.create({
+                type: "customsale_srp_3_pl_salesorder",
+                isDynamic: true,
+            });
+
+            createRecord.setValue({
+               fieldId: 'customform',
+               value: runtime.getCurrentScript().getParameter({name: "custscript_hbno_3pl_connected_shipment_f"})
+            });
+            log.audit("Start", "Esperando 1 segundo...");
+            wait(1);
+            log.audit("End", "1 segundo pasó");
+            log.audit(' currentRecord.getValue({fieldId: \'entity\'})', currentRecord.getValue({fieldId: 'entity'}))
+
+            createRecord.setValue({fieldId: 'entity', value: currentRecord.getValue({fieldId: 'entity'})});
+            log.audit("Start", "Esperando 1 segundo...");
+            wait(1);
+            log.audit("End", "1 segundo pasó");
+
+            createRecord.setValue({fieldId: 'subsidiary', value: currentRecord.getValue({fieldId: 'subsidiary'})});
+            log.audit("Start", "Esperando 1 segundo...");
+            wait(1);
+            log.audit("End", "1 segundo pasó");
+
+            createRecord.setValue({fieldId: 'transtatus', value: 'E'});
+            createRecord.setValue({
+                fieldId: 'custbody_srp_createdfromsample_so',
+                value: currentRecord.getValue({fieldId: 'custbody_srp_createdfromsample_so'})
+            });
+            createRecord.setValue({fieldId: 'custbody_created_form', value: receiveConsignment});
+
+            // Set location from createdfrom record
+            const createdfrom = currentRecord.getValue({fieldId: 'createdfrom'});
+            if (createdfrom) {
+                const createdfromRecord = search.lookupFields({
+                    type: "custompurchase_srp_3pl_purchase_order",
+                    id: createdfrom,
+                    columns: ['location']
+                });
+                if (createdfromRecord.location && createdfromRecord.location[0] && createdfromRecord.location[0].value) {
+                    createRecord.setValue({fieldId: 'location', value: createdfromRecord.location[0].value});
+                }
+            }
+
+            // --- Set tranid before saving ---
+            let tranid = '';
+            const soId = currentRecord.getValue({fieldId: 'custbody_srp_createdfromsample_so'});
+            if (soId) {
+                const salesorderRecord = search.lookupFields({
+                    type: record.Type.SALES_ORDER,
+                    id: soId,
+                    columns: ['tranid']
+                });
+                if (salesorderRecord.tranid) {
+                    // Build base tranid
+                    let baseTranid = salesorderRecord.tranid + '-3PL';
+                    tranid = baseTranid;
+                    // Ensure uniqueness
+                    let suffix = 1;
+                    let isUnique = false;
+                    while (!isUnique) {
+                        // Fetch all results in batches of 1000 to check for duplicates
+                        let found = false;
+                        let start = 0;
+                        const pageSize = 1000;
+                        do {
+                            const existing = search.create({
+                                type: "customsale_srp_3_pl_salesorder",
+                                filters: [["tranid", "is", tranid]],
+                                columns: ["internalid"]
+                            }).run().getRange({start, end: start + pageSize});
+                            if (existing && existing.length > 0) {
+                                found = true;
+                                tranid = baseTranid + '-' + suffix;
+                                suffix++;
+                                break;
+                            }
+                            if (!existing || existing.length < pageSize) {
+                                break;
+                            }
+                            start += pageSize;
+                        } while (true);
+
+                        if (!found) {
+                            isUnique = true;
+                        }
+                    }
+                    createRecord.setValue({fieldId: 'tranid', value: tranid});
+                }
+            }
+            // --- End set tranid ---
+
+            const lineCount = currentRecord.getLineCount({sublistId: 'item'});
+            for (let i = 0; i < lineCount; i++) {
+                createRecord.selectNewLine({sublistId: 'item'});
+
+                const item = currentRecord.getSublistValue({sublistId: 'item', fieldId: 'item', line: i});
+                const quantity = currentRecord.getSublistValue({sublistId: 'item', fieldId: 'quantity', line: i});
+                let rate = currentRecord.getSublistValue({sublistId: 'item', fieldId: 'rate', line: i}) || 1;
+                let amount = currentRecord.getSublistValue({
+                    sublistId: 'item',
+                    fieldId: 'amount',
+                    line: i
+                }) || rate * quantity;
+
+
+                if (!item || !quantity) {
+                    log.error('Invalid Release Order Line', {item, quantity, line: i});
+                    continue;
+                }
+
+                createRecord.setCurrentSublistValue({sublistId: 'item', fieldId: 'item', value: item});
+                createRecord.setCurrentSublistValue({sublistId: 'item', fieldId: 'quantity', value: quantity});
+                createRecord.setCurrentSublistValue({sublistId: 'item', fieldId: 'rate', value: rate});
+                createRecord.setCurrentSublistValue({sublistId: 'item', fieldId: 'amount', value: amount});
+
+                // Copy inventory detail if present
+                let currentSubrecord = null;
+                try {
+                    currentSubrecord = currentRecord.getSublistSubrecord({
+                        sublistId: 'item',
+                        fieldId: 'inventorydetail',
+                        line: i
+                    });
+                } catch (e) {
+                    log.debug('No inventorydetail subrecord for release order line', {line: i, error: e.message});
+                }
+
+                if (currentSubrecord) {
+                    const inventorySubrecord = createRecord.getCurrentSublistSubrecord({
+                        sublistId: 'item',
+                        fieldId: 'inventorydetail',
+                    });
+
+                    const inventoryDetailLineCount = currentSubrecord.getLineCount({sublistId: 'inventoryassignment'});
+                    for (let count = 0; count < inventoryDetailLineCount; count++) {
+                        inventorySubrecord.selectNewLine({sublistId: 'inventoryassignment'});
+
+                        const lotno = currentSubrecord.getSublistValue({
+                            sublistId: 'inventoryassignment',
+                            fieldId: 'receiptinventorynumber',
+                            line: count
+                        });
+                        if (lotno) {
+                            inventorySubrecord.setCurrentSublistText({
+                                sublistId: 'inventoryassignment',
+                                fieldId: 'issueinventorynumber',
+                                text: lotno
+                            });
+                        }
+
+                        const binnumber = currentSubrecord.getSublistValue({
+                            sublistId: 'inventoryassignment',
+                            fieldId: 'binnumber',
+                            line: count
+                        });
+                        if (binnumber) {
+                            inventorySubrecord.setCurrentSublistValue({
+                                sublistId: 'inventoryassignment',
+                                fieldId: 'binnumber',
+                                value: binnumber
+                            });
+                        }
+
+                        const invQuantity = currentSubrecord.getSublistValue({
+                            sublistId: 'inventoryassignment',
+                            fieldId: 'quantity',
+                            line: count
+                        });
+                        if (invQuantity) {
+                            inventorySubrecord.setCurrentSublistValue({
+                                sublistId: 'inventoryassignment',
+                                fieldId: 'quantity',
+                                value: invQuantity
+                            });
+                        }
+
+                        inventorySubrecord.commitLine({sublistId: 'inventoryassignment'});
+                    }
+                }
+
+                createRecord.commitLine({sublistId: 'item'});
+            }
+log.debug('beforesave')
+            const releaseOrderId = createRecord.save({
+                enableSourcing: true,
+                ignoreMandatoryFields: true
+            });
+            log.debug('afteresave')
+
+            if (releaseOrderId) {
+                record.submitFields({
+                    type: "custompurchase_srp_r3plo",
+                    id: receiveConsignment,
+                    values: {custbody_srp_ro: releaseOrderId},
+                    options: {enableSourcing: false, ignoreMandatoryFields: true}
+                });
+            }
+
+            return releaseOrderId;
+
+
         }
 
         /**

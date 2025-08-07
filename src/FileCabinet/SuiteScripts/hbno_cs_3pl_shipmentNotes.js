@@ -46,7 +46,6 @@ define(['N/currentRecord'],
                     fieldId: 'custcol_srp_3pl_remaining_qty',
                     line: i,
                 })) || 0;
-
                 // If quantity entered is greater than remaining, prevent submission
                 if (qty > remaining) {
                     alert(`Line ${i + 1}: Quantity (${qty}) exceeds Remaining (${remaining}).`);

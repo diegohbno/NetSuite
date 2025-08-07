@@ -36,7 +36,7 @@ define(['N/runtime', 'N/record', 'N/search'],
                 if (showButton) {
                     form.addButton({
                         id: "custpage_3pl_consignment",
-                        label: "3PL Consignment DIEGO",
+                        label: "3PL Consignment",
                         functionName: `create_3pl_consignment("${cid}")`
                     });
                     form.clientScriptModulePath = runtime.getCurrentScript().getParameter({name: "custscript_hbno_if_client_path_logic"});
@@ -61,3 +61,6 @@ define(['N/runtime', 'N/record', 'N/search'],
             beforeLoad,
         };
     });
+
+
+//todo si se borra el IF, get custbody_created_form, borrar todos los custompurchase_srp_r3plo asociados a custbody_created_form y luego el que este ahi
