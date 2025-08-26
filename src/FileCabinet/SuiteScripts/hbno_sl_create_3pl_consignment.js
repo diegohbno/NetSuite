@@ -527,8 +527,8 @@ define(['N/record', 'N/search', 'N/runtime'],
             });
 
             createRecord.setValue({
-               fieldId: 'customform',
-               value: runtime.getCurrentScript().getParameter({name: "custscript_hbno_3pl_connected_shipment_f"})
+                fieldId: 'customform',
+                value: runtime.getCurrentScript().getParameter({name: "custscript_hbno_3pl_connected_shipment_f"})
             });
             log.audit("Start", "Esperando 1 segundo...");
             wait(1);
@@ -704,7 +704,7 @@ define(['N/record', 'N/search', 'N/runtime'],
 
                 createRecord.commitLine({sublistId: 'item'});
             }
-log.debug('beforesave')
+            log.debug('beforesave')
             const releaseOrderId = createRecord.save({
                 enableSourcing: true,
                 ignoreMandatoryFields: true

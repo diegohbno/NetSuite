@@ -2,8 +2,8 @@
  * @NApiVersion 2.1
  * @NScriptType UserEventScript
  */
-define(['N/record', 'N/search'],
-    (record, search) => {
+define(['N/record', 'N/search', 'N/runtime'],
+    (record, search, runtime) => {
 
         /**
          * Reads items from the fulfillment and updates related custom sales order.
@@ -105,7 +105,7 @@ define(['N/record', 'N/search'],
                     ]
                 });
                 const results = shipNoteSearch.run().getRange({start: 0, end: 1000});
-                log.debug('Shipment note search results', results);
+                log.audit('0000 Shipment note search results', results);
                 if (results && results.length > 0) {
                     results.forEach(result => {
                         const itemId = result.getValue({name: 'item', summary: 'GROUP'});
@@ -210,7 +210,7 @@ define(['N/record', 'N/search'],
                     ]
                 });
                 const relatedShipNotes = relatedShipNotesSearch.run().getRange({start: 0, end: 1000});
-                log.debug('Related shipment notes to update remaining and fulfilled qty', relatedShipNotes);
+                log.audit('11 Related shipment notes to update remaining and fulfilled qty', relatedShipNotes);
 
                 // Map: { shipNoteId: [itemId1, itemId2, ...] }
                 const shipNoteItemsMap = {};
@@ -224,10 +224,15 @@ define(['N/record', 'N/search'],
                         shipNoteItemsMap[shipNoteId].push(itemId);
                     });
                 }
+                log.audit('shipNoteItemsMap',shipNoteItemsMap)
+                log.audit('shipNoteItemsMap',shipNoteItemsMap.length)
 
                 // Now load each record only once and update all its item lines
                 for (const shipNoteId in shipNoteItemsMap) {
                     try {
+                        log.audit('shipNoteId',shipNoteId)
+                        const remainingUsage = runtime.getCurrentScript().getRemainingUsage();
+                        log.audit('Unidades de gobierno restantes', remainingUsage);
                         const shipNoteRec = record.load({
                             type: 'customsale_srp_f3plo',
                             id: shipNoteId,
@@ -272,41 +277,6 @@ define(['N/record', 'N/search'],
             }
         };
 
-        /**
-         * Returns the total fulfilled quantity for a given sales order and item,
-         * summing all shipment notes (customsale_srp_f3plo) associated to the sales order and item.
-         *
-         * @param {number|string} salesOrderId
-         * @param {number|string} itemId
-         * @returns {number}
-         */
-        function getTotalFulfilledFromShipmentNotes(salesOrderId, itemId) {
-            let total = 0;
-            try {
-                log.debug('getTotalFulfilledFromShipmentNotes called', {salesOrderId, itemId});
-                const shipNoteSearch = search.create({
-                    type: 'customsale_srp_f3plo',
-                    filters: [
-                        ['createdfrom', 'anyof', salesOrderId],
-                        'AND',
-                        ['mainline', 'is', 'F'],
-                        'AND',
-                        ['item', 'anyof', itemId]
-                    ],
-                    columns: [
-                        search.createColumn({name: 'custcol_srp_3pl_quantity', summary: 'SUM'})
-                    ]
-                });
-                const results = shipNoteSearch.run().getRange({start: 0, end: 1000});
-                log.debug('getTotalFulfilledFromShipmentNotes results', results);
-                if (results && results.length > 0) {
-                    total = Number(results[0].getValue({name: 'quantity', summary: 'SUM'})) || 0;
-                }
-            } catch (e) {
-                log.error('Error in getTotalFulfilledFromShipmentNotes', e);
-            }
-            return total;
-        }
 
         /**
          * Sets the value of custbodycustbody159 to the value of createdfrom if populated.
