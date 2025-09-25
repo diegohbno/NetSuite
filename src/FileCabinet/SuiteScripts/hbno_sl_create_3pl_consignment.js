@@ -11,6 +11,10 @@ define(['N/record', 'N/search', 'N/runtime'],
          * @param {Object} context - Suitelet context object.
          */
         const onRequest = (context) => {
+            let consignmentId = null;
+            let receiveConsignmentId = null;
+            let inventoryAdjustmentId = null;
+            let releaseOrderId = null;
             try {
                 const {request, response} = context;
                 const {parameters, method} = request;
@@ -28,25 +32,24 @@ define(['N/record', 'N/search', 'N/runtime'],
                     return;
                 }
 
-                const consignmentId = createConsignment(recordId);
-
+                consignmentId = createConsignment(recordId);
                 if (!consignmentId) {
                     log.error('Consignment Creation Failed', 'Could not create consignment record');
                     response.write(JSON.stringify({success: false, message: 'Failed to create consignment'}));
                     return;
                 }
 
-                const receiveConsignmentId = createReceiveConsignment(consignmentId);
+                receiveConsignmentId = createReceiveConsignment(consignmentId);
                 if (!receiveConsignmentId) {
                     log.error('Receive Consignment Creation Failed', 'Could not create receive consignment');
                     response.write(JSON.stringify({success: false, message: 'Failed to create receive consignment'}));
                     return;
                 }
                 log.debug('1111111111', '1111111111111111')
-                createInventoryAdjustment(receiveConsignmentId);
-                log.debug('22222222', '2222222222222')
-
-                const releaseOrderId = createReleaseOrder(receiveConsignmentId);
+                // Track inventory adjustment ID
+                inventoryAdjustmentId = createInventoryAdjustment(receiveConsignmentId);
+                log.debug('inventoryAdjustmentId', inventoryAdjustmentId)
+                releaseOrderId = createReleaseOrder(receiveConsignmentId);
                 log.debug('releaseOrderId', releaseOrderId)
 
                 if (!releaseOrderId) {
@@ -62,7 +65,40 @@ define(['N/record', 'N/search', 'N/runtime'],
 
             } catch (error) {
                 log.error('Error in Suitelet', error);
-                context.response.write(JSON.stringify({success: false, error: error.message}));
+                             // Rollback logic: delete created records if they exist
+                try {
+                    if (releaseOrderId) {
+                        record.delete({type: 'customsale_srp_3_pl_salesorder', id: releaseOrderId});
+                        log.audit('Rollback', 'Deleted release order: ' + releaseOrderId);
+                    }
+                } catch (e) {
+                    log.error('Rollback releaseOrderId failed', e);
+                }
+                try {
+                    if (inventoryAdjustmentId) {
+                        record.delete({type: record.Type.INVENTORY_ADJUSTMENT, id: inventoryAdjustmentId});
+                        log.audit('Rollback', 'Deleted inventory adjustment: ' + inventoryAdjustmentId);
+                    }
+                } catch (e) {
+                    log.error('Rollback inventoryAdjustmentId failed', e);
+                }
+                try {
+                    if (receiveConsignmentId) {
+                        record.delete({type: 'custompurchase_srp_r3plo', id: receiveConsignmentId});
+                        log.audit('Rollback', 'Deleted receive consignment: ' + receiveConsignmentId);
+                    }
+                } catch (e) {
+                    log.error('Rollback receiveConsignmentId failed', e);
+                }
+                try {
+                    if (consignmentId) {
+                        record.delete({type: 'custompurchase_srp_3pl_purchase_order', id: consignmentId});
+                        log.audit('Rollback', 'Deleted consignment: ' + consignmentId);
+                    }
+                } catch (e) {
+                    log.error('Rollback consignmentId failed', e);
+                }
+                context.response.write(JSON.stringify({success: false, error: error.message, rollback: true}));
             }
         };
 
@@ -499,6 +535,7 @@ define(['N/record', 'N/search', 'N/runtime'],
                         options: {enableSourcing: false, ignoreMandatoryFields: true}
                     });
                 }
+                return adjustmentRecordId;
 
             } catch (e) {
                 log.error("createInventoryAdjustment Exception", e);
